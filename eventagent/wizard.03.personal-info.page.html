@@ -12,8 +12,7 @@
         
     <script src="./vendor/modernizr/modernizr.js"></script>
 
-
-    <link rel="stylesheet" href="./style/wizard.page.css">
+    <link rel="stylesheet" href="./style/wizard.03.personal-info.page.css">
 
         
     </head>
@@ -48,62 +47,40 @@
         
         </div>
     </div>
+
     
-    <section id="wizard" class="row">
-        <ol class="breadcrumbs small-12 small-centered columns">
-            <li>Package</li>
-            <li>Custoize</li>
-            <li>Personal info</li>
-            <li>Summary</li>
-            <li>Payment</li>
-        </ol>      
+    <section id="wizard" class="row-wide">
+
+        <div id="breadcrumb" class="row">
+            
+    <ol class="breadcrumbs small-12 small-centered columns">
+        <li>Package</li>
+        <li>Custoize</li>
+        <li>Personal info</li>
+        <li>Summary</li>
+        <li>Payment</li>
+    </ol>
+
+        
+        </div>
     
-        <div class="small-8 columns"> 
-    <h1>Package name</h1>
+        <div id="page" class="row">
+            
+    <div class="small-8 columns"> 
     
-    <div class="row">
-        <label class="small-4 columns end">
-            Number of persons
-            <input type="number" min="1" max="50"/>    
-        </label>
-    </div>
-   
-    <div class="row">
-        <label class="small-4 columns end">
-            Event date
-            <select>
-                <option>Saturday 18 October 2012</option>    
-            </select>
-        </label>
-    </div>
-    
-    <div class="row">       
-        <label class="small-4 columns">
-            Arrival date
-            <select>
-                <option>Saturday 18 October 2012</option>    
-            </select>
-        </label>
-   
-        <label class="small-4 columns end">
-            Depature date
-            <select>
-                <option>Saturday 18 October 2012</option>    
-            </select>            
-        </label>
-    </div>
-    
-    <div class="row">
-        <label class="small-4 columns end">
-            Room layout
-            <select>
-                <option>Saturday 18 October 2012</option>    
-            </select>
-        </label>
-    </div>
+    <form>    
+        <label>Intials<input type="text"></label>
+        <label>Surname<input type="text"></label>
+        <label>Email address<input type="text"></label>
+        <label>Phone number<input type="text"></label>
+        <label>Address<input type="text"></label>
+        <label>Zipcode<input type="text"></label>
+        <label>City<input type="text"></label>
+        <label>Country<input type="text"></label>
+    </form>
 
 </div>
-        <div class="small-4 columns"> 
+    <div class="small-4 columns"> 
 
     <h1>Shopping cart</h1>
     
@@ -117,9 +94,13 @@
     <button class="button">Next</button>
 
  </div>
-    
+
+        </div>
+        
     </section>
-    
+
+
+
     
     
     
@@ -158,12 +139,10 @@
     
     </div>
 
-
-    
     
 
         
-        
+            
         <script data-main="./lib/config.js" src="./vendor/requirejs/require.js"></script>
 
 
