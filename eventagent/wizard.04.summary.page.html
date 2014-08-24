@@ -7,22 +7,27 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
+        <!-- master#head -->
         
         <link rel="stylesheet" href="./vendor/foundation/css/normalize.css">
         
-    <script src="./vendor/modernizr/modernizr.js"></script>
+    <!--script src="./vendor/modernizr/modernizr.js"></script-->
 
     <link rel="stylesheet" href="./style/wizard.04.summary.page.css">
 
+        <!-- /master#head -->
         
     </head>
     <body>
     
+        <!-- master#body -->
         
-    <div id="navigation" class="row">    
-        <div class="contain-to-grid">
-        
+    <!-- foundation.master#header -->
+            <header id="navigation" class="row">
+    
+            <div class="contain-to-grid">
             
+                
     <nav class="top-bar navigation" data-topbar>
 
         <ul class="title-area navigation_title">
@@ -44,29 +49,37 @@
     </nav>
 
 
-        
-        </div>
-    </div>
-
-    
-    <section id="wizard" class="row-wide">
-
-        <div id="breadcrumb" class="row">
             
-    <ol class="breadcrumbs small-12 small-centered columns">
-        <li>Package</li>
-        <li>Custoize</li>
-        <li>Personal info</li>
-        <li>Summary</li>
-        <li>Payment</li>
+            </div>
+        
+        </header>    
+        <!-- /foundation.master#header -->
+    
+    <!-- foundation.master#content -->
+    
+    <section id="wizard" class="row-full">
+
+        <div id="breadcrumb" class="row-wide">
+            
+    <ol class="wizardcrumbs small-12 small-centered columns">
+        <li class=""><a href="#">Package</a></li>
+        <li class=""><a href="#">Customize</a></li>
+        <li class=""><a href="#">Personal info</a></li>
+        <li class="active"><a href="#">Summary</a></li>
+        <li class="unavailable"><a href="#">Payment</a></li>
     </ol>
 
         
         </div>
     
-        <div id="page" class="row">
+        <div id="page" class="row-wide page" data-equalizer>
             
-    <div class="small-8 columns"> 
+    <form 
+        method="GET" 
+        target="_self" 
+        action="./wizard.05.payment.page.html"
+    >
+        <div class="small-8 columns page_content" data-equalizer-watch> 
     <h1>Package title</h1>
 
     <h4>Event</h4>
@@ -152,33 +165,76 @@
         After payment you will recieve your confirmation imediatly
     </p>
 </div>
-    <div class="small-4 columns"> 
+        <div class="small-4 columns page_cart" data-equalizer-watch>
+             
 
-    <h1>Shopping cart</h1>
+        
     
-    <!-- items -->
+    <ul class="wizard_cart pricing-table">
+        <li class="title wizard_cart_title">Your order</li>
+        <li class="bullet-item wizard_cart_item">
+            <p>
+                <span class="wizard_cart_item_description">description</span>
+                <span class="wizard_cart_item_amount">amount</span>                
+            </p>
+        </li>
+        <li class="bullet-item wizard_cart_item">
+            <p>
+                <span class="wizard_cart_item_description">description</span>
+                <span class="wizard_cart_item_amount">amount</span>                
+            </p>
+        </li>
+        <li class="bullet-item wizard_cart_item">
+            <p>
+                <span class="wizard_cart_item_description">description</span>
+                <span class="wizard_cart_item_amount">amount</span>                
+            </p>
+        </li>
+        <li class="bullet-item wizard_cart_item">
+            <p>
+                <span class="wizard_cart_item_description">description</span>
+                <span class="wizard_cart_item_amount">amount</span>                
+            </p>
+        </li>
+        <li class="bullet-item wizard_cart_item">
+            <p>
+                <span class="wizard_cart_item_description">description</span>
+                <span class="wizard_cart_item_amount">amount</span>                
+            </p>
+        </li>
+        <li class="price wizard_cart_total">
+            <p>
+                <span class="wizard_cart_total_description">Total:</span>    
+                <span class="wizard_cart_total_amount">$99.99</span>
+            </p>
+        </li>
+        <li class="cta-button wizard_cart_buttons">
+            <a href="./wizard.03.personal-info.page.html" class="button wizard_cart_buttons_button -previous">Previous</a>
+            <button type="submit" class="button wizard_cart_buttons_button -next">Next</button>            
+        </li>
+    </ul>
     
-    <hr />
-    
-    <!-- total stuff -->
-    
-    <button class="button">Previous</button>
-    <button class="button">Next</button>
-
- </div>
+ 
+        </div>
+    </form>
 
         </div>
         
     </section>
 
-
-
+    <!-- /content -->
+    
+    <!-- foundation.master#footer -->
+        
+        
+                        
+                
+        
     
     
     
     
-    
-    <div class="footer icon-bar four-up">
+    <footer id="footer" class="footer icon-bar four-up">
     
             
     <span class="item">
@@ -197,27 +253,58 @@
     
     <span class="item">
         <i class="fi-info"></i>
-        <label></label>
+        <label>            <ul>
+                <li><a href="#">Disclaimer</a></li>    
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Legal</a></li>
+            </ul>
+        </label>
     </span>
 
 
     
     <span class="item">
         <i class="fi-mail"></i>
-        <label></label>
+        <label> 
+            <div class="row collapse">
+                <div class="small-10 columns">
+                    <input type="text" placeholder="Your email address">
+                </div>
+                <div class="small-2 columns">
+                    <button type="submit" class="button postfix">OK</button>
+                </div>
+            </div>
+        </label>
     </span>
 
             
     
-    </div>
+    </footer>
 
     
+        <!-- /foundation.master#footer -->
 
+        <!-- /master#body -->
         
+        <!-- master#scripts -->
             
+        
+    <script> 
+        var require = { 
+                callback: function( ){ 
+                    require(
+                        [ "jquery", "foundation/equalizer", "domReady!" ],
+                        function( $ ){ $( document ).foundation( ); }
+                    ); 
+                } 
+            };
+    </script>
         <script data-main="./lib/config.js" src="./vendor/requirejs/require.js"></script>
+    
 
 
+
+        <!-- /master#scripts -->
     
     </body>
 </html>

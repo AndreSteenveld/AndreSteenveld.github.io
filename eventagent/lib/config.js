@@ -40,7 +40,7 @@ require.config({
     shim: {
             
         "foundation": { 
-            deps: [ "jquery", "fastclick", "jquery.placeholder" ], 
+            deps: [ "jquery", "fastclick" ], 
             exports: "Foundation" 
         },
     
@@ -49,7 +49,7 @@ require.config({
         "foundation/alert"       : { deps: [ "foundation" ] },
         "foundation/clearing"    : { deps: [ "foundation" ] },
         "foundation/dropdown"    : { deps: [ "foundation" ] },
-        "foundation/equalizer"   : { deps: [ "foundation" ] },
+        "foundation/equalizer"   : { deps: [ "foundation", "jquery.placeholder" ] },
         "foundation/interchange" : { deps: [ "foundation" ] },
         "foundation/joyride"     : { deps: [ "foundation", "jquery.cookie" ] },
         "foundation/magellan"    : { deps: [ "foundation" ] },
@@ -61,8 +61,8 @@ require.config({
         "foundation/tooltip"     : { deps: [ "foundation" ] },
         "foundation/topbar"      : { deps: [ "foundation" ] },
         
-        "fastclick"     : { exports: "FastClick" },
-        "placeholder"   : { deps: [ "jquery" ], exports: "Placeholders" }        
+        "fastclick"          : { exports: "FastClick" },
+        "jquery.placeholder" : { deps: [ "jquery" ], exports: "Placeholders" }        
         
     }
         

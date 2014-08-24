@@ -295,8 +295,8 @@ small {
 
 code {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
-  font-weight: normal;
-  color: #333;
+  font-weight: bold;
+  color: #bd240d;
   background-color: #f8f8f8;
   border-width: 1px;
   border-style: solid;
@@ -1855,8 +1855,23 @@ th.hide-for-touch {
   .row-wide:after {
     clear: both; }
 
+.row-full {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5rem;
+  max-width: 100%; }
+  .row-full:before, .row-full:after {
+    content: " ";
+    display: table; }
+  .row-full:after {
+    clear: both; }
+
 #navigation {
-  height: 10%; }
+  height: 10%;
+  min-height: 100px; }
 
 #content {
   min-height: 90%; }
