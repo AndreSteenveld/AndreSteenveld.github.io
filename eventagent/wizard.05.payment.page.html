@@ -79,6 +79,7 @@
         target="_self" 
         action="."
     >
+        <input type="hidden" name="state" value="{}">
         <div class="small-8 columns page_content"><p></p></div>
         <div class="small-4 columns page_cart"><p></p></div>
     </form>
@@ -158,7 +159,7 @@
         var require = { 
                 callback: function( ){ 
                     require(
-                        [ "jquery", "foundation/equalizer", "domReady!" ],
+                        [ "jquery", "scripts/state", "foundation/equalizer", "scripts/cart", "domReady!" ],
                         function( $ ){ $( document ).foundation( ); }
                     ); 
                 } 

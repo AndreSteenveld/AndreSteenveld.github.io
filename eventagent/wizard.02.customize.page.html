@@ -79,76 +79,109 @@
         target="_self" 
         action="./wizard.03.personal-info.page.html"
     >
-        <div class="small-8 columns page_content" data-equalizer-watch> 
-
+        <input type="hidden" name="state" value="{}">
+        <div class="small-8 columns page_content" data-equalizer-watch>
+             
+    
     <div class="row">
     
-        <img src="http://placehold.it/400x300" class="small-4 columns">
+        <img src="http://placehold.it/400x300" class="small-4 columns wizard_extra_image">
         <div class="small-8 columns">
         
-            <h3>Extra extra extra</h3>
+            <h3 class="wizard_extra_title">The first extra</h3>
             
-            <ul>
-                <li>Feature</li>    
-                <li>Feature</li>
-                <li>Feature</li>
-                <li>Feature</li>
-                <li>Feature</li>
-                <li>Feature</li>
-                <li>Feature</li>
-            </ul>
+            <ul class="wizard_extra_features"><li>First feature</li>
+<li>Second feature</li>
+<li>Third feature</li>
+<li>Forth feature</li></ul>
             
-            <span>10,00</span>
-            <input id="checkbox" type="checkbox"><label for="checkbox">Select</label>
+            <p>
+                <span class>50.00</span>
+                <label><input type="checkbox" name="extra[]" value='{"price":50,"description":"The first extra"}'>Select</label>
+            </p>
             
         </div>
         
     </div>
 
-</div>
+
+            
+             
+    
+    <div class="row">
+    
+        <img src="http://placehold.it/400x300" class="small-4 columns wizard_extra_image">
+        <div class="small-8 columns">
+        
+            <h3 class="wizard_extra_title">The second extra</h3>
+            
+            <ul class="wizard_extra_features"><li>First feature</li>
+<li>Second feature</li>
+<li>Third feature</li>
+<li>Forth feature</li></ul>
+            
+            <p>
+                <span class>150.00</span>
+                <label><input type="checkbox" name="extra[]" value='{"price":150,"description":"The second extra"}'>Select</label>
+            </p>
+            
+        </div>
+        
+    </div>
+
+
+            
+             
+    
+    <div class="row">
+    
+        <img src="http://placehold.it/400x300" class="small-4 columns wizard_extra_image">
+        <div class="small-8 columns">
+        
+            <h3 class="wizard_extra_title">The third extra</h3>
+            
+            <ul class="wizard_extra_features"><li>First feature</li>
+<li>Second feature</li>
+<li>Third feature</li>
+<li>Forth feature</li></ul>
+            
+            <p>
+                <span class>300.00</span>
+                <label><input type="checkbox" name="extra[]" value='{"price":300,"description":"The third extra"}'>Select</label>
+            </p>
+            
+        </div>
+        
+    </div>
+
+
+            
+        </div>
         <div class="small-4 columns page_cart" data-equalizer-watch>
              
 
-        
+    <script id="wizard_cart_item-template" type="text/template">
+        <li class="bullet-item wizard_cart_item">
+            <p>
+                <span class="wizard_cart_item_amount">{{amount}}</span>          
+                <span class="wizard_cart_item_description">{{description}}</span>                
+                <span class="wizard_card_item_price">{{price}}</span>
+            </p>
+        </li>
+    </script>
     
     <ul class="wizard_cart pricing-table">
         <li class="title wizard_cart_title">Your order</li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
+        
+        <!-- templates go here... -->
+        
         <li class="price wizard_cart_total">
             <p>
                 <span class="wizard_cart_total_description">Total:</span>    
-                <span class="wizard_cart_total_amount">$99.99</span>
+                <span class="wizard_cart_total_amount">&nbsp;</span>
             </p>
         </li>
+        
         <li class="cta-button wizard_cart_buttons">
             <a href="./wizard.01.package.page.html" class="wizard_cart_buttons_button -previous">Previous</a>
             <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
@@ -233,7 +266,7 @@
         var require = { 
                 callback: function( ){ 
                     require(
-                        [ "jquery", "foundation/equalizer", "domReady!" ],
+                        [ "jquery", "scripts/state", "foundation/equalizer", "scripts/cart", "domReady!" ],
                         function( $ ){ $( document ).foundation( ); }
                     ); 
                 } 

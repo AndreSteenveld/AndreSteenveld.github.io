@@ -79,6 +79,7 @@
         target="_self" 
         action="./wizard.02.customize.page.html"
     >
+        <input type="hidden" name="state" value="{}">
         <div class="small-8 columns page_content" data-equalizer-watch> 
 
     <h1>Package name</h1>
@@ -86,14 +87,14 @@
     <div class="row">
         <label class="small-6 columns end">
             Number of persons
-            <input type="number" min="1" max="50" value="1"/>    
+            <input name="booking.noOfPeople" type="number" min="1" max="50" value="1"/>    
         </label>
     </div>
    
     <div class="row">
         <label class="small-6 columns end">
             Event date
-            <select>
+            <select name="booking.eventDate">
                 <option>Friday 17 October 2012</option>    
                 <option>Saturday 18 October 2012</option>    
                 <option>Sunday 19 October 2012</option>    
@@ -104,14 +105,14 @@
     <div class="row">       
         <label class="small-6 columns">
             Arrival date
-            <select>
+            <select name="booking.arrivalDate">
                 <option>Saturday 18 October 2012</option>    
             </select>
         </label>
    
         <label class="small-6 columns end">
             Depature date
-            <select>
+            <select name="booking.departureDate">
                 <option>Sunday 19 October 2012</option>    
             </select>            
         </label>
@@ -120,11 +121,10 @@
     <div class="row">
         <label class="small-6 columns end">
             Room layout
-            <select>
+            <select name="booking.roomLayout">
                 <option>Feng shui</option>    
                 <option>Round</option>    
-                <option>Glued to the cieling</option>    
-                
+                <option>Glued to the cieling</option>                    
             </select>
         </label>
     </div>
@@ -132,46 +132,28 @@
 </div>
         <div class="small-4 columns page_cart" data-equalizer-watch> 
 
-        
+    <script id="wizard_cart_item-template" type="text/template">
+        <li class="bullet-item wizard_cart_item">
+            <p>
+                <span class="wizard_cart_item_amount">{{amount}}</span>          
+                <span class="wizard_cart_item_description">{{description}}</span>                
+                <span class="wizard_card_item_price">{{price}}</span>
+            </p>
+        </li>
+    </script>
     
     <ul class="wizard_cart pricing-table">
         <li class="title wizard_cart_title">Your order</li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
+        
+        <!-- templates go here... -->
+        
         <li class="price wizard_cart_total">
             <p>
                 <span class="wizard_cart_total_description">Total:</span>    
-                <span class="wizard_cart_total_amount">$99.99</span>
+                <span class="wizard_cart_total_amount">&nbsp;</span>
             </p>
         </li>
+        
         <li class="cta-button wizard_cart_buttons">
             <a href="#" class="wizard_cart_buttons_button -previous">Previous</a>
             <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
@@ -255,7 +237,7 @@
         var require = { 
                 callback: function( ){ 
                     require(
-                        [ "jquery", "foundation/equalizer", "domReady!" ],
+                        [ "jquery", "scripts/state", "foundation/equalizer", "scripts/cart", "domReady!" ],
                         function( $ ){ $( document ).foundation( ); }
                     ); 
                 } 

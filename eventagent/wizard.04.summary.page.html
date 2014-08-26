@@ -79,6 +79,7 @@
         target="_self" 
         action="./wizard.05.payment.page.html"
     >
+        <input type="hidden" name="state" value="{}">
         <div class="small-8 columns page_content" data-equalizer-watch> 
     <h1>Package title</h1>
 
@@ -161,53 +162,35 @@
     <hr/>
     <!-- accept general condtions -->
     <p>
-        <input type="checkbox"> I agree with the <a href="#">general conditions</a><br/>
+        <input name="summary.accept" type="checkbox"> I agree with the <a href="#">general conditions</a><br/>
         After payment you will recieve your confirmation imediatly
     </p>
 </div>
         <div class="small-4 columns page_cart" data-equalizer-watch>
              
 
-        
+    <script id="wizard_cart_item-template" type="text/template">
+        <li class="bullet-item wizard_cart_item">
+            <p>
+                <span class="wizard_cart_item_amount">{{amount}}</span>          
+                <span class="wizard_cart_item_description">{{description}}</span>                
+                <span class="wizard_card_item_price">{{price}}</span>
+            </p>
+        </li>
+    </script>
     
     <ul class="wizard_cart pricing-table">
         <li class="title wizard_cart_title">Your order</li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_description">description</span>
-                <span class="wizard_cart_item_amount">amount</span>                
-            </p>
-        </li>
+        
+        <!-- templates go here... -->
+        
         <li class="price wizard_cart_total">
             <p>
                 <span class="wizard_cart_total_description">Total:</span>    
-                <span class="wizard_cart_total_amount">$99.99</span>
+                <span class="wizard_cart_total_amount">&nbsp;</span>
             </p>
         </li>
+        
         <li class="cta-button wizard_cart_buttons">
             <a href="./wizard.03.personal-info.page.html" class="wizard_cart_buttons_button -previous">Previous</a>
             <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
@@ -293,7 +276,7 @@
         var require = { 
                 callback: function( ){ 
                     require(
-                        [ "jquery", "foundation/equalizer", "domReady!" ],
+                        [ "jquery", "scripts/state", "foundation/equalizer", "scripts/cart", "domReady!" ],
                         function( $ ){ $( document ).foundation( ); }
                     ); 
                 } 

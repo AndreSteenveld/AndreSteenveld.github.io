@@ -6115,7 +6115,7 @@ th.hide-for-touch {
       text-shadow: #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px; }
 
 .packages .package {
-  padding: 0.125rem 0px;
+  padding: 1.125rem 0px;
   border-top: solid 1px #a4b0ac; }
   .packages .package_info {
     border-right: solid 1px #a4b0ac; }

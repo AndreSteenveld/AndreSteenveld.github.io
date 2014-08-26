@@ -8,7 +8,7 @@ require.config({
         { name: "lib",     location: "../lib/" },
         
         { name: "jquery",        main: "jquery",        location: "../vendor/jquery/dist/" },
-        { name: "jquery.cookie", main: "jquery.cookie", location: "../vendor/jquery.cookie/" },
+        { name: "jquery.cookie", main: "jquery.cookie", location: "../vendor/jquery.cookie/" },        
         { name: "slick",         main: "slick",         location: "../vendor/slick.js/slick/" }
     ],
 
@@ -34,14 +34,15 @@ require.config({
         "foundation/topbar"      : "../vendor/foundation/js/foundation/foundation.topbar",
 
         "fastclick"          : "../vendor/fastclick/lib/fastclick",
-        "jquery.placeholder" : "../vendor/jquery-placeholder/jquery.placeholder"
+        "jquery.placeholder" : "../vendor/jquery-placeholder/jquery.placeholder",
+        "jquery.query"       : "../vendor/jquery-plugin-query-object/jquery.query-object"
     },
         
     shim: {
             
         "foundation": { 
             deps: [ "jquery", "fastclick" ], 
-            exports: "Foundation" 
+            exports: "Foundation"
         },
     
         "foundation/abide"       : { deps: [ "foundation" ] },
@@ -61,8 +62,9 @@ require.config({
         "foundation/tooltip"     : { deps: [ "foundation" ] },
         "foundation/topbar"      : { deps: [ "foundation" ] },
         
-        "fastclick"          : { exports: "FastClick" },
-        "jquery.placeholder" : { deps: [ "jquery" ], exports: "Placeholders" }        
+        "fastclick"          : {                     exports: "FastClick"    },
+        "jquery.placeholder" : { deps: [ "jquery" ], exports: "Placeholders" },
+        "jquery.query"       : { deps: [ "jquery" ], exports: "jQuery.query" }    
         
     }
         
