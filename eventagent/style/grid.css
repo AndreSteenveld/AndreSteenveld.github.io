@@ -1,4 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+@import url(//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
 meta.foundation-version {
   font-family: "/5.3.3/"; }
 
@@ -40,7 +41,7 @@ body {
   color: #30343D;
   padding: 0;
   margin: 0;
-  font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 150%;
@@ -235,7 +236,7 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #30343D;
@@ -249,19 +250,19 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 2.125rem; }
+  font-size: 4.0625rem; }
 
 h2 {
-  font-size: 1.6875rem; }
+  font-size: 1.25rem; }
 
 h3 {
-  font-size: 1.375rem; }
+  font-size: 0.625rem; }
 
 h4 {
-  font-size: 1.125rem; }
+  font-size: 0.125rem; }
 
 h5 {
-  font-size: 1.125rem; }
+  font-size: 0.3125rem; }
 
 h6 {
   font-size: 1rem; }
@@ -407,15 +408,15 @@ blockquote, blockquote p {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
   h1 {
-    font-size: 2.75rem; }
+    font-size: 4.6875rem; }
   h2 {
-    font-size: 2.3125rem; }
+    font-size: 1.875rem; }
   h3 {
-    font-size: 1.6875rem; }
+    font-size: 0.9375rem; }
   h4 {
-    font-size: 1.4375rem; }
+    font-size: 0.4375rem; }
   h5 {
-    font-size: 1.125rem; }
+    font-size: 0.3125rem; }
   h6 {
     font-size: 1rem; } }
 
@@ -1840,6 +1841,13 @@ th.hide-for-touch {
     float: left; }
   .column.xxlarge-uncentered.opposite, .columns.xxlarge-uncentered.opposite {
     float: right; } }
+
+h3, h6 {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic; }
+
+h6:before, h6:after {
+  content: "\2013"; }
 
 .row-wide {
   width: 100%;

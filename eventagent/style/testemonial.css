@@ -1,4 +1,5 @@
 @import url(//fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900);
+@import url(//fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
 meta.foundation-version {
   font-family: "/5.3.3/"; }
 
@@ -40,7 +41,7 @@ body {
   color: #30343D;
   padding: 0;
   margin: 0;
-  font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
   font-style: normal;
   line-height: 150%;
@@ -235,7 +236,7 @@ p {
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #30343D;
@@ -249,19 +250,19 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0; }
 
 h1 {
-  font-size: 2.125rem; }
+  font-size: 4.0625rem; }
 
 h2 {
-  font-size: 1.6875rem; }
+  font-size: 1.25rem; }
 
 h3 {
-  font-size: 1.375rem; }
+  font-size: 0.625rem; }
 
 h4 {
-  font-size: 1.125rem; }
+  font-size: 0.125rem; }
 
 h5 {
-  font-size: 1.125rem; }
+  font-size: 0.3125rem; }
 
 h6 {
   font-size: 1rem; }
@@ -407,15 +408,15 @@ blockquote, blockquote p {
   h1, h2, h3, h4, h5, h6 {
     line-height: 1.4; }
   h1 {
-    font-size: 2.75rem; }
+    font-size: 4.6875rem; }
   h2 {
-    font-size: 2.3125rem; }
+    font-size: 1.875rem; }
   h3 {
-    font-size: 1.6875rem; }
+    font-size: 0.9375rem; }
   h4 {
-    font-size: 1.4375rem; }
+    font-size: 0.4375rem; }
   h5 {
-    font-size: 1.125rem; }
+    font-size: 0.3125rem; }
   h6 {
     font-size: 1rem; } }
 
@@ -1841,6 +1842,13 @@ th.hide-for-touch {
   .column.xxlarge-uncentered.opposite, .columns.xxlarge-uncentered.opposite {
     float: right; } }
 
+h3, h6 {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic; }
+
+h6:before, h6:after {
+  content: "\2013"; }
+
 .row-wide {
   width: 100%;
   margin-left: auto;
@@ -2070,7 +2078,7 @@ th.hide-for-touch {
       color: #222;
       padding: 1rem;
       display: block;
-      font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-family: "Raleway", sans-serif;
       font-size: 1rem; }
       .accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
         background: #e3e3e3; }
@@ -2409,44 +2417,44 @@ th.hide-for-touch {
 
 .breadcrumbs {
   display: block;
-  padding: 1.125rem 0.875rem 1.125rem;
+  padding: 0.5625rem 0.875rem 0.5625rem;
   overflow: hidden;
   margin-left: 0;
   list-style: none;
   border-style: solid;
-  border-width: 0px;
-  background-color: #E8EBEA;
-  border-color: #cfd5d3;
+  border-width: 1px;
+  background-color: #ffaaa3;
+  border-color: #ff8279;
   border-radius: 3px; }
   .breadcrumbs > * {
     margin: 0;
     float: left;
-    font-size: 1.125rem;
-    line-height: 1.125rem;
+    font-size: 0.6875rem;
+    line-height: 0.6875rem;
     text-transform: uppercase;
-    color: #30343D; }
+    color: #E8EBEA; }
     .breadcrumbs > *:hover a, .breadcrumbs > *:focus a {
       text-decoration: underline; }
     .breadcrumbs > * a {
-      color: #30343D; }
+      color: #E8EBEA; }
     .breadcrumbs > *.current {
       cursor: default;
-      color: #30343D; }
+      color: #333; }
       .breadcrumbs > *.current a {
         cursor: default;
-        color: #30343D; }
+        color: #333; }
       .breadcrumbs > *.current:hover, .breadcrumbs > *.current:hover a, .breadcrumbs > *.current:focus, .breadcrumbs > *.current:focus a {
         text-decoration: none; }
     .breadcrumbs > *.unavailable {
-      color: #30343D; }
+      color: #999; }
       .breadcrumbs > *.unavailable a {
-        color: #30343D; }
+        color: #999; }
       .breadcrumbs > *.unavailable:hover, .breadcrumbs > *.unavailable:hover a, .breadcrumbs > *.unavailable:focus, .breadcrumbs > *.unavailable a:focus {
         text-decoration: none;
-        color: #30343D;
+        color: #999;
         cursor: default; }
     .breadcrumbs > *:before {
-      content: "";
+      content: "/";
       color: #aaa;
       margin: 0 0.75rem;
       position: relative;
@@ -2459,7 +2467,7 @@ button, .button {
   border-style: solid;
   border-width: 0px;
   cursor: pointer;
-  font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0 0 1.25rem;
@@ -3450,7 +3458,7 @@ label.error {
   width: 100%;
   font-size: 0;
   display: inline-block;
-  background: #333; }
+  background: #30343D; }
   .icon-bar > * {
     text-align: center;
     font-size: 1rem;
@@ -3497,7 +3505,7 @@ label.error {
       width: 1.875rem;
       height: 1.875rem; }
   .icon-bar > *:hover {
-    background: #333; }
+    background: #30343D; }
   .icon-bar > * label {
     color: #fff; }
   .icon-bar > * i {
@@ -3704,7 +3712,7 @@ label.error {
 
 .label {
   font-weight: normal;
-  font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  font-family: "Raleway", sans-serif;
   text-align: center;
   text-decoration: none;
   line-height: 1;
@@ -4072,7 +4080,7 @@ ul.pagination {
     color: #eee;
     font-weight: normal;
     font-size: 1rem;
-    font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+    font-family: "Raleway", sans-serif; }
   .pricing-table .price {
     background-color: #f6f6f6;
     padding: 0.9375rem 1.25rem;
@@ -4080,7 +4088,7 @@ ul.pagination {
     color: #333;
     font-weight: normal;
     font-size: 2rem;
-    font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+    font-family: "Raleway", sans-serif; }
   .pricing-table .description {
     background-color: #fff;
     padding: 0.9375rem;
@@ -4320,7 +4328,7 @@ dialog.full, .reveal-modal.full {
   padding: 0.875rem 0;
   list-style-type: none;
   list-style-position: outside;
-  font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+  font-family: "Raleway", sans-serif; }
   .side-nav li {
     margin: 0 0 0.4375rem 0;
     font-size: 0.875rem; }
@@ -4335,7 +4343,7 @@ dialog.full, .reveal-modal.full {
     .side-nav li.active > a:first-child:not(.button) {
       color: #eff1f0;
       font-weight: normal;
-      font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif; }
+      font-family: "Raleway", sans-serif; }
     .side-nav li.divider {
       border-top: 1px solid;
       height: 0;
@@ -4441,7 +4449,7 @@ dialog.full, .reveal-modal.full {
     display: inline;
     margin-left: 1rem;
     margin-bottom: 0.625rem;
-    font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: normal;
     font-size: 0.875rem;
     color: #999; }
@@ -4595,7 +4603,7 @@ table {
       background: #efefef;
       color: #222;
       padding: 1rem 2rem;
-      font-family: "Raleway", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+      font-family: "Raleway", sans-serif;
       font-size: 1rem; }
       .tabs dd > a:hover, .tabs .tab-title > a:hover {
         background: #e1e1e1; }
@@ -5236,7 +5244,7 @@ meta.foundation-mq-topbar {
     line-height: 2.8125rem;
     margin: 0; }
   .tab-bar h1, .tab-bar h2, .tab-bar h3, .tab-bar h4 {
-    font-size: 1.125rem; }
+    font-size: 0.3125rem; }
 
 .left-small {
   width: 2.8125rem;
@@ -5732,6 +5740,7 @@ th.hide-for-touch {
   .testemonial .testemonial_title {
     margin-top: 0px;
     margin-bottom: 0px;
+    color: white;
     min-height: 1em;
     height: 20%;
     max-height: 2em; }
@@ -5747,22 +5756,26 @@ th.hide-for-touch {
       height: inherit; }
     .testemonial_slick .slick-slider {
       margin-bottom: 0px; }
-  .testemonial .testemonial_quote:before {
-    content: '';
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle; }
-  .testemonial .testemonial_quote:before {
-    display: inline; }
-  .testemonial .testemonial_quote_container {
-    display: inline-block;
-    vertical-align: middle; }
-  .testemonial .testemonial_quote_text {
-    font-size: 3vw; }
-    .testemonial .testemonial_quote_text:before, .testemonial .testemonial_quote_text:after {
-      content: "\""; }
-  .testemonial .testemonial_quote_author {
-    font-size: 0.8vw; }
+  .testemonial .testemonial_quote {
+    color: white; }
+    .testemonial .testemonial_quote:before {
+      content: '';
+      display: inline-block;
+      height: 100%;
+      vertical-align: middle; }
+    .testemonial .testemonial_quote:before {
+      display: inline; }
+    .testemonial .testemonial_quote_container {
+      display: inline-block;
+      vertical-align: middle; }
+    .testemonial .testemonial_quote_text {
+      font-size: 2vw; }
+      .testemonial .testemonial_quote_text:before {
+        content: "\201C"; }
+      .testemonial .testemonial_quote_text:after {
+        content: "\201D"; }
+    .testemonial .testemonial_quote_author {
+      font-size: 0.8vw; }
   .testemonial .testemonial_button {
     font-size: 16.666vw;
     font-weight: 100;
