@@ -1885,7 +1885,5 @@ h6:before, h6:after {
   min-height: 90%; }
 
 .reasons_reason_number {
-  border-radius: 1000px;
-  border: black 1px solid;
   display: inline-block;
   padding: 0.98em 1.4em; }

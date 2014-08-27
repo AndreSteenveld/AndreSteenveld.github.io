@@ -2399,7 +2399,7 @@ meta.foundation-mq-topbar {
         height: 34px;
         line-height: 33px;
         padding: 0 58.33333px 0 33.33333px;
-        color: #fff;
+        color: #616E72;
         position: relative; }
         .top-bar .toggle-topbar.menu-icon a span::after {
           content: "";
@@ -2409,12 +2409,12 @@ meta.foundation-mq-topbar {
           top: 50%;
           margin-top: -8px;
           right: 33.33333px;
-          -webkit-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
-                  box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+          -webkit-box-shadow: 0 0px 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000;
+                  box-shadow: 0 0px 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000;
           width: 16px; }
         .top-bar .toggle-topbar.menu-icon a span:hover:after {
-          -webkit-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
-                  box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff; }
+          -webkit-box-shadow: 0 0px 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000;
+                  box-shadow: 0 0px 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000; }
   .top-bar.expanded {
     height: auto;
     background: transparent; }
@@ -2452,7 +2452,7 @@ meta.foundation-mq-topbar {
       color: #616E72;
       padding: 12px 0 12px 0;
       padding-left: 33.33333px;
-      font-family: "ZMGXRC+Arimo", Arimo, Arial, Helvetica, sans-serif;
+      font-family: "Raleway", sans-serif;
       font-size: 1.25rem;
       font-weight: normal;
       text-transform: none; }
@@ -2763,10 +2763,8 @@ meta.foundation-mq-topbar {
     clip: auto;
     position: absolute !important; } }
 
-.navigation {
-  min-height: 100px; }
-  .navigation * {
-    text-transform: uppercase; }
+.navigation .top-bar-section {
+  z-index: 100; }
 
 /* Standard Forms */
 form {
@@ -4218,7 +4216,7 @@ label.error {
   width: 100%;
   font-size: 0;
   display: inline-block;
-  background: #30343D; }
+  background: #333; }
   .icon-bar > * {
     text-align: center;
     font-size: 1rem;
@@ -4265,7 +4263,7 @@ label.error {
       width: 1.875rem;
       height: 1.875rem; }
   .icon-bar > *:hover {
-    background: #30343D; }
+    background: #333; }
   .icon-bar > * label {
     color: #fff; }
   .icon-bar > * i {
@@ -6053,8 +6051,6 @@ th.hide-for-touch {
       vertical-align: middle; }
 
 .reasons_reason_number {
-  border-radius: 1000px;
-  border: black 1px solid;
   display: inline-block;
   padding: 0.98em 1.4em; }
 
@@ -6092,14 +6088,43 @@ th.hide-for-touch {
 
 .reasons {
   background-color: #30343D; }
-  .reasons .reasons_reason_number, .reasons .reasons_reason_subTitle, .reasons .reasons_reason_reason {
-    border-color: #A2AEAA;
-    color: #A2AEAA !important; }
-  .reasons .reasons_reason_subTitle {
+  .reasons * {
+    color: #A2AEAA; }
+  .reasons .reasons_reason_number {
+    border-radius: 1000px;
+    border: #A2AEAA 1px solid; }
+  .reasons .reasons_reason_subTitle, .reasons .reasons_reason_number {
     font-family: "Libre Baskerville", serif;
     font-style: italic; }
   .reasons .reasons_button {
-    background-color: #a4b0ac; }
+    border-style: solid;
+    border-width: 0px;
+    cursor: pointer;
+    font-family: "Raleway", sans-serif;
+    font-weight: normal;
+    line-height: normal;
+    margin: 0 0 1.25rem;
+    position: relative;
+    text-decoration: none;
+    text-align: center;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    display: inline-block;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 1.0625rem;
+    padding-left: 2rem;
+    font-size: 1rem;
+    background-color: #a4b0ac;
+    border-color: #7f908b;
+    color: #fff;
+    -webkit-transition: background-color 300ms ease-out;
+            transition: background-color 300ms ease-out;
+    color: #30343D; }
+    .reasons .reasons_button:hover, .reasons .reasons_button:focus {
+      background-color: #7f908b; }
+    .reasons .reasons_button:hover, .reasons .reasons_button:focus {
+      color: #fff; }
 
 .information {
   background-color: #a4b0ac; }
@@ -6134,8 +6159,7 @@ th.hide-for-touch {
       text-shadow: #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px; }
 
 .packages .package {
-  padding: 1.125rem 0px;
-  border-top: solid 1px #a4b0ac; }
+  padding: 1.125rem 0px; }
   .packages .package_subTitle {
     font-family: "Libre Baskerville", serif;
     font-style: italic;

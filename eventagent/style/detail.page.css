@@ -2158,7 +2158,7 @@ meta.foundation-mq-topbar {
         height: 34px;
         line-height: 33px;
         padding: 0 58.33333px 0 33.33333px;
-        color: #fff;
+        color: #616E72;
         position: relative; }
         .top-bar .toggle-topbar.menu-icon a span::after {
           content: "";
@@ -2168,12 +2168,12 @@ meta.foundation-mq-topbar {
           top: 50%;
           margin-top: -8px;
           right: 33.33333px;
-          -webkit-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
-                  box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
+          -webkit-box-shadow: 0 0px 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000;
+                  box-shadow: 0 0px 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000;
           width: 16px; }
         .top-bar .toggle-topbar.menu-icon a span:hover:after {
-          -webkit-box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff;
-                  box-shadow: 0 0px 0 1px #fff, 0 7px 0 1px #fff, 0 14px 0 1px #fff; }
+          -webkit-box-shadow: 0 0px 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000;
+                  box-shadow: 0 0px 0 1px #000, 0 7px 0 1px #000, 0 14px 0 1px #000; }
   .top-bar.expanded {
     height: auto;
     background: transparent; }
@@ -2211,7 +2211,7 @@ meta.foundation-mq-topbar {
       color: #616E72;
       padding: 12px 0 12px 0;
       padding-left: 33.33333px;
-      font-family: "ZMGXRC+Arimo", Arimo, Arial, Helvetica, sans-serif;
+      font-family: "Raleway", sans-serif;
       font-size: 1.25rem;
       font-weight: normal;
       text-transform: none; }
@@ -2522,10 +2522,8 @@ meta.foundation-mq-topbar {
     clip: auto;
     position: absolute !important; } }
 
-.navigation {
-  min-height: 100px; }
-  .navigation * {
-    text-transform: uppercase; }
+.navigation .top-bar-section {
+  z-index: 100; }
 
 /* Standard Forms */
 form {
@@ -4250,7 +4248,7 @@ label.error {
   width: 100%;
   font-size: 0;
   display: inline-block;
-  background: #30343D; }
+  background: #333; }
   .icon-bar > * {
     text-align: center;
     font-size: 1rem;
@@ -4297,7 +4295,7 @@ label.error {
       width: 1.875rem;
       height: 1.875rem; }
   .icon-bar > *:hover {
-    background: #30343D; }
+    background: #333; }
   .icon-bar > * label {
     color: #fff; }
   .icon-bar > * i {

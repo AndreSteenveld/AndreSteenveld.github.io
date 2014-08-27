@@ -11,7 +11,7 @@
         
         <link rel="stylesheet" href="./vendor/foundation/css/normalize.css">
         
-    <!--script src="./vendor/modernizr/modernizr.js"></script-->
+    <script src="./vendor/modernizr/modernizr.js"></script>
 
     <link rel="stylesheet" href="./style/wizard.04.summary.page.css">
 
@@ -23,17 +23,18 @@
         <!-- master#body -->
         
     <!-- foundation.master#header -->
-            <header id="navigation" class="row">
+            <header id="navigation" class="row-full">
     
             <div class="contain-to-grid">
             
                 
-    <nav class="top-bar navigation" data-topbar>
+    <nav class="top-bar navigation" data-topbar role="navigation">
 
         <ul class="title-area navigation_title">
             <li class="name">
                 <h1><a href="#">Eventagent</a></h1>
             </li>    
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
         
         <section class="top-bar-section">
@@ -83,7 +84,7 @@
         <div class="small-8 columns page_content" data-equalizer-watch> 
     <h1>Package title</h1>
 
-    <h4>Event</h4>
+    <h2>Event</h2>
     <div class="row">
         <span class="small-12 medium-4 columns">Event</span>
         <span class="small-12 medium-8 columns">Eventment title</span>  
@@ -95,7 +96,7 @@
     
     <hr/>
     
-    <h4>Accomodations</h4>
+    <h2>Accomodations</h2>
     <div class="row">
         <span class="small-12 medium-4 columns">Arrival date</span>
         <span class="small-12 medium-8 columns">01-01-2015 - full date</span>  
@@ -114,7 +115,7 @@
     </div>
     
     <hr/>
-    <h4>Extras</h4>
+    <h2>Extras</h2>
     <div class="row">
         <span class="small-12 medium-4 columns">Shared limo ride</span>
         <span class="small-12 medium-8 columns">1x</span>  
@@ -125,7 +126,7 @@
     </div>
     
     <hr>
-    <h4>Personal info</h4>
+    <h2>Personal info</h2>
     <div class="row">
         <span class="small-12 medium-4 columns">Initials</span>
         <span class="small-12 medium-8 columns">A</span>  
@@ -166,10 +167,7 @@
             <input name="summary.accept" type="hidden" value="false">
             <input name="summary.accept" type="checkbox" value="true"> 
             I agree with the <a href="#">general conditions</a>
-        </label>
-        
-        <br/>
-        
+        </label><br/>
         After payment you will recieve your confirmation imediatly
     </p>
 </div>
@@ -290,7 +288,7 @@
         var require = { 
                 callback: function( ){ 
                     require(
-                        [ "jquery", "scripts/state", "foundation/equalizer", "scripts/cart", "domReady!" ],
+                        [ "jquery", "scripts/state", "foundation/topbar", "foundation/equalizer", "scripts/cart", "domReady!" ],
                         function( $ ){ $( document ).foundation( ); }
                     ); 
                 } 

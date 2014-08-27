@@ -11,7 +11,7 @@
         
         <link rel="stylesheet" href="./vendor/foundation/css/normalize.css">
         
-    <!--script src="./vendor/modernizr/modernizr.js"></script-->
+    <script src="./vendor/modernizr/modernizr.js"></script>
     
     <link rel="stylesheet" href="./style/impression.page.css">
     
@@ -23,17 +23,18 @@
         <!-- master#body -->
         
     <!-- foundation.master#header -->
-            <header id="navigation" class="row">
+            <header id="navigation" class="row-full">
     
             <div class="contain-to-grid">
             
                 
-    <nav class="top-bar navigation" data-topbar>
+    <nav class="top-bar navigation" data-topbar role="navigation">
 
         <ul class="title-area navigation_title">
             <li class="name">
                 <h1><a href="#">Eventagent</a></h1>
             </li>    
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
         </ul>
         
         <section class="top-bar-section">
@@ -145,9 +146,8 @@
     
     <section class="row-full reasons">
       
-       <h1 class="reasond_title">4 reasons why book with Sensation travel?</h1> 
-        
         <div class="small-12 columns row small-centered" data-equalizer>
+            <h1 class="reasons_title">4 reasons why book with Sensation travel?</h1> 
             
     <div class="small-6 medium-3 columns reasons_reason">
         <h2 class="reasons_reason_number"  >1</h2>    
@@ -182,7 +182,7 @@
 
         </div>
         
-        <a href="javascript:void(0);" class="button small-3 small-centered columns reasons_button">To packages</a>
+        <a href="javascript:void(0);" class="small-3 small-centered columns reasons_button">To packages</a>
                 
     </section>
 
@@ -195,7 +195,7 @@
         <h6 class="packages_header text-center">Products</h6>            
         <h1 class="packages_title text-center">Packages</h1>
             
-        
+        <!-- --><hr/>
 <div class="package row small-12 small-centered columns">
     <div class="small-8 columns package_info">
         <h2 class="package_info_title">Hoteltitle</h2>
@@ -227,8 +227,7 @@
     
 </div>
 
-
-
+<hr/>
 <div class="package row small-12 small-centered columns">
     <div class="small-8 columns package_info">
         <h2 class="package_info_title">Hoteltitle</h2>
@@ -260,8 +259,7 @@
     
 </div>
 
-
-
+<hr/>
 <div class="package row small-12 small-centered columns">
     <div class="small-8 columns package_info">
         <h2 class="package_info_title">Hoteltitle</h2>
@@ -293,8 +291,7 @@
     
 </div>
 
-
-
+<hr/>
 <div class="package row small-12 small-centered columns">
     <div class="small-8 columns package_info">
         <h2 class="package_info_title">Hoteltitle</h2>
@@ -326,8 +323,7 @@
     
 </div>
 
-
-
+<hr/>
 <div class="package row small-12 small-centered columns">
     <div class="small-8 columns package_info">
         <h2 class="package_info_title">Hoteltitle</h2>
@@ -359,8 +355,7 @@
     
 </div>
 
-
-
+<hr/>
 <div class="package row small-12 small-centered columns">
     <div class="small-8 columns package_info">
         <h2 class="package_info_title">Hoteltitle</h2>
@@ -570,7 +565,7 @@
     <script> 
         var require = { 
                 callback: function( ){ 
-                    require([ "jquery", "scripts/slick", "foundation/equalizer" ], function( $ ){
+                    require([ "jquery", "scripts/slick", "foundation/equalizer", "foundation/topbar" ], function( $ ){
                         
                         $( document ).foundation( );        
                         
