@@ -172,57 +172,64 @@
     <!-- foundation.master#footer -->
         
         
+                
+                
                         
                 
         
+    <footer id="footer" class="footer row-full">
     
-    
-    
-    
-    <footer id="footer" class="footer icon-bar four-up">
-    
-            
-    <span class="item">
-        <i class="fi-telephone"></i>
-        <label>+31 6 52 382 328</label>
-    </span>
+        <div class="small-12 colunms centered row-wide">
+        
+                
+    <div class="footer_item small-3 columns">
+        <i class="footer_item_charachter fi-telephone"></i>
+        <div class="footer_item_label">            <p><a href="tel://+31652382328">+31 6 52 382 328</a></p>
+        </div>
+    </div>
 
 
     
-    <span class="item">
-        <i class="fi-at-sign"></i>
-        <label>travel@eventagent.nl</label>
-    </span>
+    <div class="footer_item small-3 columns">
+        <i class="footer_item_charachter fi-at-sign"></i>
+        <div class="footer_item_label">            <p><a href="mailto:travel@eventagent.nl">travel@eventagent.nl</a></p>
+        </div>
+    </div>
 
 
     
-    <span class="item">
-        <i class="fi-info"></i>
-        <label>            <ul>
+    <div class="footer_item small-3 columns">
+        <i class="footer_item_charachter fi-info"></i>
+        <div class="footer_item_label">            <ul>
                 <li><a href="#">Disclaimer</a></li>    
                 <li><a href="#">Privacy policy</a></li>
                 <li><a href="#">Legal</a></li>
             </ul>
-        </label>
-    </span>
+        </div>
+    </div>
 
 
     
-    <span class="item">
-        <i class="fi-mail"></i>
-        <label> 
-            <div class="row collapse">
-                <div class="small-10 columns">
-                    <input type="text" placeholder="Your email address">
+    <div class="footer_item small-3 columns">
+        <i class="footer_item_charachter fi-mail"></i>
+        <div class="footer_item_label"> 
+            <form method="POST" action="./email" target="email_frame">
+                <div class="row collapse">
+                    <div class="small-10 columns">
+                        <input type="text" name="email" class="email_input" placeholder="Your email address">
+                    </div>
+                    <div class="small-2 columns">
+                        <button type="submit" class="button postfix email_submit">OK</button>
+                    </div>
                 </div>
-                <div class="small-2 columns">
-                    <button type="submit" class="button postfix">OK</button>
-                </div>
-            </div>
-        </label>
-    </span>
+            </form>                
+            <iframe src="about:blank" id="email_frame" frameborder="0"></iframe>
+        </div>
+    </div>
 
+    
             
+        </div>        
     
     </footer>
 
