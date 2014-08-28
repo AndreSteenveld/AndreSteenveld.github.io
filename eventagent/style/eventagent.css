@@ -1876,10 +1876,3 @@ h6:before, h6:after {
     display: table; }
   .row-full:after {
     clear: both; }
-
-#navigation {
-  height: 10%;
-  min-height: 100px; }
-
-#content {
-  min-height: 90%; }

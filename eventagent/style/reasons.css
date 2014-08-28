@@ -1877,13 +1877,6 @@ h6:before, h6:after {
   .row-full:after {
     clear: both; }
 
-#navigation {
-  height: 10%;
-  min-height: 100px; }
-
-#content {
-  min-height: 90%; }
-
 .reasons_reason_number {
   display: inline-block;
   padding: 0.98em 1.4em; }
