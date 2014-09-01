@@ -2221,14 +2221,16 @@ h6:before, h6:after {
         -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
-        font-weight: 900;
-        font-size: 5em; }
+        font-weight: 200;
+        font-size: 5.625rem; }
       .grid .grid_panel .grid_panel_link > .grid_panel_description {
         color: white;
         visibility: hidden;
         position: absolute;
         bottom: 0px;
         left: 0px; }
+        .grid .grid_panel .grid_panel_link > .grid_panel_description * {
+          color: white; }
       .grid .grid_panel .grid_panel_link:hover:after {
         display: block; }
       .grid .grid_panel .grid_panel_link:hover {

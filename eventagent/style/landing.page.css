@@ -3191,14 +3191,16 @@ label.error {
         -webkit-transform: translateY(-50%);
             -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
-        font-weight: 900;
-        font-size: 5em; }
+        font-weight: 200;
+        font-size: 5.625rem; }
       .grid .grid_panel .grid_panel_link > .grid_panel_description {
         color: white;
         visibility: hidden;
         position: absolute;
         bottom: 0px;
         left: 0px; }
+        .grid .grid_panel .grid_panel_link > .grid_panel_description * {
+          color: white; }
       .grid .grid_panel .grid_panel_link:hover:after {
         display: block; }
       .grid .grid_panel .grid_panel_link:hover {
@@ -3208,3 +3210,14 @@ label.error {
       .grid .grid_panel .grid_panel_link:hover ~ .grid_panel_description {
         visibility: hidden; }
 
+.landing_title {
+  background-color: #30343D;
+  color: white; }
+  .landing_title h1 {
+    font-size: 3.125rem;
+    font-weight: 300; }
+    .landing_title h1:before, .landing_title h1:after {
+      content: "\2013"; }
+
+.grid_panel_description h2, .grid_panel_description h3 {
+  font-size: 0.9375rem; }
