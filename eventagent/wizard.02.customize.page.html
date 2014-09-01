@@ -99,7 +99,24 @@
             
             <p>
                 <span class>50.00</span>
-                <label><input type="checkbox" name="extra[]" value='{"price":50,"description":"The first extra"}'>Select</label>
+                <label>
+                    <input 
+                        type="checkbox" 
+                        name="extra[][id]" 
+                        
+                        value='{"price":50,"description":"The first extra"}'
+                    >Select
+                </label>
+                <label>
+                    <input 
+                        type="number" 
+                        name="extra[][amount]" 
+                        
+                        min="1" 
+                        max="1" 
+                        
+                        value="1"/>
+                </label>
             </p>
             
         </div>
@@ -124,7 +141,24 @@
             
             <p>
                 <span class>150.00</span>
-                <label><input type="checkbox" name="extra[]" value='{"price":150,"description":"The second extra"}'>Select</label>
+                <label>
+                    <input 
+                        type="checkbox" 
+                        name="extra[][id]" 
+                        
+                        value='{"price":150,"description":"The second extra"}'
+                    >Select
+                </label>
+                <label>
+                    <input 
+                        type="number" 
+                        name="extra[][amount]" 
+                        
+                        min="1" 
+                        max="1" 
+                        
+                        value="1"/>
+                </label>
             </p>
             
         </div>
@@ -149,7 +183,24 @@
             
             <p>
                 <span class>300.00</span>
-                <label><input type="checkbox" name="extra[]" value='{"price":300,"description":"The third extra"}'>Select</label>
+                <label>
+                    <input 
+                        type="checkbox" 
+                        name="extra[][id]" 
+                        
+                        value='{"price":300,"description":"The third extra"}'
+                    >Select
+                </label>
+                <label>
+                    <input 
+                        type="number" 
+                        name="extra[][amount]" 
+                        
+                        min="1" 
+                        max="1" 
+                        
+                        value="1"/>
+                </label>
             </p>
             
         </div>
@@ -210,10 +261,10 @@
         
     <footer id="footer" class="footer row-full">
     
-        <div class="small-12 colunms centered row-wide">
+        <div class="small-12 colunms row-wide">
         
                 
-    <div class="footer_item small-3 columns">
+    <div class="footer_item small-12 medium-3 columns">
         <i class="footer_item_charachter fi-telephone"></i>
         <div class="footer_item_label">            <p><a href="tel://+31652382328">+31 6 52 382 328</a></p>
         </div>
@@ -221,7 +272,7 @@
 
 
     
-    <div class="footer_item small-3 columns">
+    <div class="footer_item small-12 medium-3 columns">
         <i class="footer_item_charachter fi-at-sign"></i>
         <div class="footer_item_label">            <p><a href="mailto:travel@eventagent.nl">travel@eventagent.nl</a></p>
         </div>
@@ -229,7 +280,7 @@
 
 
     
-    <div class="footer_item small-3 columns">
+    <div class="footer_item small-12 medium-3 columns">
         <i class="footer_item_charachter fi-info"></i>
         <div class="footer_item_label">            <ul>
                 <li><a href="#">Disclaimer</a></li>    
@@ -241,7 +292,7 @@
 
 
     
-    <div class="footer_item small-3 columns">
+    <div class="footer_item small-12 medium-3 columns">
         <i class="footer_item_charachter fi-mail"></i>
         <div class="footer_item_label"> 
             <form method="POST" action="./email" target="email_frame">

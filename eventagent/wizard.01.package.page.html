@@ -86,35 +86,47 @@
     <h1>Package name</h1>
     
     <div class="row">
+        
         <label class="small-6 columns end">
             Number of persons
-            <input name="booking.noOfPeople" type="number" min="1" max="50" value="1"/>    
+            <input name="booking_person" type="number" min="1" max="50" value="1"/>    
         </label>
     </div>
    
     <div class="row">
         <label class="small-6 columns end">
             Event date
-            <select name="booking.eventDate">
-                <option>Friday 17 October 2012</option>    
-                <option>Saturday 18 October 2012</option>    
-                <option>Sunday 19 October 2012</option>    
+            <select name="booking_date">
+                <option value="17-10-2012">Friday 17 October 2012</option>    
+                <option value="18-10-2012">Saturday 18 October 2012</option>    
+                <option value="19-10-2012">Sunday 19 October 2012</option>    
             </select>
         </label>
+    </div>
+    
+    <div class="row">
+        <label class="small-6 columns end">
+            Ticket
+            <select name="ticket">
+                <option value="231">No additional ticket</option>    
+                <option value="229">Normal ticket</option>    
+                <option value="230">VIP ticket</option>    
+            </select>
+        </label>            
     </div>
     
     <div class="row">       
         <label class="small-6 columns">
             Arrival date
-            <select name="booking.arrivalDate">
-                <option>Saturday 18 October 2012</option>    
+            <select name="date_from">
+                <option value="18-10-2012">Saturday 18 October 2012</option>    
             </select>
         </label>
    
         <label class="small-6 columns end">
             Depature date
-            <select name="booking.departureDate">
-                <option>Sunday 19 October 2012</option>    
+            <select name="date_to">
+                <option value="19-10-2012">Sunday 19 October 2012</option>    
             </select>            
         </label>
     </div>
@@ -122,10 +134,10 @@
     <div class="row">
         <label class="small-6 columns end">
             Room layout
-            <select name="booking.roomLayout">
-                <option>Feng shui</option>    
-                <option>Round</option>    
-                <option>Glued to the cieling</option>                    
+            <select name="room_layout">
+                <option value="1">Feng shui</option>    
+                <option value="3">Round</option>    
+                <option value="4">Glued to the cieling</option>                    
             </select>
         </label>
     </div>
@@ -180,10 +192,10 @@
         
     <footer id="footer" class="footer row-full">
     
-        <div class="small-12 colunms centered row-wide">
+        <div class="small-12 colunms row-wide">
         
                 
-    <div class="footer_item small-3 columns">
+    <div class="footer_item small-12 medium-3 columns">
         <i class="footer_item_charachter fi-telephone"></i>
         <div class="footer_item_label">            <p><a href="tel://+31652382328">+31 6 52 382 328</a></p>
         </div>
@@ -191,7 +203,7 @@
 
 
     
-    <div class="footer_item small-3 columns">
+    <div class="footer_item small-12 medium-3 columns">
         <i class="footer_item_charachter fi-at-sign"></i>
         <div class="footer_item_label">            <p><a href="mailto:travel@eventagent.nl">travel@eventagent.nl</a></p>
         </div>
@@ -199,7 +211,7 @@
 
 
     
-    <div class="footer_item small-3 columns">
+    <div class="footer_item small-12 medium-3 columns">
         <i class="footer_item_charachter fi-info"></i>
         <div class="footer_item_label">            <ul>
                 <li><a href="#">Disclaimer</a></li>    
@@ -211,7 +223,7 @@
 
 
     
-    <div class="footer_item small-3 columns">
+    <div class="footer_item small-12 medium-3 columns">
         <i class="footer_item_charachter fi-mail"></i>
         <div class="footer_item_label"> 
             <form method="POST" action="./email" target="email_frame">

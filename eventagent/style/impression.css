@@ -1842,6 +1842,9 @@ th.hide-for-touch {
   .column.xxlarge-uncentered.opposite, .columns.xxlarge-uncentered.opposite {
     float: right; } }
 
+html, body {
+  min-width: 1.25rem; }
+
 h3, h6 {
   font-family: "Libre Baskerville", serif;
   font-style: italic; }
