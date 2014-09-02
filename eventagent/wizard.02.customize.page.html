@@ -28,7 +28,7 @@
             <div class="contain-to-grid">
             
                 
-    <nav class="top-bar navigation" data-topbar role="navigation">
+    <nav class="top-bar navigation" data-topbar role="navigation" data-options="is_hover: false">
 
         <ul class="title-area navigation_title">
             <li class="name">
@@ -40,7 +40,36 @@
         <section class="top-bar-section">
         
             <ul class="right">
-                <li><a href="#" class="navigation_button">Packages</a></li>    
+                <li class="has-dropdown">
+                    <a href="#" class="navigation_button">Packages</a>
+                    <div class="dropdown row">
+                        <form>
+                            <div class="small-6 columns">
+                                
+                                <label><input type="checkbox">Indoor dance</label>
+                                <label><input type="checkbox">Outdoor dance</label>
+                                <label><input type="checkbox">Concerts</label>
+                                <label><input type="checkbox">Theater</label>
+                                <label><input type="checkbox">Sports</label>                        
+                            
+                            </div> 
+                            
+                            <div class="small-6 columns">
+                                
+                                <label><input type="checkbox">Bus package</label>
+                                <label><input type="checkbox">Hotel</label>
+                                <label><input type="checkbox">Camping</label>
+                                <label><input type="checkbox">Tickets only</label>
+                                <label><input type="checkbox">Diner and ticket</label>                        
+                                <label><input type="checkbox">VIP</label>                        
+                            
+                            </div> 
+                            
+                            <button type="submit" class="small-12 columns button">Filter</button>
+                        </form>                        
+                                                
+                    </div>                    
+                </li>    
                 <li><a href="#" class="navigation_button">Why book?</a></li>
                 <li><a href="#" class="navigation_button">Tell me more</a></li>                
             </ul>    
@@ -263,27 +292,33 @@
         
     <footer id="footer" class="footer row-full">
     
-        <div class="small-12 colunms row-wide">
+        <div class="small-12 colunms row">
         
                 
-    <div class="footer_item small-12 medium-3 columns">
-        <i class="footer_item_charachter fi-telephone"></i>
+    <div class="footer_item image_item small-12 medium-3 columns phone">
+        <div class="footer_item_wrapper">
+            <img class="footer_item_image" src="./content/footer/phone.png">
+        </div>
         <div class="footer_item_label">            <p><a href="tel://+31652382328">+31 6 52 382 328</a></p>
         </div>
     </div>
 
 
     
-    <div class="footer_item small-12 medium-3 columns">
-        <i class="footer_item_charachter fi-at-sign"></i>
+    <div class="footer_item image_item small-12 medium-3 columns email">
+        <div class="footer_item_wrapper">
+            <img class="footer_item_image" src="./content/footer/email.png">
+        </div>
         <div class="footer_item_label">            <p><a href="mailto:travel@eventagent.nl">travel@eventagent.nl</a></p>
         </div>
     </div>
 
 
     
-    <div class="footer_item small-12 medium-3 columns">
-        <i class="footer_item_charachter fi-info"></i>
+    <div class="footer_item image_item small-12 medium-3 columns info">
+        <div class="footer_item_wrapper">
+            <img class="footer_item_image" src="./content/footer/info.png">
+        </div>
         <div class="footer_item_label">            <ul>
                 <li><a href="#">Disclaimer</a></li>    
                 <li><a href="#">Privacy policy</a></li>
@@ -294,8 +329,10 @@
 
 
     
-    <div class="footer_item small-12 medium-3 columns">
-        <i class="footer_item_charachter fi-mail"></i>
+    <div class="footer_item image_item small-12 medium-3 columns mailinglist">
+        <div class="footer_item_wrapper">
+            <img class="footer_item_image" src="./content/footer/mailinglist.png">
+        </div>
         <div class="footer_item_label"> 
             <form method="POST" action="./email" target="email_frame">
                 <div class="row collapse">
@@ -307,7 +344,7 @@
                     </div>
                 </div>
             </form>                
-            <iframe src="about:blank" id="email_frame" frameborder="0"></iframe>
+            <iframe src="about:blank" id="email_frame" name="email_frame" frameborder="0"></iframe>
         </div>
     </div>
 

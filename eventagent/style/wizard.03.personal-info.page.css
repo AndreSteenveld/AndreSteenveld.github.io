@@ -756,10 +756,10 @@ th.hide-for-touch {
     display: table; }
   .row:after {
     clear: both; }
-  .row.collapse > .column, .row.collapse > .footer .row.footer_item, .footer .row.collapse > .row.footer_item, .row.collapse > .columns, .row.collapse > .footer .row.footer_item, .footer .row.collapse > .row.footer_item {
+  .row.collapse > .column, .row.collapse > .columns {
     padding-left: 0;
     padding-right: 0; }
-  .row.collapse .row, .row.collapse .footer .row.footer_item, .footer .row.collapse .row.footer_item {
+  .row.collapse .row {
     margin-left: 0;
     margin-right: 0; }
   .row .row {
@@ -774,14 +774,14 @@ th.hide-for-touch {
       display: table; }
     .row .row:after {
       clear: both; }
-    .row .row.collapse, .row .footer .row.footer_item, .footer .row .row.footer_item {
+    .row .row.collapse {
       width: auto;
       margin: 0;
       max-width: none; }
-      .row .row.collapse:before, .row .footer .row.footer_item:before, .footer .row .row.footer_item:before, .row .row.collapse:after, .row .footer .row.footer_item:after, .footer .row .row.footer_item:after {
+      .row .row.collapse:before, .row .row.collapse:after {
         content: " ";
         display: table; }
-      .row .row.collapse:after, .row .footer .row.footer_item:after, .footer .row .row.footer_item:after {
+      .row .row.collapse:after {
         clear: both; }
 
 .column, .columns {
@@ -2571,11 +2571,11 @@ form .row .row {
   margin: 0 -0.5rem; }
   form .row .row .column, form .row .row .columns {
     padding: 0 0.5rem; }
-  form .row .row.collapse, form .row .footer .row.footer_item, .footer form .row .row.footer_item {
+  form .row .row.collapse {
     margin: 0; }
-    form .row .row.collapse .column, form .row .row.collapse .footer .row.footer_item, .footer form .row .row.collapse .row.footer_item, form .row .row.collapse .columns, form .row .row.collapse .footer .row.footer_item, .footer form .row .row.collapse .row.footer_item {
+    form .row .row.collapse .column, form .row .row.collapse .columns {
       padding: 0; }
-    form .row .row.collapse input, form .row .row.collapse .footer .row.footer_item, .footer form .row .row.collapse .row.footer_item {
+    form .row .row.collapse input {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0; }
 form .row input.column, form .row input.columns, form .row textarea.column, form .row textarea.columns {
@@ -2852,76 +2852,46 @@ label.error {
       display: block; }
 
 .footer {
-  padding: 1.875rem;
   color: #A2AEAA;
   background-color: #30343D; }
-  @media only screen and (max-width: 0em 30rem) {
-    .footer .footer_item ul {
-      margin-top: 0.78125rem; }
-      .footer .footer_item ul li {
-        float: none; }
-      .footer .footer_item ul li:first-child {
-        border-left: solid 1px #A2AEAA;
-        padding-left: 0.5ch;
-        margin-left: 0.5ch; } }
-  @media only screen and (max-width: 40em) {
-    .footer .footer_item_charachter {
-      float: left; }
-    .footer .footer_item_label {
-      text-align: left;
-      float: left;
-      display: inline-block;
-      height: 100%;
-      padding-left: 0.5ch;
-      width: 80%; }
-      .footer .footer_item_label p {
-        line-height: 3.125rem; }
-      .footer .footer_item_label ul {
-        margin: 0 auto 1.0625rem auto;
-        margin-left: -1.375rem;
-        margin-right: 0;
-        padding: 0;
-        list-style: none;
-        overflow: hidden;
-        margin-top: 0.78125rem; }
-        .footer .footer_item_label ul > li {
-          list-style: none;
-          float: left;
-          margin-left: 1.375rem;
-          display: block; }
-          .footer .footer_item_label ul > li > * {
-            display: block; }
-        .footer .footer_item_label ul li {
-          border-left: solid 1px #A2AEAA;
-          padding-left: 0.5ch;
-          margin-left: 0.5ch; }
-        .footer .footer_item_label ul li:first-child {
-          border-left: none;
-          padding-left: 0;
-          margin-left: 0; }
-      .footer .footer_item_label form {
-        margin-top: 0.39063rem; } }
-  @media only screen and (min-width:40.063em) { }
-  .footer .footer_item_charachter {
-    display: inline-block;
-    font-size: 3.125rem;
-    min-height: 4.375rem; }
-  .footer .footer_item_image {
-    height: 3.125rem; }
-  .footer .footer_item_label form .email_input, .footer .footer_item_label form .email_submit {
-    background-color: #464d5a;
-    color: inherit; }
-  .footer .footer_item_label form .email_input {
-    border: none;
-    font-family: "Libre Baskerville", serif;
-    font-style: italic; }
-  .footer .footer_item #email_frame {
-    height: 0px;
-    width: 0px; }
-  .footer .footer_item_label ul {
-    margin-left: 0px; }
-    .footer .footer_item_label ul li {
-      list-style-type: none; }
+  .footer .footer_item *:hover {
+    color: white; }
+  @media only screen and (min-width:40.063em) {
+    .footer {
+      min-height: 250px;
+      max-height: 250px; }
+      .footer .footer_item {
+        height: 250px; }
+        .footer .footer_item_character, .footer .footer_item_wrapper {
+          position: relative;
+          height: 112.5px;
+          width: 100%; }
+        .footer .footer_item.image_item .footer_item_image {
+          height: 50px;
+          width: 50px;
+          margin-top: 1.95313rem; }
+        .footer .footer_item.phone .footer_item_label {
+          font-size: 1.25rem; }
+        .footer .footer_item.info ul {
+          margin-left: 0px; }
+          .footer .footer_item.info ul li {
+            list-style-type: none; }
+        .footer .footer_item.mailinglist iframe {
+          height: 0px;
+          width: 0px; }
+        .footer .footer_item.mailinglist form .email_input, .footer .footer_item.mailinglist form .email_submit {
+          background-color: #464d5a;
+          color: inherit; }
+        .footer .footer_item.mailinglist form .email_submit {
+          border-left: 1px solid #30343D;
+          font-weight: bolder; }
+        .footer .footer_item.mailinglist form .email_input:focus {
+          -webkit-box-shadow: none;
+                  box-shadow: none; }
+        .footer .footer_item.mailinglist form .email_input {
+          border: none;
+          font-family: "Libre Baskerville", serif;
+          font-style: italic; } }
 
 /* Pricing Tables */
 .pricing-table {
