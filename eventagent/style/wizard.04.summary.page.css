@@ -260,10 +260,10 @@ h3 {
   font-size: 0.625rem; }
 
 h4 {
-  font-size: 0.125rem; }
+  font-size: 0.6875rem; }
 
 h5 {
-  font-size: 0.3125rem; }
+  font-size: 1rem; }
 
 h6 {
   font-size: 1rem; }
@@ -415,9 +415,9 @@ blockquote, blockquote p {
   h3 {
     font-size: 0.9375rem; }
   h4 {
-    font-size: 0.4375rem; }
+    font-size: 1rem; }
   h5 {
-    font-size: 0.3125rem; }
+    font-size: 1rem; }
   h6 {
     font-size: 1rem; } }
 
@@ -1846,12 +1846,30 @@ th.hide-for-touch {
 html, body {
   min-width: 1.25rem; }
 
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+h2 {
+  font-weight: bold; }
+
 h3, h6 {
   font-family: "Libre Baskerville", serif;
   font-style: italic; }
 
-h6:before, h6:after {
-  content: "\2013"; }
+h5 {
+  font-weight: bold; }
+
+h6 {
+  margin-top: 50px; }
+
+h6:before {
+  content: "\2013 "; }
+
+h6:after {
+  content: " \2013"; }
 
 .row-wide {
   width: 100%;
@@ -2854,6 +2872,9 @@ label.error {
 .footer {
   color: #A2AEAA;
   background-color: #30343D; }
+  .footer .footer_item * {
+    color: #A2AEAA;
+    font-weight: 200; }
   .footer .footer_item *:hover {
     color: white; }
   @media only screen and (min-width:40.063em) {
@@ -2869,7 +2890,7 @@ label.error {
         .footer .footer_item.image_item .footer_item_image {
           height: 50px;
           width: 50px;
-          margin-top: 1.95313rem; }
+          margin-top: 2.26563rem; }
         .footer .footer_item.phone .footer_item_label {
           font-size: 1.25rem; }
         .footer .footer_item.info ul {

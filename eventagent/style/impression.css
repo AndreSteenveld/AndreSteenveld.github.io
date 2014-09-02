@@ -259,10 +259,10 @@ h3 {
   font-size: 0.625rem; }
 
 h4 {
-  font-size: 0.125rem; }
+  font-size: 0.6875rem; }
 
 h5 {
-  font-size: 0.3125rem; }
+  font-size: 1rem; }
 
 h6 {
   font-size: 1rem; }
@@ -414,9 +414,9 @@ blockquote, blockquote p {
   h3 {
     font-size: 0.9375rem; }
   h4 {
-    font-size: 0.4375rem; }
+    font-size: 1rem; }
   h5 {
-    font-size: 0.3125rem; }
+    font-size: 1rem; }
   h6 {
     font-size: 1rem; } }
 
@@ -1845,12 +1845,30 @@ th.hide-for-touch {
 html, body {
   min-width: 1.25rem; }
 
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: bold; }
+
+h2 {
+  font-weight: bold; }
+
 h3, h6 {
   font-family: "Libre Baskerville", serif;
   font-style: italic; }
 
-h6:before, h6:after {
-  content: "\2013"; }
+h5 {
+  font-weight: bold; }
+
+h6 {
+  margin-top: 50px; }
+
+h6:before {
+  content: "\2013 "; }
+
+h6:after {
+  content: " \2013"; }
 
 .row-wide {
   width: 100%;
