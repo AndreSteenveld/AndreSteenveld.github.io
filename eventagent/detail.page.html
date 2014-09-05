@@ -136,7 +136,7 @@
         
             <div class="small-12 medium-8 columns">
                 <h2 class="detail_title">The package title</h2>
-                <h3 class="detail_subTitle">Awesome detail sub title</h3>
+                <h3 class="detail_subTitle">Awesome detail sub title <a href="#" class="detail_show_map">Show on map</a></h3>
                 
                 <div class="detail_description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend mauris sit amet eros cursus, id tristique libero eleifend. Ut finibus, ex sit amet pretium condimentum, odio metus ornare lorem, vitae elementum lectus felis id mi. Pellentesque urna orci, luctus vel elit eu, imperdiet dignissim sem. Mauris maximus vehicula purus in volutpat. Vestibulum in convallis elit, eu lobortis est. Mauris ut euismod risus, vel dapibus purus. Fusce pellentesque eros eget diam auctor egestas. In vitae urna id neque ultricies dignissim ac eget magna.</p>                    
@@ -191,14 +191,11 @@
                  | friends about their awesome purchase. -DRE
                  |-->
                  
-                <!--
                 <ul class="detail_social">
-                    <li>Twitter</li>
-                    <li>Facebook</li>
-                    <li>Pinterest</li>
-                    <li>Google+</li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Google+</a></li>
                 </ul>
-                -->
                 
             </div>
         
@@ -214,11 +211,11 @@
         <h6 class="testemonial_title text-center">Testimonial</h6>
                 
         <div class="testemonial_container row small-12 small-centered columns"  data-equalizer>
-            <a href="javascript:void(0);" class="testemonial_button -left small-1 columns" data-equalizer-watch><!-- text flow will be rtl here -->&gt;</a>
+            <a href="javascript:void(0);" class="testemonial_button -left small-1 columns" data-equalizer-watch>&nbsp;</a>
             
             <div class="small-10 columns testemonial_slickContainer" data-equalizer-watch>
                 
-                <div class="testemonial_slick" data-slick='{"slide":".testemonial_quote","nextArrow":".testemonial_button.-right","prevArrow":".testemonial_button.-left"}' data-equalizer-watch>
+                <div class="testemonial_slick" data-slick='{"autoplay":false,"slide":".testemonial_quote","nextArrow":".testemonial_button.-right","prevArrow":".testemonial_button.-left"}' data-equalizer-watch>
         
                     
     <div class="testemonial_quote ">    
@@ -261,7 +258,7 @@
         
             </div>
             
-            <a href="javascript:void(0);" class="testemonial_button -right small-1 columns" data-equalizer-watch>&gt;</a>
+            <a href="javascript:void(0);" class="testemonial_button -right small-1 columns" data-equalizer-watch>&nbsp;</a>
         </div>
                 
     </section>
@@ -352,7 +349,7 @@
     <script> 
         var require = { 
                 callback: function( ){ 
-                    require([ "scripts/slick", "foundation/topbar" ], function( $ ){
+                    require([ "jquery", "scripts/slick", "foundation/topbar", "foundation/equalizer" ], function( $ ){
                         
                         $( document ).foundation( );        
                         

@@ -92,7 +92,7 @@
         <div id="breadcrumb" class="row-wide">
             
     <ol class="breadcrumbs small-12 small-centered columns">
-        <li class="active"><a href="#">Package</a></li>
+        <li class="current"><a href="#">Package</a></li>
         <li class="unavailable"><a href="#">Customize</a></li>
         <li class="unavailable"><a href="#">Personal info</a></li>
         <li class="unavailable"><a href="#">Summary</a></li>
@@ -102,9 +102,9 @@
         
         </div>
         
-        <hr />
+        <hr id="wizard_divider"/>
     
-        <div id="page" class="row-wide page" data-equalizer>
+        <div id="page" class="row page" data-equalizer>
             
     <form 
         method="GET" 
@@ -112,22 +112,22 @@
         action="./wizard.02.customize.page.html"
     >
         <input type="hidden" name="state" value="{}">
-        <div class="small-8 columns page_content" data-equalizer-watch> 
+        <div class="small-7 columns page_content" data-equalizer-watch> 
 
-    <h1>Package name</h1>
+    <h2>Package name</h2>
     
     <div class="row">
         
         <label class="small-6 columns end">
             Number of persons
-            <input name="booking_person" type="number" min="1" max="50" value="1"/>    
+            <input name="booking[persons]" type="number" min="1" max="50" value="1"/>    
         </label>
     </div>
    
     <div class="row">
         <label class="small-6 columns end">
             Event date
-            <select name="booking_date">
+            <select name="booking[event_date]">
                 <option value="17-10-2012">Friday 17 October 2012</option>    
                 <option value="18-10-2012">Saturday 18 October 2012</option>    
                 <option value="19-10-2012">Sunday 19 October 2012</option>    
@@ -138,7 +138,7 @@
     <div class="row">
         <label class="small-6 columns end">
             Ticket
-            <select name="ticket">
+            <select name="booking[ticket_type]">
                 <option value="231">No additional ticket</option>    
                 <option value="229">Normal ticket</option>    
                 <option value="230">VIP ticket</option>    
@@ -149,14 +149,14 @@
     <div class="row">       
         <label class="small-6 columns">
             Arrival date
-            <select name="date_from">
+            <select name="booking[arrival_date]">
                 <option value="18-10-2012">Saturday 18 October 2012</option>    
             </select>
         </label>
    
         <label class="small-6 columns end">
             Depature date
-            <select name="date_to">
+            <select name="booking[departure_date]">
                 <option value="19-10-2012">Sunday 19 October 2012</option>    
             </select>            
         </label>
@@ -165,7 +165,7 @@
     <div class="row">
         <label class="small-6 columns end">
             Room layout
-            <select name="room_layout">
+            <select name="booking[room]">
                 <option value="1">Feng shui</option>    
                 <option value="3">Round</option>    
                 <option value="4">Glued to the cieling</option>                    
@@ -174,7 +174,7 @@
     </div>
 
 </div>
-        <div class="small-4 columns page_cart" data-equalizer-watch> 
+        <div class="small-5 columns page_cart" data-equalizer-watch> 
 
     <script id="wizard_cart_item-template" type="text/template">
         <li class="bullet-item wizard_cart_item">
@@ -186,10 +186,26 @@
         </li>
     </script>
     
+    <h2 class="wizard_cart_title">Shopping cart</h2>
+    <dl class="wizard_cart row collapse">
+        
+        <dt class="small-9 columns wizard_cart_item-title">Number of nights</dt>   <dd class="small-3 columns wizard_cart_item-amount">2</dd>
+        <dt class="small-9 columns wizard_cart_item-title">Number of people</dt>   <dd class="small-3 columns wizard_cart_item-amount">4</dd>
+        <dt class="small-9 columns wizard_cart_item-title">Hotel for 2 nights</dt> <dd class="small-3 columns wizard_cart_item-amount">&euro;450.00</dd>
+        <dt class="small-9 columns wizard_cart_item-title">Limo ride</dt>          <dd class="small-3 columns wizard_cart_item-amount">&euro;100.00</dd>
+        <dt class="small-9 columns wizard_cart_item-title">Power breakfast</dt>    <dd class="small-3 columns wizard_cart_item-amount">&euro;35.00</dd>
+        <dt class="small-9 columns wizard_cart_total-title">Total:</dt>            <dd class="small-3 columns wizard_cart_total-price">&euro;585.00</dd>
+        
+    </dl>
+    
+    <a href="javascript:window.history.back( );" class="wizard_cart_buttons_button -previous">Previous</a>
+    <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
+    
+    <!--
     <ul class="wizard_cart pricing-table">
         <li class="title wizard_cart_title">Your order</li>
         
-        <!-- templates go here... -->
+        <!-- templates go here... --
         
         <li class="price wizard_cart_total">
             <p>
@@ -203,7 +219,7 @@
             <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
         </li>
     </ul>
-    
+    -->
 </div>
     </form>
 

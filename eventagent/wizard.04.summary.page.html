@@ -95,16 +95,16 @@
         <li class=""><a href="#">Package</a></li>
         <li class=""><a href="#">Customize</a></li>
         <li class=""><a href="#">Personal info</a></li>
-        <li class="active"><a href="#">Summary</a></li>
+        <li class="current"><a href="#">Summary</a></li>
         <li class="unavailable"><a href="#">Payment</a></li>
     </ol>
 
         
         </div>
         
-        <hr />
+        <hr id="wizard_divider"/>
     
-        <div id="page" class="row-wide page" data-equalizer>
+        <div id="page" class="row page" data-equalizer>
             
     <form 
         method="GET" 
@@ -195,8 +195,8 @@
     <!-- accept general condtions -->
     <p>
         <label>
-            <input name="conditions" type="hidden" value="false">
-            <input name="conditions" type="checkbox" value="true"> 
+            <input name="accept_conditions" type="hidden" value="false">
+            <input name="accept_conditions" type="checkbox" value="true"> 
             I agree with the <a href="#">general conditions</a>
         </label><br/>
         After payment you will recieve your confirmation imediatly
@@ -215,10 +215,26 @@
         </li>
     </script>
     
+    <h2 class="wizard_cart_title">Shopping cart</h2>
+    <dl class="wizard_cart row collapse">
+        
+        <dt class="small-9 columns wizard_cart_item-title">Number of nights</dt>   <dd class="small-3 columns wizard_cart_item-amount">2</dd>
+        <dt class="small-9 columns wizard_cart_item-title">Number of people</dt>   <dd class="small-3 columns wizard_cart_item-amount">4</dd>
+        <dt class="small-9 columns wizard_cart_item-title">Hotel for 2 nights</dt> <dd class="small-3 columns wizard_cart_item-amount">&euro;450.00</dd>
+        <dt class="small-9 columns wizard_cart_item-title">Limo ride</dt>          <dd class="small-3 columns wizard_cart_item-amount">&euro;100.00</dd>
+        <dt class="small-9 columns wizard_cart_item-title">Power breakfast</dt>    <dd class="small-3 columns wizard_cart_item-amount">&euro;35.00</dd>
+        <dt class="small-9 columns wizard_cart_total-title">Total:</dt>            <dd class="small-3 columns wizard_cart_total-price">&euro;585.00</dd>
+        
+    </dl>
+    
+    <a href="./wizard.03.personal-info.page.html" class="wizard_cart_buttons_button -previous">Previous</a>
+    <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
+    
+    <!--
     <ul class="wizard_cart pricing-table">
         <li class="title wizard_cart_title">Your order</li>
         
-        <!-- templates go here... -->
+        <!-- templates go here... --
         
         <li class="price wizard_cart_total">
             <p>
@@ -232,7 +248,7 @@
             <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
         </li>
     </ul>
-    
+    -->
  
         </div>
     </form>

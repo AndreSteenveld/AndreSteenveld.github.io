@@ -16,7 +16,7 @@ define([ "jquery", "scripts/object", "jquery.query", "domReady!" ], function( $,
                 object.set( key, query.keys[ key ], urlState );
                 
             // A serialized object, make sure to deserialize it and stick it in properly
-            } else if( (/^([\[\{]).*([\]\}])$/).test( query.keys[ key ] ) ){
+            } else if( typeof query.keys[ key ] === "string" && (/^([\[\{]).*([\]\}])$/).test( query.keys[ key ] ) ){
                         
                 object.set( key, JSON.parse( query.keys[ key ] ), urlState );
                 
