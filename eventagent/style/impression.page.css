@@ -6132,7 +6132,7 @@ th.hide-for-touch {
 
 .reasons {
   background-color: #30343D;
-  height: 100%; }
+  min-height: 100%; }
   .reasons * {
     color: #A2AEAA; }
   .reasons .reasons_reason_number {
@@ -6173,7 +6173,7 @@ th.hide-for-touch {
 
 .information {
   background-color: #a4b0ac;
-  height: 100%; }
+  min-height: 100%; }
   .information .information_panels {
     padding-bottom: 50px; }
     .information .information_panels_panel {

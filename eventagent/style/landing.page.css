@@ -3211,19 +3211,17 @@ label.error {
 .landing_title {
   background-color: #A2AEAA;
   color: white;
-  height: 300px; }
+  min-height: 300px; }
   .landing_title .row {
-    height: 300px;
-    padding-top: 45px;
-    padding-bottom: 45px; }
+    min-height: 300px; }
   .landing_title h1 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 45px;
+    margin-bottom: 45px;
     text-transform: none;
     font-size: 3.33333rem;
     font-weight: 300;
     line-height: 52.5px;
-    height: 210px; }
+    min-height: 210px; }
     .landing_title h1:before {
       content: "\2013"; }
 
