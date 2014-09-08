@@ -1,4 +1,4 @@
-{
+jsonp_callback({
     "cart":{         
         "total": { "title": "Het totaal", "total": "&#3647;92.000,00" },        
         "items": [ 
@@ -19,4 +19,4 @@
     },
     "messages": { },
     "values":   { "[name='booking[persons]']": "5" }
-}
+});

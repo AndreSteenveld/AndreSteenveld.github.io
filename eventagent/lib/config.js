@@ -5,10 +5,10 @@ require.config({
 
     config: {
         
-        "scripts/wizard/package":       { validation_url: "./content/wizard/package.json" },
-        "scripts/wizard/customize":     { validation_url: "./content/wizard/customize.json" },
-        "scripts/wizard/personal-info": { validation_url: "./content/wizard/personal-info.json" },
-        "scripts/wizard/summary":       { validation_url: "./content/wizard/summary.json" }    
+        "scripts/wizard/package":       { ajax: { jsonpCallback: "jsonp_callback", dataType: "jsonp", url: "./content/wizard/package.json" } },
+        "scripts/wizard/customize":     { ajax: { jsonpCallback: "jsonp_callback", dataType: "jsonp", url: "./content/wizard/customize.json" } },
+        "scripts/wizard/personal-info": { ajax: { jsonpCallback: "jsonp_callback", dataType: "jsonp", url: "./content/wizard/personal-info.json" } },
+        "scripts/wizard/summary":       { ajax: { jsonpCallback: "jsonp_callback", dataType: "jsonp", url: "./content/wizard/summary.json" } }   
         
     },
 

@@ -1,4 +1,4 @@
-define([ "jquery", "jquery.serialize" ], function( $ ){   
+define([ "jquery", "scripts/object", "jquery.serialize" ], function( $, O ){   
     
     function validator( settings ){
     
@@ -15,18 +15,21 @@ define([ "jquery", "jquery.serialize" ], function( $ ){
             delete record.form.state;
         
             if( request ) request.abort( );
-            
-            request = $.ajax({ 
-                type    : "POST", 
-                data    : JSON.stringify( record ),
-                url     : settings.url,
-                headers : {
-                    
-                    "Accept"       : "application/json",
-                    "Content-Type" : "application/json"
-                
-                }
-            });
+                        
+            request = $.ajax(
+                O.mixin(
+                    { 
+                        data    : JSON.stringify( record ),            
+                        headers : {
+                            
+                            "Accept"       : "application/json",
+                            "Content-Type" : "application/json"
+                        
+                        }
+                    }
+                    , settings || { }
+                )
+            );
             
             request.always( function( ){ request = null; } );
             

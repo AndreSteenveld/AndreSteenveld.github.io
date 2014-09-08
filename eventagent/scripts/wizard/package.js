@@ -20,8 +20,7 @@ function( $, validation, cart, select, values, messages, module ){
         $departure_date = $( "[name='booking[departure_date]']" ),
         $room           = $( "[name='booking[room]']" );
         
-    var url       = module.config( ).validation_url,
-        validator = validation.validator({ url : url });        
+    var validator = validation.validator( module.config( ).ajax );        
         
     [
         $persons,       

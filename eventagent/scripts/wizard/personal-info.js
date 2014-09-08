@@ -22,8 +22,7 @@ function( $, validation, cart, select, values, messages, module ){
         $city         = $( "[name='naw[city]']" ),
         $country      = $( "[name='naw[country]']" );
     
-    var url       = module.config( ).validation_url,
-        validator = validation.validator({ url : url });        
+    var validator = validation.validator( module.config( ).ajax );        
     
     [
         $initials,    

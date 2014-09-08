@@ -21,8 +21,7 @@ function( $, validation, cart, select, values, messages, module ){
             return { $checkbox: $checkbox, $amount: $amount };        
         });
                 
-    var url       = module.config( ).validation_url,
-        validator = validation.validator({ url : url });        
+    var validator = validation.validator( module.config( ).ajax );        
     
     $pairs.each( function( index, pair ){
         
