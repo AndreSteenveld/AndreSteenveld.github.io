@@ -129,20 +129,19 @@
 <li>Forth feature</li></ul>
             
             <p>
-                <span class>50.00</span>
-                <label>
-                    <input type="hidden" name="extra[][id]" value="null">
+                <span class="wizard_extra_price">50.00</span>
+                <label class="wizard_extra_select">
                     <input 
                         type="checkbox" 
-                        name="extra[][id]" 
+                        name="extra[0][id]" 
                         
-                        value='{"price":50,"description":"The first extra"}'
+                        value='"ea-customs[0]"'
                     >Select
                 </label>
-                <label>
+                <label class="wizard_extra_amount">
                     <input 
                         type="number" 
-                        name="extra[][amount]" 
+                        name="extra[0][amount]" 
                         
                         min="1" 
                         max="1" 
@@ -172,20 +171,19 @@
 <li>Forth feature</li></ul>
             
             <p>
-                <span class>150.00</span>
-                <label>
-                    <input type="hidden" name="extra[][id]" value="null">
+                <span class="wizard_extra_price">150.00</span>
+                <label class="wizard_extra_select">
                     <input 
                         type="checkbox" 
-                        name="extra[][id]" 
+                        name="extra[1][id]" 
                         
-                        value='{"price":150,"description":"The second extra"}'
+                        value='"ea-customs[1]"'
                     >Select
                 </label>
-                <label>
+                <label class="wizard_extra_amount">
                     <input 
                         type="number" 
-                        name="extra[][amount]" 
+                        name="extra[1][amount]" 
                         
                         min="1" 
                         max="1" 
@@ -215,20 +213,19 @@
 <li>Forth feature</li></ul>
             
             <p>
-                <span class>300.00</span>
-                <label>
-                    <input type="hidden" name="extra[][id]" value="null">
+                <span class="wizard_extra_price">300.00</span>
+                <label class="wizard_extra_select">
                     <input 
                         type="checkbox" 
-                        name="extra[][id]" 
+                        name="extra[2][id]" 
                         
-                        value='{"price":300,"description":"The third extra"}'
+                        value='"ea-customs[2]"'
                     >Select
                 </label>
-                <label>
+                <label class="wizard_extra_amount">
                     <input 
                         type="number" 
-                        name="extra[][amount]" 
+                        name="extra[2][amount]" 
                         
                         min="1" 
                         max="1" 
@@ -248,49 +245,25 @@
              
 
     <script id="wizard_cart_item-template" type="text/template">
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_amount">{{amount}}</span>          
-                <span class="wizard_cart_item_description">{{description}}</span>                
-                <span class="wizard_card_item_price">{{price}}</span>
-            </p>
-        </li>
+        <dt class="small-9 columns wizard_cart_item-title">{{title}}</dt>   
+        <dd class="small-3 columns wizard_cart_item-amount">{{amount}}</dd>
+    </script>
+    
+    <script id="wizard_cart_total-template" type="text/template">
+        <dt class="small-9 columns wizard_cart_total-title">{{title}}</dt>            
+        <dd class="small-3 columns wizard_cart_total-price">{{total}}</dd>        
     </script>
     
     <h2 class="wizard_cart_title">Shopping cart</h2>
-    <dl class="wizard_cart row collapse">
+    <dl id="wizard_cart" class="wizard_cart row collapse">
         
-        <dt class="small-9 columns wizard_cart_item-title">Number of nights</dt>   <dd class="small-3 columns wizard_cart_item-amount">2</dd>
-        <dt class="small-9 columns wizard_cart_item-title">Number of people</dt>   <dd class="small-3 columns wizard_cart_item-amount">4</dd>
-        <dt class="small-9 columns wizard_cart_item-title">Hotel for 2 nights</dt> <dd class="small-3 columns wizard_cart_item-amount">&euro;450.00</dd>
-        <dt class="small-9 columns wizard_cart_item-title">Limo ride</dt>          <dd class="small-3 columns wizard_cart_item-amount">&euro;100.00</dd>
-        <dt class="small-9 columns wizard_cart_item-title">Power breakfast</dt>    <dd class="small-3 columns wizard_cart_item-amount">&euro;35.00</dd>
-        <dt class="small-9 columns wizard_cart_total-title">Total:</dt>            <dd class="small-3 columns wizard_cart_total-price">&euro;585.00</dd>
+
         
     </dl>
     
     <a href="./wizard.01.package.page.html" class="wizard_cart_buttons_button -previous">Previous</a>
     <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
     
-    <!--
-    <ul class="wizard_cart pricing-table">
-        <li class="title wizard_cart_title">Your order</li>
-        
-        <!-- templates go here... --
-        
-        <li class="price wizard_cart_total">
-            <p>
-                <span class="wizard_cart_total_description">Total:</span>    
-                <span class="wizard_cart_total_amount">&nbsp;</span>
-            </p>
-        </li>
-        
-        <li class="cta-button wizard_cart_buttons">
-            <a href="./wizard.01.package.page.html" class="wizard_cart_buttons_button -previous">Previous</a>
-            <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
-        </li>
-    </ul>
-    -->
  
         </div>
     </form>
@@ -384,7 +357,7 @@
         var require = { 
                 callback: function( ){ 
                     require(
-                        [ "jquery", "scripts/state", "foundation/topbar", "foundation/equalizer", "scripts/cart", "domReady!" ],
+                        [ "jquery", "foundation/topbar", "domReady!" ].concat([ "scripts/wizard/customize", "foundation/equalizer" ]),
                         function( $ ){ $( document ).foundation( ); }
                     ); 
                 } 

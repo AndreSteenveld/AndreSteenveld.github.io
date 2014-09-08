@@ -120,14 +120,15 @@
         
         <label class="small-6 columns end">
             Number of persons
-            <input name="booking[persons]" type="number" min="1" max="50" value="1"/>    
+            <input name="booking[persons]" type="number" min="1" max="50" value="1" required>    
         </label>
     </div>
    
     <div class="row">
         <label class="small-6 columns end">
             Event date
-            <select name="booking[event_date]">
+            <select name="booking[event_date]" required>
+                <option value="" selected disabled>Event date</option>
                 <option value="17-10-2012">Friday 17 October 2012</option>    
                 <option value="18-10-2012">Saturday 18 October 2012</option>    
                 <option value="19-10-2012">Sunday 19 October 2012</option>    
@@ -136,9 +137,10 @@
     </div>
     
     <div class="row">
-        <label class="small-6 columns end">
+        <label class="small-6 columns end" required>
             Ticket
-            <select name="booking[ticket_type]">
+            <select name="booking[ticket_type]" required>
+                <option value="" selected disabled>Ticket</option>
                 <option value="231">No additional ticket</option>    
                 <option value="229">Normal ticket</option>    
                 <option value="230">VIP ticket</option>    
@@ -147,16 +149,18 @@
     </div>
     
     <div class="row">       
-        <label class="small-6 columns">
+        <label class="small-6 columns" required>
             Arrival date
-            <select name="booking[arrival_date]">
+            <select name="booking[arrival_date]" required>
+                <option value="" selected disabled>Arrival date</option>
                 <option value="18-10-2012">Saturday 18 October 2012</option>    
             </select>
         </label>
    
-        <label class="small-6 columns end">
+        <label class="small-6 columns end" required>
             Depature date
-            <select name="booking[departure_date]">
+            <select name="booking[departure_date]" required>
+                <option value="" selected disabled>Departure date</option>
                 <option value="19-10-2012">Sunday 19 October 2012</option>    
             </select>            
         </label>
@@ -165,7 +169,8 @@
     <div class="row">
         <label class="small-6 columns end">
             Room layout
-            <select name="booking[room]">
+            <select name="booking[room]" required>
+                <option value="" selected disabled>Room layout</option>
                 <option value="1">Feng shui</option>    
                 <option value="3">Round</option>    
                 <option value="4">Glued to the cieling</option>                    
@@ -177,49 +182,25 @@
         <div class="small-5 columns page_cart" data-equalizer-watch> 
 
     <script id="wizard_cart_item-template" type="text/template">
-        <li class="bullet-item wizard_cart_item">
-            <p>
-                <span class="wizard_cart_item_amount">{{amount}}</span>          
-                <span class="wizard_cart_item_description">{{description}}</span>                
-                <span class="wizard_card_item_price">{{price}}</span>
-            </p>
-        </li>
+        <dt class="small-9 columns wizard_cart_item-title">{{title}}</dt>   
+        <dd class="small-3 columns wizard_cart_item-amount">{{amount}}</dd>
+    </script>
+    
+    <script id="wizard_cart_total-template" type="text/template">
+        <dt class="small-9 columns wizard_cart_total-title">{{title}}</dt>            
+        <dd class="small-3 columns wizard_cart_total-price">{{total}}</dd>        
     </script>
     
     <h2 class="wizard_cart_title">Shopping cart</h2>
-    <dl class="wizard_cart row collapse">
+    <dl id="wizard_cart" class="wizard_cart row collapse">
         
-        <dt class="small-9 columns wizard_cart_item-title">Number of nights</dt>   <dd class="small-3 columns wizard_cart_item-amount">2</dd>
-        <dt class="small-9 columns wizard_cart_item-title">Number of people</dt>   <dd class="small-3 columns wizard_cart_item-amount">4</dd>
-        <dt class="small-9 columns wizard_cart_item-title">Hotel for 2 nights</dt> <dd class="small-3 columns wizard_cart_item-amount">&euro;450.00</dd>
-        <dt class="small-9 columns wizard_cart_item-title">Limo ride</dt>          <dd class="small-3 columns wizard_cart_item-amount">&euro;100.00</dd>
-        <dt class="small-9 columns wizard_cart_item-title">Power breakfast</dt>    <dd class="small-3 columns wizard_cart_item-amount">&euro;35.00</dd>
-        <dt class="small-9 columns wizard_cart_total-title">Total:</dt>            <dd class="small-3 columns wizard_cart_total-price">&euro;585.00</dd>
+
         
     </dl>
     
     <a href="javascript:window.history.back( );" class="wizard_cart_buttons_button -previous">Previous</a>
     <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
     
-    <!--
-    <ul class="wizard_cart pricing-table">
-        <li class="title wizard_cart_title">Your order</li>
-        
-        <!-- templates go here... --
-        
-        <li class="price wizard_cart_total">
-            <p>
-                <span class="wizard_cart_total_description">Total:</span>    
-                <span class="wizard_cart_total_amount">&nbsp;</span>
-            </p>
-        </li>
-        
-        <li class="cta-button wizard_cart_buttons">
-            <a href="javascript:window.history.back( );" class="wizard_cart_buttons_button -previous">Previous</a>
-            <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
-        </li>
-    </ul>
-    -->
 </div>
     </form>
 
@@ -312,7 +293,7 @@
         var require = { 
                 callback: function( ){ 
                     require(
-                        [ "jquery", "scripts/state", "foundation/topbar", "foundation/equalizer", "scripts/cart", "domReady!" ],
+                        [ "jquery", "foundation/topbar", "domReady!" ].concat([ "scripts/wizard/package", "foundation/equalizer" ]),
                         function( $ ){ $( document ).foundation( ); }
                     ); 
                 } 

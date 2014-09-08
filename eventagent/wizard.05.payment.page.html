@@ -206,7 +206,7 @@
         var require = { 
                 callback: function( ){ 
                     require(
-                        [ "jquery", "scripts/state", "foundation/topbar", "foundation/equalizer", "scripts/cart", "domReady!" ],
+                        [ "jquery", "foundation/topbar", "domReady!" ].concat([ ]),
                         function( $ ){ $( document ).foundation( ); }
                     ); 
                 } 

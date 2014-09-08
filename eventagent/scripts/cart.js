@@ -1,93 +1,30 @@
-define( [ "jquery", "scripts/state" ], function( $, state ){
+define( [ "jquery", "domReady!" ], function( $ ){
     
-    state = JSON.parse( state );
-
-    function add( item ){
-        
-        var $row = $(
-                $template.item
-                    .replace( "{{amount}}",      item.amount || "" )
-                    .replace( "{{description}}", item.description )
-                    .replace( "{{price}}",       item.price || "" )
-            );
-        
-        $row.data( "index", items.push( item ) );
-        
-        "price" in item
-            ? $row.insertBefore( $cart.total )
-            : $row.insertAfter( $cart.title );
-            
-        update( );        
-    }
+    // Templates
+    var ITEM_TEMPLATE  = $( "#wizard_cart_item-template" ).html( ),
+        TOTAL_TEMPLATE = $( "#wizard_cart_total-template" ).html( );    
     
-    function remove( item ){
-    
+    // Our interface to communicate with the data we are getting
+    return function cart( data ){
+        
+        if( !data || !( "cart"  in data ) ) return;
+        
+        var total = TOTAL_TEMPLATE
+                .replace( "{{title}}", data.cart.total.title )
+                .replace( "{{total}}", data.cart.total.total ),
                 
-        update( );                
-    }
-    
-    function update( ){
-    
-        $( ".wizard_cart_total_amount" ).text(
-            items.reduce(
-                function( total, item ){
-                    
-                    if( "price" in item )
-                        total += "amount" in item
-                            ? item.price * item.amount
-                            : item.price;
-                    
-                    return total;       
-                                 
-                },
-                0.00
-            )
-        );
-        
-    }
-
-    var $cart = {
-            title: $( ".wizard_cart_title" )[ 0 ],
-            total: $( ".wizard_cart_total" )[ 0 ]
-        };
-        
-    var $template = { item: $( "#wizard_cart_item-template" ).text( ) };
-
-    var items = [ ];
-        
-    Object
-        .keys( state )
-        .forEach( function( key ){
-        
-            switch( key ){
-                        
-                case "package": {
-                    add({
-                        description: state.package.name,
-                        price: state.package.price
-                    });
-                    break;
-                }
-            
-                case "extra": { 
-                    state.extra.forEach( function( item ){
-                    
-                        add( JSON.parse( item ) );
-                        
-                    });
-                    break;     
-                }
-                case "booking": { break; }
-                case "personal": { break; }
+            items = data.cart.items.map( function( item ){
                 
-                default: {
-                    console.log( "We found an unknown key! [ ", key, " ]" );
-                    break;
-                }
+                return ITEM_TEMPLATE
+                    .replace( "{{title}}", item.title )
+                    .replace( "{{amount}}", item.amount );
+                    
+            });     
             
-            }        
+        $( "#wizard_cart" ).html( items.join( "\n" ) + "\n" + total );
         
-        });
-
-    return { add: add, remove: remove };
+        return data;
+        
+    };
+    
 });

@@ -3,13 +3,23 @@ require.config({
 
     //baseUrl: "../",
 
+    config: {
+        
+        "scripts/wizard/package":       { validation_url: "./content/wizard/package.json" },
+        "scripts/wizard/customize":     { validation_url: "./content/wizard/customize.json" },
+        "scripts/wizard/personal-info": { validation_url: "./content/wizard/personal-info.json" },
+        "scripts/wizard/summary":       { validation_url: "./content/wizard/summary.json" }    
+        
+    },
+
     packages: [
         { name: "scripts", location: "../scripts/" },
         { name: "lib",     location: "../lib/" },
         
-        { name: "jquery",        main: "jquery",        location: "../vendor/jquery/dist/" },
-        { name: "jquery.cookie", main: "jquery.cookie", location: "../vendor/jquery.cookie/" },        
-        { name: "slick",         main: "slick",         location: "../vendor/slick.js/slick/" }
+        { name: "jquery",           main: "jquery",                  location: "../vendor/jquery/dist/" },
+        { name: "jquery.cookie",    main: "jquery.cookie",           location: "../vendor/jquery.cookie/" },        
+        { name: "jquery.serialize", main: "jquery.serialize-object", location: "../vendor/jquery-serialize-object/" },
+        { name: "slick",            main: "slick",                   location: "../vendor/slick.js/slick/" }
     ],
 
     paths: {
