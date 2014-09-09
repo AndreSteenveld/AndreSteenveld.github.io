@@ -3195,8 +3195,10 @@ label.error {
   #wizard hr {
     border-color: #B9C2BF; }
   #wizard label {
+    color: #30343D; }
+  #wizard label {
     font-weight: bold;
-    font-size: 1.33333rem;
+    font-size: 1rem;
     margin-top: 5px; }
     #wizard label > input, #wizard label > select {
       border: none;
@@ -3216,9 +3218,13 @@ label.error {
     border-right-style: solid;
     border-right-width: 1px;
     border-right-color: #B9C2BF;
+    padding-left: 0px;
     padding-right: 25px; }
+    #wizard .page_content .row {
+      margin-right: auto; }
   #wizard .page_cart {
-    padding-left: 25px; }
+    padding-left: 25px;
+    padding-right: 0px; }
   #wizard .wizard_cart_title, #wizard .wizard_pane_title {
     margin-bottom: 2rem; }
   #wizard .wizard_cart_item-title {
@@ -3227,7 +3233,7 @@ label.error {
     margin: 0px; }
   #wizard .wizard_cart_total-title, #wizard .wizard_cart_total-price {
     margin-top: 1rem;
-    border-top: solid 1px black;
+    border-top: solid 2px black;
     padding-top: 1rem; }
   #wizard .wizard_cart .bullet_item_description {
     display: inline-block;
@@ -3261,16 +3267,20 @@ label.error {
       padding-bottom: 1.13333rem;
       padding-left: 2.13333rem;
       font-size: 1.06667rem;
-      background-color: #000;
-      border-color: black;
+      background-color: #30343D;
+      border-color: #262a31;
       color: #fff;
       -webkit-transition: background-color 300ms ease-out;
               transition: background-color 300ms ease-out;
+      text-transform: uppercase;
       width: 49.5%; }
       #wizard .wizard_cart_buttons_button:hover, #wizard .wizard_cart_buttons_button:focus, #wizard .wizard_cart .cta-button_button:hover, #wizard .wizard_cart .cta-button_button:focus {
-        background-color: black; }
+        background-color: #262a31; }
       #wizard .wizard_cart_buttons_button:hover, #wizard .wizard_cart_buttons_button:focus, #wizard .wizard_cart .cta-button_button:hover, #wizard .wizard_cart .cta-button_button:focus {
         color: #fff; }
+      #wizard .wizard_cart_buttons_button:hover, #wizard .wizard_cart .cta-button_button:hover {
+        background-color: #FFF;
+        color: #30343D; }
       #wizard .wizard_cart_buttons_button.-previous, #wizard .wizard_cart .cta-button_button.-previous {
         float: left; }
       #wizard .wizard_cart_buttons_button.-next, #wizard .wizard_cart .cta-button_button.-next {
@@ -3280,3 +3290,10 @@ label.error {
   color: #30343D; }
 #wizard [name='accept_conditions'] + a:hover {
   text-decoration: underline; }
+#wizard h3 {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: bold; }
+#wizard .accept_conditions {
+  font-family: "Libre Baskerville", serif;
+  font-style: italic; }
