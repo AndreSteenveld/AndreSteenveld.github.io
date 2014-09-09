@@ -1917,8 +1917,8 @@ body > section:nth-last-of-type(1) {
   .breadcrumbs > * {
     margin: 0;
     float: left;
-    font-size: 1.2rem;
-    line-height: 1.2rem;
+    font-size: 1rem;
+    line-height: 1rem;
     text-transform: uppercase;
     color: #30343D; }
     .breadcrumbs > *:hover a, .breadcrumbs > *:focus a {
@@ -1927,10 +1927,10 @@ body > section:nth-last-of-type(1) {
       color: #30343D; }
     .breadcrumbs > *.current {
       cursor: default;
-      color: #30343D; }
+      color: #FF4632; }
       .breadcrumbs > *.current a {
         cursor: default;
-        color: #30343D; }
+        color: #FF4632; }
       .breadcrumbs > *.current:hover, .breadcrumbs > *.current:hover a, .breadcrumbs > *.current:focus, .breadcrumbs > *.current:focus a {
         text-decoration: none; }
     .breadcrumbs > *.unavailable {
@@ -1961,15 +1961,15 @@ body > section:nth-last-of-type(1) {
     counter-increment: breadcrumb-counter;
     border-left-style: solid;
     border-left-width: 1px;
-    border-left-color: #93A69F; }
+    border-left-color: #B9C2BF; }
     .breadcrumbs > li:first-child {
       border-left: none; }
     .breadcrumbs > li.current:before, .breadcrumbs > li.current:first-child:before {
-      color: #30343D; }
+      color: #FF4632; }
     .breadcrumbs > li.unavailable:before, .breadcrumbs > li.unavailable:first-child:before {
       color: #30343D; }
     .breadcrumbs > li:before, .breadcrumbs > li:first-child:before {
-      font-size: 1.2rem;
+      font-size: 1rem;
       color: #30343D;
       text-transform: uppercase;
       content: counter(breadcrumb-counter) ": ";

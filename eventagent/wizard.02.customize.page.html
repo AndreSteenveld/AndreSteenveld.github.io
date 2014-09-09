@@ -40,35 +40,9 @@
         <section class="top-bar-section">
         
             <ul class="right">
-                <li class="has-dropdown">
-                    <a href="#" class="navigation_button">Packages</a>
-                    <div class="dropdown row">
-                        <form>
-                            <div class="small-6 columns">
-                                
-                                <label><input type="checkbox">Indoor dance</label>
-                                <label><input type="checkbox">Outdoor dance</label>
-                                <label><input type="checkbox">Concerts</label>
-                                <label><input type="checkbox">Theater</label>
-                                <label><input type="checkbox">Sports</label>                        
-                            
-                            </div> 
-                            
-                            <div class="small-6 columns">
-                                
-                                <label><input type="checkbox">Bus package</label>
-                                <label><input type="checkbox">Hotel</label>
-                                <label><input type="checkbox">Camping</label>
-                                <label><input type="checkbox">Tickets only</label>
-                                <label><input type="checkbox">Diner and ticket</label>                        
-                                <label><input type="checkbox">VIP</label>                        
-                            
-                            </div> 
-                            
-                            <button type="submit" class="small-12 columns button">Filter</button>
-                        </form>                        
-                                                
-                    </div>                    
+                <li>
+                    <a href="#" class="navigation_button" data-dropdown="navigation_packages_dropdown" data-options="is_hover:true">Packages</a>
+                    
                 </li>    
                 <li><a href="#" class="navigation_button">Why book?</a></li>
                 <li><a href="#" class="navigation_button">Tell me more</a></li>                
@@ -76,7 +50,37 @@
             
         </section>
         
+        <div id="navigation_packages_dropdown" data-dropdown-content class="medium content f-dropdown row ">
+            <form>
+                <div class="small-6 columns">
+                    
+                    <label><input name="filter[]" value="" type="checkbox">Indoor dance</label>
+                    <label><input name="filter[]" value="" type="checkbox">Outdoor dance</label>
+                    <label><input name="filter[]" value="" type="checkbox">Concerts</label>
+                    <label><input name="filter[]" value="" type="checkbox">Theater</label>
+                    <label><input name="filter[]" value="" type="checkbox">Sports</label>                        
+                
+                </div> 
+                
+                <div class="small-6 columns">
+                    
+                    <label><input name="filter[]" value="" type="checkbox">Bus package</label>
+                    <label><input name="filter[]" value="" type="checkbox">Hotel</label>
+                    <label><input name="filter[]" value="" type="checkbox">Camping</label>
+                    <label><input name="filter[]" value="" type="checkbox">Tickets only</label>
+                    <label><input name="filter[]" value="" type="checkbox">Diner and ticket</label>                        
+                    <label><input name="filter[]" value="" type="checkbox">VIP</label>                        
+                
+                </div> 
+                
+                <button type="submit" class="small-12 columns button">Filter</button>
+            </form>                        
+                                    
+        </div>                    
+        
     </nav>
+    
+    
 
 
             
@@ -113,7 +117,7 @@
     >
         <input type="hidden" name="state" value="{}">
         <div class="small-8 columns page_content" data-equalizer-watch>
-            <h2>Package name</h2>
+            <h2 class="wizard_pane_title">Package name</h2>
              
     
     <div class="row">
@@ -128,26 +132,33 @@
 <li>Third feature</li>
 <li>Forth feature</li></ul>
             
-            <p>
-                <span class="wizard_extra_price">50.00</span>
-                <label class="wizard_extra_select">
-                    <input 
-                        type="checkbox" 
-                        name="extra[0][id]" 
-                        
-                        value='"ea-customs[0]"'
-                    >Select
-                </label>
-                <label class="wizard_extra_amount">
-                    <input 
-                        type="number" 
-                        name="extra[0][amount]" 
-                        
-                        min="1" 
-                        max="1" 
-                        
-                        value="1"/>
-                </label>
+            <p class="wizard_extra_info">
+                &euro;50.00
+                
+                <span class="wizard_extra_selection">
+                    <label class="wizard_extra_select">
+                        <input 
+                            type="checkbox" 
+                            name="extra[0][id]" 
+                            
+                            value='"ea-customs[0]"'
+                        >Select<input 
+                            class="wizard_extra_amount"
+                            type="number" 
+                            name="extra[0][amount]" 
+                                                    
+                                                         
+                                min="3" 
+                                max="10" 
+                                
+                                                                    
+                            
+                                                        
+                            value="3"/>
+
+                    </label>
+
+                </span>
             </p>
             
         </div>
@@ -170,26 +181,34 @@
 <li>Third feature</li>
 <li>Forth feature</li></ul>
             
-            <p>
-                <span class="wizard_extra_price">150.00</span>
-                <label class="wizard_extra_select">
-                    <input 
-                        type="checkbox" 
-                        name="extra[1][id]" 
-                        
-                        value='"ea-customs[1]"'
-                    >Select
-                </label>
-                <label class="wizard_extra_amount">
-                    <input 
-                        type="number" 
-                        name="extra[1][amount]" 
-                        
-                        min="1" 
-                        max="1" 
-                        
-                        value="1"/>
-                </label>
+            <p class="wizard_extra_info">
+                &euro;150.00
+                
+                <span class="wizard_extra_selection">
+                    <label class="wizard_extra_select">
+                        <input 
+                            type="checkbox" 
+                            name="extra[1][id]" 
+                            
+                            value='"ea-customs[1]"'
+                        >Select<input 
+                            class="wizard_extra_amount"
+                            type="number" 
+                            name="extra[1][amount]" 
+                                                    
+                                                         
+                                min="2" 
+                                max="2" 
+                                
+                                                                    disabled
+                                                                    
+                            
+                                                        
+                            value="2"/>
+
+                    </label>
+
+                </span>
             </p>
             
         </div>
@@ -212,26 +231,132 @@
 <li>Third feature</li>
 <li>Forth feature</li></ul>
             
-            <p>
-                <span class="wizard_extra_price">300.00</span>
-                <label class="wizard_extra_select">
-                    <input 
-                        type="checkbox" 
-                        name="extra[2][id]" 
-                        
-                        value='"ea-customs[2]"'
-                    >Select
-                </label>
-                <label class="wizard_extra_amount">
-                    <input 
-                        type="number" 
-                        name="extra[2][amount]" 
-                        
-                        min="1" 
-                        max="1" 
-                        
-                        value="1"/>
-                </label>
+            <p class="wizard_extra_info">
+                &euro;300.00
+                
+                <span class="wizard_extra_selection">
+                    <label class="wizard_extra_select">
+                        <input 
+                            type="checkbox" 
+                            name="extra[2][id]" 
+                            
+                            value='"ea-customs[2]"'
+                        >Select<input 
+                            class="wizard_extra_amount"
+                            type="number" 
+                            name="extra[2][amount]" 
+                                                    
+                                                         
+                                min="" 
+                                max="" 
+                                
+                                                                    disabled
+                                                                    
+                            
+                                                        
+                            value="1"/>
+
+                    </label>
+
+                </span>
+            </p>
+            
+        </div>
+        
+    </div>
+
+
+            
+             
+    
+    <div class="row">
+    
+        <img src="http://placehold.it/400x300" class="small-4 columns wizard_extra_image">
+        <div class="small-8 columns">
+        
+            <h3 class="wizard_extra_title">Max is 5 item</h3>
+            
+            <ul class="wizard_extra_features"><li>First feature</li>
+<li>Second feature</li>
+<li>Third feature</li>
+<li>Forth feature</li></ul>
+            
+            <p class="wizard_extra_info">
+                &euro;300.00
+                
+                <span class="wizard_extra_selection">
+                    <label class="wizard_extra_select">
+                        <input 
+                            type="checkbox" 
+                            name="extra[2][id]" 
+                            
+                            value='"ea-customs[2]"'
+                        >Select<input 
+                            class="wizard_extra_amount"
+                            type="number" 
+                            name="extra[2][amount]" 
+                                                    
+                                                         
+                                min="" 
+                                max="5" 
+                                
+                                                                    
+                            
+                                                        
+                            value="1"/>
+
+                    </label>
+
+                </span>
+            </p>
+            
+        </div>
+        
+    </div>
+
+
+            
+             
+    
+    <div class="row">
+    
+        <img src="http://placehold.it/400x300" class="small-4 columns wizard_extra_image">
+        <div class="small-8 columns">
+        
+            <h3 class="wizard_extra_title">Max is 5 item</h3>
+            
+            <ul class="wizard_extra_features"><li>First feature</li>
+<li>Second feature</li>
+<li>Third feature</li>
+<li>Forth feature</li></ul>
+            
+            <p class="wizard_extra_info">
+                &euro;300.00
+                
+                <span class="wizard_extra_selection">
+                    <label class="wizard_extra_select">
+                        <input 
+                            type="checkbox" 
+                            name="extra[2][id]" 
+                            
+                            value='"ea-customs[2]"'
+                        >Select<input 
+                            class="wizard_extra_amount"
+                            type="number" 
+                            name="extra[2][amount]" 
+                                                    
+                                                         
+                                min="5" 
+                                max="" 
+                                
+                                                                    
+                            
+                                                        
+                            value="5"/>
+
+                    </label>
+
+                </span>
             </p>
             
         </div>

@@ -39,35 +39,9 @@
         <section class="top-bar-section">
         
             <ul class="right">
-                <li class="has-dropdown">
-                    <a href="#" class="navigation_button">Packages</a>
-                    <div class="dropdown row">
-                        <form>
-                            <div class="small-6 columns">
-                                
-                                <label><input type="checkbox">Indoor dance</label>
-                                <label><input type="checkbox">Outdoor dance</label>
-                                <label><input type="checkbox">Concerts</label>
-                                <label><input type="checkbox">Theater</label>
-                                <label><input type="checkbox">Sports</label>                        
-                            
-                            </div> 
-                            
-                            <div class="small-6 columns">
-                                
-                                <label><input type="checkbox">Bus package</label>
-                                <label><input type="checkbox">Hotel</label>
-                                <label><input type="checkbox">Camping</label>
-                                <label><input type="checkbox">Tickets only</label>
-                                <label><input type="checkbox">Diner and ticket</label>                        
-                                <label><input type="checkbox">VIP</label>                        
-                            
-                            </div> 
-                            
-                            <button type="submit" class="small-12 columns button">Filter</button>
-                        </form>                        
-                                                
-                    </div>                    
+                <li>
+                    <a href="#" class="navigation_button" data-dropdown="navigation_packages_dropdown" data-options="is_hover:true">Packages</a>
+                    
                 </li>    
                 <li><a href="#" class="navigation_button">Why book?</a></li>
                 <li><a href="#" class="navigation_button">Tell me more</a></li>                
@@ -75,7 +49,37 @@
             
         </section>
         
+        <div id="navigation_packages_dropdown" data-dropdown-content class="medium content f-dropdown row ">
+            <form>
+                <div class="small-6 columns">
+                    
+                    <label><input name="filter[]" value="" type="checkbox">Indoor dance</label>
+                    <label><input name="filter[]" value="" type="checkbox">Outdoor dance</label>
+                    <label><input name="filter[]" value="" type="checkbox">Concerts</label>
+                    <label><input name="filter[]" value="" type="checkbox">Theater</label>
+                    <label><input name="filter[]" value="" type="checkbox">Sports</label>                        
+                
+                </div> 
+                
+                <div class="small-6 columns">
+                    
+                    <label><input name="filter[]" value="" type="checkbox">Bus package</label>
+                    <label><input name="filter[]" value="" type="checkbox">Hotel</label>
+                    <label><input name="filter[]" value="" type="checkbox">Camping</label>
+                    <label><input name="filter[]" value="" type="checkbox">Tickets only</label>
+                    <label><input name="filter[]" value="" type="checkbox">Diner and ticket</label>                        
+                    <label><input name="filter[]" value="" type="checkbox">VIP</label>                        
+                
+                </div> 
+                
+                <button type="submit" class="small-12 columns button">Filter</button>
+            </form>                        
+                                    
+        </div>                    
+        
     </nav>
+    
+    
 
 
             
