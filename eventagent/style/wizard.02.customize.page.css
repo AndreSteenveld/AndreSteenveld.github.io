@@ -3192,6 +3192,8 @@ label.error {
   border-top-style: solid;
   border-top-width: 1px;
   border-top-color: #B9C2BF; }
+  #wizard hr {
+    border-color: #B9C2BF; }
   #wizard label {
     font-weight: bold;
     font-size: 1.33333rem;
@@ -3217,7 +3219,7 @@ label.error {
     padding-right: 25px; }
   #wizard .page_cart {
     padding-left: 25px; }
-  #wizard .wizard_cart_title {
+  #wizard .wizard_cart_title, #wizard .wizard_pane_title {
     margin-bottom: 2rem; }
   #wizard .wizard_cart_item-title {
     font-weight: normal; }
@@ -3274,8 +3276,6 @@ label.error {
       #wizard .wizard_cart_buttons_button.-next, #wizard .wizard_cart .cta-button_button.-next {
         float: right; }
 
-#wizard .wizard_pane_title {
-  margin-bottom: 2rem; }
 #wizard .wizard_extra_title {
   font-family: "Raleway", sans-serif;
   font-style: normal;
