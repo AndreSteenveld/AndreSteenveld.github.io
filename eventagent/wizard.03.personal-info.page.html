@@ -510,7 +510,21 @@
                             
                             $( "#wizard_cart_wrapper" ).scrollToFixed({
                                 marginTop: 15, 
-                                limit: $( "#footer" ).offset( ).top - 100
+                                removeOffsets: true,
+                                offsets: false,
+                                limit: function( ){
+                               
+                                    return  $( "#footer" ).offset( ).top - $( "#wizard_cart_wrapper" ).outerHeight( ) - 100;
+                                },
+                                
+                                unfixed : function( ){
+                                                                       
+                                    var $wrapper = $( "#wizard_cart_wrapper" );
+                                    
+                                    if( $wrapper.css( "position" ) === "absolute" )
+                                        $wrapper.css({ top: ( parseInt( $wrapper.css( "top" ), 10 ) + 80 ) + "px" });
+                                                                        
+                                }
                             });
                                 
                         }

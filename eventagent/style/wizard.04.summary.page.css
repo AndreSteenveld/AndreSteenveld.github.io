@@ -3331,7 +3331,8 @@ label.error {
         #wizard .wizard_cart_buttons_button.-previous, #wizard .wizard_cart .cta-button_button.-previous {
           float: left; }
         #wizard .wizard_cart_buttons_button.-next, #wizard .wizard_cart .cta-button_button.-next {
-          float: right; }
+          float: right;
+          margin-bottom: 0px; }
 
 #wizard [name='accept_conditions'] + a {
   color: #30343D; }
