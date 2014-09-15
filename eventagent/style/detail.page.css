@@ -2059,6 +2059,8 @@ button::-moz-focus-inner {
     font-size: 0.86667rem;
     float: right;
     color: #30343D; }
+    .detail .detail_show_map img {
+      margin: -3px 0.5ch 0; }
     .detail .detail_show_map:hover {
       text-decoration: underline; }
   .detail .detail_book {

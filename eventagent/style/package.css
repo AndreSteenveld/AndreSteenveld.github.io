@@ -2067,6 +2067,8 @@ button::-moz-focus-inner {
       position: absolute;
       top: 0px;
       left: 0px; } }
+  .packages .package_info_map img {
+    margin: -3px 0.5ch 0; }
   .packages .package_cta_button {
     border-style: solid;
     border-width: 0px;

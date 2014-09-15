@@ -102,7 +102,7 @@
     <a href="javascript:void(0);" class=" impression_button-right ">&gt;</a>
     
         
-        <div data-slick='{"responsive":[{"settings":{"centerMode":true,"_keys":["slidesToShow","centerMode"],"slidesToShow":3},"_keys":["breakpoint","settings"],"breakpoint":1800},{"settings":{"centerMode":true,"_keys":["slidesToShow","centerMode"],"slidesToShow":2},"_keys":["breakpoint","settings"],"breakpoint":1200},{"settings":{"centerMode":false,"_keys":["slidesToShow","centerMode"],"slidesToShow":1},"_keys":["breakpoint","settings"],"breakpoint":1025}],"centerMode":true,"slidesToShow":4,"autoplaySpeed":2500,"autoplay":true,"slide":".impression_panel","nextArrow":".impression .impression_button-right","prevArrow":".impression .impression_button-left"}'>
+        <div data-slick='{"responsive":[{"settings":{"centerMode":false,"_keys":["slidesToShow","centerMode"],"slidesToShow":2},"_keys":["breakpoint","settings"],"breakpoint":1800},{"settings":{"centerMode":false,"_keys":["slidesToShow","centerMode"],"slidesToShow":1},"_keys":["breakpoint","settings"],"breakpoint":1200},{"settings":{"centerMode":false,"_keys":["slidesToShow","centerMode"],"slidesToShow":1},"_keys":["breakpoint","settings"],"breakpoint":600}],"centerMode":true,"slidesToShow":3,"autoplay":false,"slide":".impression_panel","nextArrow":".impression .impression_button-right","prevArrow":".impression .impression_button-left"}'>
     <div class="impression_panel " ><p>&nbsp;</p></div>
 
 
@@ -137,7 +137,10 @@
         
             <div class="small-12 medium-8 columns">
                 <h2 class="detail_title">The package title</h2>
-                <h3 class="detail_subTitle">Awesome detail sub title <a href="#" class="detail_show_map">Show on map</a></h3>
+                <h3 class="detail_subTitle">
+                    Awesome detail sub title 
+                    <a href="#" class="detail_show_map"><img src="./content/ShowOnMap.png" alt="Show on map"/>Show on map</a>
+                </h3>
                 
                 <div class="detail_description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend mauris sit amet eros cursus, id tristique libero eleifend. Ut finibus, ex sit amet pretium condimentum, odio metus ornare lorem, vitae elementum lectus felis id mi. Pellentesque urna orci, luctus vel elit eu, imperdiet dignissim sem. Mauris maximus vehicula purus in volutpat. Vestibulum in convallis elit, eu lobortis est. Mauris ut euismod risus, vel dapibus purus. Fusce pellentesque eros eget diam auctor egestas. In vitae urna id neque ultricies dignissim ac eget magna.</p>                    
@@ -350,7 +353,14 @@
     <script> 
         var require = { 
                 callback: function( ){ 
-                    require([ "jquery", "scripts/slick", "foundation/dropdown", "foundation/topbar", "foundation/equalizer" ], function( $ ){
+                    require([ 
+                        "jquery", "scripts/slick", 
+                        
+                        "foundation/dropdown", 
+                        "foundation/reveal", 
+                        "foundation/topbar", 
+                        "foundation/equalizer" 
+                    ], function( $ ){
                         
                         $( document ).foundation( );        
                         
