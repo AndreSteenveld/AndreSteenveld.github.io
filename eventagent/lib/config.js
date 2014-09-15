@@ -43,9 +43,10 @@ require.config({
         "foundation/tooltip"     : "../vendor/foundation/js/foundation/foundation.tooltip",
         "foundation/topbar"      : "../vendor/foundation/js/foundation/foundation.topbar",
 
-        "fastclick"          : "../vendor/fastclick/lib/fastclick",
-        "jquery.placeholder" : "../vendor/jquery-placeholder/jquery.placeholder",
-        "jquery.query"       : "../vendor/jquery-plugin-query-object/jquery.query-object"
+        "fastclick"            : "../vendor/fastclick/lib/fastclick",
+        "jquery.placeholder"   : "../vendor/jquery-placeholder/jquery.placeholder",
+        "jquery.query"         : "../vendor/jquery-plugin-query-object/jquery.query-object",
+        "jquery.scrolltofixed" : "../vendor/ScrollToFixed/jquery-scrolltofixed"
     },
         
     shim: {
@@ -72,9 +73,10 @@ require.config({
         "foundation/tooltip"     : { deps: [ "foundation" ] },
         "foundation/topbar"      : { deps: [ "foundation" ] },
         
-        "fastclick"          : {                     exports: "FastClick"    },
-        "jquery.placeholder" : { deps: [ "jquery" ], exports: "Placeholders" },
-        "jquery.query"       : { deps: [ "jquery" ], exports: "jQuery.query" }    
+        "fastclick"            : {                     exports: "FastClick"    },
+        "jquery.placeholder"   : { deps: [ "jquery" ], exports: "Placeholders" },
+        "jquery.query"         : { deps: [ "jquery" ], exports: "jQuery.query" },
+        "jquery.scrolltofixed" : { deps: [ "jquery" ], exports: "jQuery.ScrollToFixed" }
         
     }
         

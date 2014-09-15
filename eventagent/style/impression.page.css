@@ -6186,8 +6186,10 @@ th.hide-for-touch {
       color: #30343D; }
 
 .reasons {
-  background-color: #30343D;
-  min-height: 100%; }
+  background-color: #30343D; }
+  @media only screen and (min-width:64.063em) {
+    .reasons {
+      min-height: 100%; } }
   .reasons * {
     color: #A2AEAA; }
   @media only screen and (min-width:40.063em) and (max-width:64em) {
@@ -6226,7 +6228,8 @@ th.hide-for-touch {
     color: #fff;
     -webkit-transition: background-color 300ms ease-out;
             transition: background-color 300ms ease-out;
-    color: #30343D; }
+    color: #30343D;
+    text-decoration: uppercase; }
     .reasons .reasons_button:hover, .reasons .reasons_button:focus {
       background-color: white; }
     .reasons .reasons_button:hover, .reasons .reasons_button:focus {
@@ -6280,8 +6283,12 @@ th.hide-for-touch {
     background-image: url("../content/impression/003.jpg"); }
   .impression .impression_panel .content {
     display: inline-block;
-    vertical-align: middle; }
-    .impression .impression_panel .content h1, .impression .impression_panel .content h3 {
+    vertical-align: middle;
+    padding: 0px;
+    margin: 0px; }
+    .impression .impression_panel .content h1, .impression .impression_panel .content h2, .impression .impression_panel .content h3 {
+      font-family: "Raleway", sans-serif;
+      font-style: normal;
       color: #FFF;
       text-shadow: #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px; }
 

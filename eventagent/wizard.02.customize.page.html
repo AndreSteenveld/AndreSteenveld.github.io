@@ -487,26 +487,14 @@
         var require = { 
                 callback: function( ){ 
                     require(
-                        [ "jquery", "foundation/dropdown", "foundation/topbar", "domReady!" ].concat([ "scripts/wizard/customize", "foundation/equalizer" ]),
+                        [ "jquery", "foundation/dropdown", "foundation/topbar", "jquery.scrolltofixed", "domReady!" ].concat([ "scripts/wizard/customize", "foundation/equalizer" ]),
                         function( $ ){ 
                             $( document ).foundation( ); 
                             
-                            // Beause turning something in to a fixed element is honestly a pain
-                            var $wrapper    = $( "#wizard_cart_wrapper" ),
-                                $cart_title = $( ".wizard_cart_title" );
-                            
-                            $wrapper.css({ 
-                                position: "fixed",
-                                width: $cart_title.innerWidth( )
-                            });                            
-                            
-                            $( window ).resize( function( ){
-                            
-                                $wrapper.css({ width: $cart_title.innerWidth( ) });
-                                
+                            $( "#wizard_cart_wrapper" ).scrollToFixed({
+                                marginTop: 15, 
+                                limit: $( "#footer" ).offset( ).top - 100
                             });
-                            
-                            
                                 
                         }
                     ); 
