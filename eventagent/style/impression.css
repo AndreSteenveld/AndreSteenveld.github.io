@@ -2136,10 +2136,10 @@ button, .button {
   -webkit-appearance: none;
   -webkit-border-radius: 0;
   display: inline-block;
-  padding-top: 1.06667rem;
-  padding-right: 2.13333rem;
-  padding-bottom: 1.13333rem;
-  padding-left: 2.13333rem;
+  padding-top: 0.93333rem;
+  padding-right: 1.86667rem;
+  padding-bottom: 1rem;
+  padding-left: 1.86667rem;
   font-size: 1.06667rem;
   background-color: #30343D;
   border-color: white;
@@ -2175,22 +2175,22 @@ button, .button {
     button.alert:hover, button.alert:focus, .button.alert:hover, .button.alert:focus {
       color: #333; }
   button.large, .button.large {
-    padding-top: 1.2rem;
-    padding-right: 2.4rem;
-    padding-bottom: 1.26667rem;
-    padding-left: 2.4rem;
+    padding-top: 1.06667rem;
+    padding-right: 2.13333rem;
+    padding-bottom: 1.13333rem;
+    padding-left: 2.13333rem;
     font-size: 1.33333rem; }
   button.small, .button.small {
-    padding-top: 0.93333rem;
-    padding-right: 1.86667rem;
-    padding-bottom: 1rem;
-    padding-left: 1.86667rem;
+    padding-top: 0.8rem;
+    padding-right: 1.6rem;
+    padding-bottom: 0.86667rem;
+    padding-left: 1.6rem;
     font-size: 0.86667rem; }
   button.tiny, .button.tiny {
-    padding-top: 0.66667rem;
-    padding-right: 1.33333rem;
-    padding-bottom: 0.73333rem;
-    padding-left: 1.33333rem;
+    padding-top: 0.53333rem;
+    padding-right: 1.06667rem;
+    padding-bottom: 0.6rem;
+    padding-left: 1.06667rem;
     font-size: 0.73333rem; }
   button.expand, .button.expand {
     padding-right: 0;
@@ -2304,10 +2304,10 @@ button::-moz-focus-inner {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
     display: inline-block;
-    padding-top: 1.2rem;
-    padding-right: 2.4rem;
-    padding-bottom: 1.26667rem;
-    padding-left: 2.4rem;
+    padding-top: 1.06667rem;
+    padding-right: 2.13333rem;
+    padding-bottom: 1.13333rem;
+    padding-left: 2.13333rem;
     font-size: 1.33333rem;
     background-color: #30343D;
     border-color: white;
