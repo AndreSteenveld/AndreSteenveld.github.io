@@ -6192,9 +6192,6 @@ th.hide-for-touch {
       padding-left: 15%; }
     .reasons .reasons_reason:nth-of-type(2n) {
       padding-right: 15%; } }
-  .reasons .reasons_reason_number {
-    border-radius: 1000px;
-    border: #A2AEAA 1px solid; }
   .reasons .reasons_reason_subTitle, .reasons .reasons_reason_number {
     font-family: "Libre Baskerville", serif;
     font-style: italic; }
