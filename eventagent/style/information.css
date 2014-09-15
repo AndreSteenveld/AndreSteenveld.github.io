@@ -1945,3 +1945,13 @@ body > section:nth-last-of-type(1) {
   .panel.radius, .information .radius.information_panels_panel {
     border-radius: 3px; }
 
+.information {
+  position: relative; }
+  @media only screen and (min-width:64.063em) {
+    .information > .vertical-center {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 100%; } }

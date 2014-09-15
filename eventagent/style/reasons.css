@@ -1903,6 +1903,16 @@ body > section:nth-last-of-type(1) {
   body > section:nth-last-of-type(1)#testemonial {
     padding-bottom: 0px; }
 
-.reasons_reason_number {
-  display: inline-block;
-  padding: 0.98em 1.4em; }
+.reasons {
+  position: relative; }
+  @media only screen and (min-width:64.063em) {
+    .reasons > .vertical-center {
+      position: absolute;
+      top: 50%;
+      -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+              transform: translateY(-50%);
+      width: 100%; } }
+  .reasons_reason_number {
+    display: inline-block;
+    padding: 0.98em 1.4em; }

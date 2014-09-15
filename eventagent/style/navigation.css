@@ -2735,18 +2735,24 @@ meta.foundation-mq-topbar {
     padding: 0 1rem !important; } }
 .navigation .navigation_packages_dropdown {
   border: none;
-  margin: 0px; }
+  margin: 0px;
+  max-width: 450px;
+  padding: 25px;
+  padding-top: 0px; }
   .navigation .navigation_packages_dropdown:after, .navigation .navigation_packages_dropdown:before {
     display: none; }
-  .navigation .navigation_packages_dropdown .navigation .navigation_packages_dropdown_title {
-    text-transform: uppercase; }
+  .navigation .navigation_packages_dropdown_title {
+    text-transform: uppercase;
+    margin: 0px; }
   .navigation .navigation_packages_dropdown .button {
-    padding: 1rem; }
+    padding: 1rem;
+    text-transform: uppercase; }
   .navigation .navigation_packages_dropdown label {
     font-family: "Libre Baskerville", serif;
     font-style: italic;
-    line-height: 1rem; }
+    line-height: 1.66667rem; }
     .navigation .navigation_packages_dropdown label input {
       margin: 0px;
+      margin-right: 0.5ch;
       height: 1rem;
       top: 3px; }
