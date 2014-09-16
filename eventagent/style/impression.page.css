@@ -2305,24 +2305,27 @@ button::-moz-focus-inner {
     -webkit-appearance: none;
     -webkit-border-radius: 0;
     display: inline-block;
-    padding-top: 1.06667rem;
-    padding-right: 2.13333rem;
-    padding-bottom: 1.13333rem;
-    padding-left: 2.13333rem;
-    font-size: 1.33333rem;
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 0.06667rem;
+    padding-left: 0;
     background-color: #30343D;
     border-color: white;
     color: #fff;
     -webkit-transition: background-color 300ms ease-out;
             transition: background-color 300ms ease-out;
+    padding: 0px;
     top: 45%;
     z-index: 10;
     display: block;
-    position: absolute; }
+    position: absolute;
+    background-color: transparent; }
     .impression .impression_button-left:hover, .impression .impression_button-left:focus, .impression .impression_button-right:hover, .impression .impression_button-right:focus {
       background-color: white; }
     .impression .impression_button-left:hover, .impression .impression_button-left:focus, .impression .impression_button-right:hover, .impression .impression_button-right:focus {
       color: #333; }
+    .impression .impression_button-left:hover, .impression .impression_button-right:hover {
+      opacity: 0.9; }
   .impression .impression_button-left {
     left: 0px; }
   .impression .impression_button-right {
