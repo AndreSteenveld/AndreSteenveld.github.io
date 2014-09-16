@@ -3800,13 +3800,14 @@ label.error {
     z-index: 10;
     display: block;
     position: absolute;
-    background-color: transparent; }
+    background-color: transparent;
+    opacity: 0.75; }
     .impression .impression_button-left:hover, .impression .impression_button-left:focus, .impression .impression_button-right:hover, .impression .impression_button-right:focus {
       background-color: white; }
     .impression .impression_button-left:hover, .impression .impression_button-left:focus, .impression .impression_button-right:hover, .impression .impression_button-right:focus {
       color: #333; }
     .impression .impression_button-left:hover, .impression .impression_button-right:hover {
-      opacity: 0.9; }
+      opacity: 1; }
   .impression .impression_button-left {
     left: 0px; }
   .impression .impression_button-right {

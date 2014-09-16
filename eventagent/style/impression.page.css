@@ -2319,13 +2319,14 @@ button::-moz-focus-inner {
     z-index: 10;
     display: block;
     position: absolute;
-    background-color: transparent; }
+    background-color: transparent;
+    opacity: 0.75; }
     .impression .impression_button-left:hover, .impression .impression_button-left:focus, .impression .impression_button-right:hover, .impression .impression_button-right:focus {
       background-color: white; }
     .impression .impression_button-left:hover, .impression .impression_button-left:focus, .impression .impression_button-right:hover, .impression .impression_button-right:focus {
       color: #333; }
     .impression .impression_button-left:hover, .impression .impression_button-right:hover {
-      opacity: 0.9; }
+      opacity: 1; }
   .impression .impression_button-left {
     left: 0px; }
   .impression .impression_button-right {
@@ -6319,7 +6320,7 @@ th.hide-for-touch {
       font-family: "Raleway", sans-serif;
       font-style: normal;
       color: #FFF;
-      text-shadow: #333 1px 1px 10px, #333 -1px 1px 10px, #333 1px -1px 10px, #333 -1px -1px 10px;
+      text-shadow: rgba(0, 0, 0, 0.8) 1px 1px 3px, rgba(0, 0, 0, 0.8) -1px -1px 3px;
       line-height: 1; }
     .impression .impression_panel .content h2, .impression .impression_panel .content h3 {
       font-weight: normal; }
