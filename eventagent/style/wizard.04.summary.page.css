@@ -3604,3 +3604,5 @@ label.error {
 #wizard .accept_conditions {
   font-family: "Libre Baskerville", serif;
   font-style: italic; }
+#wizard .accept_conditions {
+  font-weight: normal; }
