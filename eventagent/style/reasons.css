@@ -1916,3 +1916,5 @@ body > section:nth-last-of-type(1) {
   .reasons_reason_number {
     display: inline-block;
     padding: 0.98em 1.4em; }
+  .reasons_reason_subTitle {
+    margin-bottom: 1rem; }

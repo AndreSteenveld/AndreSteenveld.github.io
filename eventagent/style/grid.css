@@ -2259,7 +2259,7 @@ body > section:nth-last-of-type(1) {
       .grid .grid_panel .grid_panel_link:hover:after {
         display: block; }
       .grid .grid_panel .grid_panel_link:hover {
-        background-color: rgba(100, 190, 220, 0.9); }
+        background-color: rgba(100, 190, 220, 0.85); }
       .grid .grid_panel .grid_panel_link:hover > .grid_panel_description {
         visibility: visible; }
       .grid .grid_panel .grid_panel_link:hover ~ .grid_panel_description {

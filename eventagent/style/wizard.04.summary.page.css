@@ -2365,7 +2365,7 @@ meta.foundation-mq-topbar {
     font-size: 15px; }
     .top-bar .name h1 {
       line-height: 100px;
-      font-size: 1.33333rem;
+      font-size: 1.2rem;
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: normal;
@@ -3522,10 +3522,14 @@ label.error {
     margin-right: auto; }
     #wizard .wizard_cart_item-title {
       font-weight: normal; }
+    #wizard .wizard_cart_item-amount {
+      text-align: right; }
     #wizard .wizard_cart_item-title, #wizard .wizard_cart_item-amount {
       margin: 0px;
       padding-left: 0px;
       padding-right: 0px; }
+    #wizard .wizard_cart_total-price {
+      text-align: right; }
     #wizard .wizard_cart_total-title, #wizard .wizard_cart_total-price {
       margin-top: 1rem;
       border-top: solid 2px black;
@@ -3550,7 +3554,7 @@ label.error {
           width: 100%; } }
       @media only screen and (min-width:64.063em) {
         #wizard .wizard_cart_buttons_button, #wizard .wizard_cart .cta-button_button {
-          width: 49.5%; } }
+          width: 48.5%; } }
       #wizard .wizard_cart_buttons_button, #wizard .wizard_cart .cta-button_button {
         border-style: solid;
         border-width: 0px;

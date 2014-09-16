@@ -2640,7 +2640,7 @@ meta.foundation-mq-topbar {
     font-size: 15px; }
     .top-bar .name h1 {
       line-height: 100px;
-      font-size: 1.33333rem;
+      font-size: 1.2rem;
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: normal;
@@ -6126,6 +6126,8 @@ th.hide-for-touch {
   .reasons_reason_number {
     display: inline-block;
     padding: 0.98em 1.4em; }
+  .reasons_reason_subTitle {
+    margin-bottom: 1rem; }
 
 .information {
   position: relative; }
@@ -6203,7 +6205,8 @@ th.hide-for-touch {
   .reasons .reasons_title {
     text-transform: none;
     font-size: 3.33333rem;
-    font-weight: 300; }
+    font-weight: 300;
+    line-height: 1; }
   .reasons .reasons_reason_subTitle, .reasons .reasons_reason_number {
     font-family: "Libre Baskerville", serif;
     font-style: italic; }
@@ -6232,7 +6235,9 @@ th.hide-for-touch {
     -webkit-transition: background-color 300ms ease-out;
             transition: background-color 300ms ease-out;
     color: #30343D;
-    text-decoration: uppercase; }
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 2rem; }
     .reasons .reasons_button:hover, .reasons .reasons_button:focus {
       background-color: white; }
     .reasons .reasons_button:hover, .reasons .reasons_button:focus {
@@ -6253,6 +6258,9 @@ th.hide-for-touch {
         text-transform: uppercase; }
       .information .information_panels_panel_text {
         text-align: center; }
+      .information .information_panels_panel .button {
+        position: absolute;
+        bottom: 2rem; }
       @media only screen and (max-width: 40em), only screen and (min-width:40.063em) and (max-width:64em) {
         .information .information_panels_panel {
           border-top-width: 1px; } }
@@ -6293,7 +6301,12 @@ th.hide-for-touch {
       font-family: "Raleway", sans-serif;
       font-style: normal;
       color: #FFF;
-      text-shadow: #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px; }
+      text-shadow: #000 1px 1px, #000 -1px 1px, #000 1px -1px, #000 -1px -1px;
+      line-height: 1; }
+    .impression .impression_panel .content .button {
+      position: absolute;
+      bottom: 2rem;
+      margin-right: -50%; }
 
 .packages .packages_divider {
   margin-top: 25px;

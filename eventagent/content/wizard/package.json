@@ -1,6 +1,6 @@
 jsonp_callback({
     "cart":{         
-        "total": { "title": "Het totaal", "total": "&#3647;92.000,00" },        
+        "total": { "title": "Total price", "total": "&#3647;92.000,00" },        
         "items": [ 
             { "title": "First item",  "amount": "1" },
             { "title": "Second item", "amount": "15" },

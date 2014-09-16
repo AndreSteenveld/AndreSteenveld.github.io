@@ -2158,7 +2158,7 @@ button::-moz-focus-inner {
   background-color: #E8EBEA; }
   .detail .detail_show_map {
     font-size: 0.86667rem;
-    float: right;
+    float: left;
     color: #30343D; }
     .detail .detail_show_map img {
       margin: -3px 0.5ch 0; }
