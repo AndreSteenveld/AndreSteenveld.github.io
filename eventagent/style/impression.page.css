@@ -6222,7 +6222,8 @@ th.hide-for-touch {
     text-transform: none;
     font-size: 3.33333rem;
     font-weight: 300;
-    line-height: 1; }
+    line-height: 1;
+    padding-bottom: 1rem; }
   .reasons .reasons_reason_subTitle, .reasons .reasons_reason_number {
     font-family: "Libre Baskerville", serif;
     font-style: italic; }
