@@ -3008,11 +3008,23 @@ meta.foundation-mq-topbar {
       height: 1rem;
       top: 3px; }
 
+#navigation .fixed {
+  height: 50px;
+  line-height: 50px; }
+  #navigation .fixed .top-bar, #navigation .fixed .top-bar > .title-area *, #navigation .fixed .top-bar > .top-bar-section * {
+    height: 50px;
+    line-height: 50px;
+    font-size: 1rem; }
 #navigation .off-canvas-wrap {
   overflow-y: visible;
   overflow-x: hidden; }
   #navigation .off-canvas-wrap .right-off-canvas-menu {
     bottom: auto; }
+
+body.f-topbar-fixed {
+  padding-top: 0; }
+  body.f-topbar-fixed #navigation + * {
+    margin-top: 100px; }
 
 /* Standard Forms */
 form {
