@@ -1,0 +1,22 @@
+jsonp_callback({
+    "cart":{         
+        "total": { "title": "Total price", "total": "&#3647;92.000,00" },        
+        "items": [ 
+            { "title": "First item",  "amount": "1" },
+            { "title": "Second item", "amount": "15" },
+            { "title": "Priced item", "amount": "&euro;10,00" },
+            { "title": "Prices item", "amount": "&yen;100.000,00" }
+        ]    
+    },
+    "select": { 
+        "[name='booking[ticket_type]']": [
+            { "text": "Ticket type",   "value": "", "disabled": true },
+            { "text": "No ticket",     "value": "0" },
+            { "text": "Normal ticket", "value": "1", "selected": true },
+            { "text": "VIP ticket",    "value": "2" }
+        ]
+    
+    },
+    "messages": { },
+    "values":   { "[name='booking[persons]']": "5" }
+});

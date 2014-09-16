@@ -1,0 +1,311 @@
+﻿<!doctype html>
+<html class="no-js" lang="nl-nl">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- master#head -->
+        
+        <link rel="stylesheet" href="./vendor/foundation/css/normalize.css">
+        
+    <script src="./vendor/modernizr/modernizr.js"></script>
+
+    <link rel="stylesheet" href="./style/wizard.05.payment.page.css">
+
+        <!-- /master#head -->
+        
+    </head>
+    <body>
+    
+        <!-- master#body -->
+        
+    <!-- foundation.master#header -->
+            <header id="navigation" class="row-full">
+    
+            <div class="contain-to-grid sticky">
+            
+                
+    <nav class="top-bar navigation hide-for-small" data-topbar role="navigation" data-options="is_hover: false">
+
+        <ul class="title-area navigation_title">
+            <li class="name">
+                <h1><a href="#">Eventagent</a></h1>
+            </li>    
+            <li class="toggle-topbar menu-icon"><a href="#"><span>&nbsp;</span></a></li>
+        </ul>
+        
+        <section class="top-bar-section">
+        
+            <ul class="right">
+                <li>
+                    <a href="#" class="navigation_button" data-dropdown="navigation_packages_dropdown" data-options="is_hover:true">Packages</a>
+                    
+                </li>    
+                <li><a href="#" class="navigation_button">Why book?</a></li>
+                <li><a href="#" class="navigation_button">Tell me more</a></li>                
+            </ul>    
+            
+        </section>
+        
+        <div id="navigation_packages_dropdown" data-dropdown-content class="medium content f-dropdown row navigation_packages_dropdown">
+            <form>
+                <div class="small-6 columns">
+                    <h5 class="navigation_packages_dropdown_title">Event</h5>
+                    <label><input name="filter[]" value="" type="checkbox">Indoor dance</label>
+                    <label><input name="filter[]" value="" type="checkbox">Outdoor dance</label>
+                    <label><input name="filter[]" value="" type="checkbox">Concerts</label>
+                    <label><input name="filter[]" value="" type="checkbox">Theater</label>
+                    <label><input name="filter[]" value="" type="checkbox">Sports</label>                        
+                
+                </div> 
+                
+                <div class="small-6 columns">
+                    <h5 class="navigation_packages_dropdown_title">Package</h5>
+                    <label><input name="filter[]" value="" type="checkbox">Bus package</label>
+                    <label><input name="filter[]" value="" type="checkbox">Hotel</label>
+                    <label><input name="filter[]" value="" type="checkbox">Camping</label>
+                    <label><input name="filter[]" value="" type="checkbox">Tickets only</label>
+                    <label><input name="filter[]" value="" type="checkbox">Diner and ticket</label>                        
+                    <label><input name="filter[]" value="" type="checkbox">VIP</label>                        
+                
+                </div> 
+                
+                <button type="submit" class="small-12 columns button large">Filter</button>
+            </form>                        
+                                    
+        </div>                    
+        
+    </nav>
+        
+    <div class="off-canvas-wrap docs-wrap show-for-small" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="tab-bar">
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+                </section>
+                
+                <section class="left tab-bar-section">
+                    <h1 class="title">Eventagent</h1>
+                </section>
+            
+            </nav>
+            
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><label>Foundation</label></li>
+                    <li><a href="#">The Psychohistorians</a></li>
+                    <li><a href="#">The Encyclopedists</a></li>
+                    <li><a href="#">The Mayors</a></li>
+                    <li><a href="#">The Traders</a></li>
+                    <li><a href="#">The Merchant Princes</a></li>
+                    <li><label>Foundation and Empire</label></li>
+                    <li><a href="#">The General</a></li>
+                    <li><a href="#">The Mule</a></li>
+                    <li><label>Second Foundation</label></li>
+                    <li><a href="#">Search by the Mule</a></li>
+                    <li><a href="#">Search by the Foundation</a></li>
+                </ul>
+            </aside>
+            
+            <a class="exit-off-canvas"></a>
+        
+        </div>
+    </div>    
+
+
+            
+            </div>
+        
+        </header>    
+        <!-- /foundation.master#header -->
+    
+    <!-- foundation.master#content -->
+    
+    <section id="wizard" class="row-full">
+
+        <div id="breadcrumb" class="row-wide">
+            
+    <ol class="breadcrumbs small-12 small-centered columns">
+        <li class=""><a href="#">Package</a></li>
+        <li class=""><a href="#">Customize</a></li>
+        <li class=""><a href="#">Personal info</a></li>
+        <li class=""><a href="#">Summary</a></li>
+        <li class="current"><a href="#">Payment</a></li>
+    </ol>
+
+        
+        </div>
+        
+        <hr id="wizard_divider"/>
+    
+        <div id="page" class="row small-centered page" data-equalizer>
+            
+    <form 
+        method="GET" 
+        target="_self" 
+        action="."
+    >
+                        <input type="hidden" name="state" value="{}">                
+                <div class="small-8 columns page_content" data-equalizer-watch></div>
+                <div class="small-4 columns page_cart" data-equalizer-watch> 
+
+    <h2 class="wizard_cart_title">Your order</h2>
+    
+    <div id="wizard_cart_wrapper">
+    
+        <dl id="wizard_cart" class="wizard_cart row">
+          
+        
+      
+        </dl>
+        
+        <a href="javascript:window.history.back( );" class="wizard_cart_buttons_button -previous">Previous</a>
+        <button type="submit" class="wizard_cart_buttons_button -next">Next</button>            
+    
+    </div>
+    
+    <script id="wizard_cart_item-template" type="text/template">
+        <dt class="small-7 columns wizard_cart_item-title">{{title}}</dt>   
+        <dd class="small-5 columns wizard_cart_item-amount">{{amount}}</dd>
+    </script>
+    
+    <script id="wizard_cart_total-template" type="text/template">
+        <dt class="small-7 columns wizard_cart_total-title">{{title}}</dt>            
+        <dd class="small-5 columns wizard_cart_total-price">{{total}}</dd>        
+    </script>
+    
+    
+</div>                
+            
+    </form>
+
+        </div>
+        
+    </section>
+
+    <!-- /content -->
+    
+    <!-- foundation.master#footer -->
+        
+        
+                
+                
+                        
+                
+        
+    <footer id="footer" class="footer row-full">
+    
+        <div class="small-12 colunms row">
+        
+                
+    <div class="footer_item image_item small-12 medium-3 columns phone">
+        <div class="footer_item_wrapper">
+            <img class="footer_item_image" src="./content/footer/phone.png" alt="">
+        </div>
+        <div class="footer_item_label">            <p><a href="tel://+31652382328">+31 6 52 382 328</a></p>
+        </div>
+    </div>
+
+
+    
+    <div class="footer_item image_item small-12 medium-3 columns email">
+        <div class="footer_item_wrapper">
+            <img class="footer_item_image" src="./content/footer/email.png" alt="">
+        </div>
+        <div class="footer_item_label">            <p><a href="mailto:travel@eventagent.nl">travel@eventagent.nl</a></p>
+        </div>
+    </div>
+
+
+    
+    <div class="footer_item image_item small-12 medium-3 columns info">
+        <div class="footer_item_wrapper">
+            <img class="footer_item_image" src="./content/footer/info.png" alt="">
+        </div>
+        <div class="footer_item_label">            <ul>
+                <li><a href="#">Disclaimer</a></li>    
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Legal</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    
+    <div class="footer_item image_item small-12 medium-3 columns mailinglist">
+        <div class="footer_item_wrapper">
+            <img class="footer_item_image" src="./content/footer/mailinglist.png" alt="">
+        </div>
+        <div class="footer_item_label"> 
+            <form method="POST" action="./email" target="email_frame">
+                <div class="row collapse">
+                    <div class="small-10 columns">
+                        <input type="text" name="email" class="email_input" placeholder="Your email address">
+                    </div>
+                    <div class="small-2 columns">
+                        <button type="submit" class="button postfix email_submit">OK</button>
+                    </div>
+                </div>
+            </form>                
+            <iframe src="about:blank" id="email_frame" name="email_frame"></iframe>
+        </div>
+    </div>
+
+    
+            
+        </div>        
+    
+    </footer>
+
+    
+        <!-- /foundation.master#footer -->
+
+        <!-- /master#body -->
+        
+        <!-- master#scripts -->
+            
+        
+    <script> 
+        var require = { 
+                callback: function( ){ 
+                    require(
+                        [ "jquery", "foundation/dropdown", "foundation/topbar", "jquery.scrolltofixed", "foundation/offcanvas", "domReady!" ].concat([ ]),
+                        function( $ ){ 
+                            $( document ).foundation( ); 
+                            
+                            $( "#wizard_cart_wrapper" ).scrollToFixed({
+                                marginTop: 115, 
+                                removeOffsets: true,
+                                offsets: false,
+                                limit: function( ){
+                               
+                                    return  $( "#footer" ).offset( ).top - $( "#wizard_cart_wrapper" ).outerHeight( ) - 100;
+                                },
+                                
+                                unfixed : function( ){
+                                                                       
+                                    var $wrapper = $( "#wizard_cart_wrapper" );
+                                    
+                                    if( $wrapper.css( "position" ) === "absolute" )
+                                        $wrapper.css({ top: ( parseInt( $wrapper.css( "top" ), 10 ) + 80 ) + "px" });
+                                                                        
+                                }
+                            });
+                                
+                        }
+                    ); 
+                } 
+            };
+    </script>
+        <script data-main="./lib/config.js" src="./vendor/requirejs/require.js"></script>
+    
+
+
+
+        <!-- /master#scripts -->
+    
+    </body>
+</html>
