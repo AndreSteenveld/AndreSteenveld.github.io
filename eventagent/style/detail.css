@@ -298,10 +298,10 @@ code {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-weight: bold;
   color: #bd240d;
-  background-color: #ffc7c2;
+  background-color: #ffd9b3;
   border-width: 1px;
   border-style: solid;
-  border-color: #ff9c95;
+  border-color: #ffc387;
   padding: 0.13333rem 0.33333rem 0.06667rem; }
 
 /* Lists */
@@ -1903,6 +1903,108 @@ body > section:nth-last-of-type(1) {
   body > section:nth-last-of-type(1)#testemonial {
     padding-bottom: 0px; }
 
+.reveal-modal-bg {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1004;
+  display: none;
+  top: 0;
+  left: 0; }
+
+dialog, .reveal-modal {
+  visibility: hidden;
+  display: none;
+  position: absolute;
+  z-index: 1005;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  padding: 1.33333rem;
+  border: solid 1px #666;
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); }
+  @media only screen and (max-width: 40em) {
+    dialog, .reveal-modal {
+      min-height: 100vh; } }
+  @media only screen and (min-width:40.063em) {
+    dialog, .reveal-modal {
+      left: 50%; } }
+  dialog .column, dialog .columns, .reveal-modal .column, .reveal-modal .columns {
+    min-width: 0; }
+  dialog > :first-child, .reveal-modal > :first-child {
+    margin-top: 0; }
+  dialog > :last-child, .reveal-modal > :last-child {
+    margin-bottom: 0; }
+  @media only screen and (min-width:40.063em) {
+    dialog, .reveal-modal {
+      margin-left: -40%;
+      width: 80%; } }
+  @media only screen and (min-width:40.063em) {
+    dialog, .reveal-modal {
+      top: 6.66667rem; } }
+  dialog .close-reveal-modal, .reveal-modal .close-reveal-modal {
+    font-size: 2.66667rem;
+    line-height: 1;
+    position: absolute;
+    top: 0.53333rem;
+    right: 0.73333rem;
+    color: #aaa;
+    font-weight: bold;
+    cursor: pointer; }
+
+dialog[open] {
+  display: block;
+  visibility: visible; }
+
+dialog, .reveal-modal {
+  padding: 2rem; }
+  dialog.radius, .reveal-modal.radius {
+    border-radius: 3px; }
+  dialog.round, .reveal-modal.round {
+    border-radius: 1000px; }
+  dialog.collapse, .reveal-modal.collapse {
+    padding: 0; }
+  @media only screen and (min-width:40.063em) {
+    dialog.tiny, .reveal-modal.tiny {
+      margin-left: -15%;
+      width: 30%; } }
+  @media only screen and (min-width:40.063em) {
+    dialog.small, .reveal-modal.small {
+      margin-left: -20%;
+      width: 40%; } }
+  @media only screen and (min-width:40.063em) {
+    dialog.medium, .reveal-modal.medium {
+      margin-left: -30%;
+      width: 60%; } }
+  @media only screen and (min-width:40.063em) {
+    dialog.large, .reveal-modal.large {
+      margin-left: -35%;
+      width: 70%; } }
+  @media only screen and (min-width:40.063em) {
+    dialog.xlarge, .reveal-modal.xlarge {
+      margin-left: -47.5%;
+      width: 95%; } }
+
+dialog.full, .reveal-modal.full {
+  top: 0;
+  left: 0;
+  height: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  margin-left: 0 !important; }
+  @media only screen and (min-width:40.063em) {
+    dialog.full, .reveal-modal.full {
+      margin-left: -50vw;
+      width: 100vw; } }
+
+@media print {
+  dialog, .reveal-modal {
+    background: #fff !important; } }
+
 button, .button {
   border-style: solid;
   border-width: 0px;
@@ -1932,7 +2034,7 @@ button, .button {
   button:hover, button:focus, .button:hover, .button:focus {
     color: #333; }
   button.secondary, .button.secondary {
-    background-color: #FF4632;
+    background-color: #FF8000;
     border-color: white;
     color: #fff; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
@@ -2002,7 +2104,7 @@ button, .button {
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: #30343D; }
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
-      background-color: #FF4632;
+      background-color: #FF8000;
       border-color: white;
       color: #fff;
       cursor: default;
@@ -2014,7 +2116,7 @@ button, .button {
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         color: #333; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #FF4632; }
+        background-color: #FF8000; }
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: #43AC6A;
       border-color: white;

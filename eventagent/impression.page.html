@@ -28,7 +28,7 @@
             <div class="contain-to-grid">
             
                 
-    <nav class="top-bar navigation" data-topbar role="navigation" data-options="is_hover: false">
+    <nav class="top-bar navigation hide-for-small" data-topbar role="navigation" data-options="is_hover: false">
 
         <ul class="title-area navigation_title">
             <li class="name">
@@ -79,8 +79,41 @@
         </div>                    
         
     </nav>
-    
-    
+        
+    <div class="off-canvas-wrap docs-wrap show-for-small" data-offcanvas>
+        <div class="inner-wrap">
+            <nav class="tab-bar">
+                <section class="right-small">
+                    <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
+                </section>
+                
+                <section class="left tab-bar-section">
+                    <h1 class="title">Eventagent</h1>
+                </section>
+            
+            </nav>
+            
+            <aside class="right-off-canvas-menu">
+                <ul class="off-canvas-list">
+                    <li><label>Foundation</label></li>
+                    <li><a href="#">The Psychohistorians</a></li>
+                    <li><a href="#">The Encyclopedists</a></li>
+                    <li><a href="#">The Mayors</a></li>
+                    <li><a href="#">The Traders</a></li>
+                    <li><a href="#">The Merchant Princes</a></li>
+                    <li><label>Foundation and Empire</label></li>
+                    <li><a href="#">The General</a></li>
+                    <li><a href="#">The Mule</a></li>
+                    <li><label>Second Foundation</label></li>
+                    <li><a href="#">Search by the Mule</a></li>
+                    <li><a href="#">Search by the Foundation</a></li>
+                </ul>
+            </aside>
+            
+            <a class="exit-off-canvas"></a>
+        
+        </div>
+    </div>    
 
 
             
@@ -441,14 +474,13 @@
         
             
     
-    <section id="information" class="information row-full">
+    <section id="information" class="information row-full" data-equalizer>
         
-        <div class="vertical-center">
-            <h6 class="information_header text-center">Information</h6>
-            <h1 class="information_title text-center">Tell me more</h1>    
-        
-            <div class="information_panels row small-12 columns small-centered" data-equalizer>
-                    
+        <h6 class="information_header text-center">Information</h6>
+        <h1 class="information_title text-center">Tell me more</h1>    
+    
+        <div class="information_panels row small-12 columns small-centered" data-equalizer>
+                
     <div class="panel information_panels_panel small-12 large-4 columns"  data-equalizer-watch>
         <h2 class="information_panels_panel_title text-center">General</h2>        
         <p class="information_panels_panel_text">Beard Echo Park Tonx put a bird on it stumptown, chillwave organic Thundercats mlkshk Godard banjo iPhone mixtape. Mustache fashion axe vinyl High Life, synth YOLO pour-over deep v lo-fi plaid cornhole ugh next level twee. Neutra fashion axe keytar, shabby chic whatever crucifix hoodie Portland Tonx. Asymmetrical Austin chillwave scenester. Cred farm-to-table Portland, actually Williamsburg sriracha plaid ethnic fingerstache food truck Brooklyn swag typewriter. Jean shorts food truck Pinterest disrupt, master cleanse biodiesel pork belly polaroid gentrify XOXO kogi letterpress. Carles Cosby sweater yr viral tattooed Etsy.</p>        
@@ -469,8 +501,8 @@
     </div>
         
             
-            </div>
         </div>
+    
     
     </section>
 
@@ -626,7 +658,8 @@
                         "foundation/dropdown", 
                         "foundation/reveal", 
                         "foundation/equalizer", 
-                        "foundation/topbar" 
+                        "foundation/topbar",
+                        "foundation/offcanvas"
                     ], function( $ ){
                         
                         $( document ).foundation( );        
