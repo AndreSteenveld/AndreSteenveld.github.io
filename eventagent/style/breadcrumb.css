@@ -298,10 +298,10 @@ code {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-weight: bold;
   color: #bd240d;
-  background-color: #ffd9b3;
+  background-color: #d0ecf5;
   border-width: 1px;
   border-style: solid;
-  border-color: #ffc387;
+  border-color: #acdcec;
   padding: 0.13333rem 0.33333rem 0.06667rem; }
 
 /* Lists */
@@ -1927,10 +1927,10 @@ body > section:nth-last-of-type(1) {
       color: #30343D; }
     .breadcrumbs > *.current {
       cursor: default;
-      color: #FF8000; }
+      color: #64BEDC; }
       .breadcrumbs > *.current a {
         cursor: default;
-        color: #FF8000; }
+        color: #64BEDC; }
       .breadcrumbs > *.current:hover, .breadcrumbs > *.current:hover a, .breadcrumbs > *.current:focus, .breadcrumbs > *.current:focus a {
         text-decoration: none; }
     .breadcrumbs > *.unavailable {
@@ -1975,7 +1975,7 @@ body > section:nth-last-of-type(1) {
     .breadcrumbs > li:first-child {
       border-left: none; }
     .breadcrumbs > li.current:before, .breadcrumbs > li.current:first-child:before {
-      color: #FF8000; }
+      color: #64BEDC; }
     .breadcrumbs > li.unavailable:before, .breadcrumbs > li.unavailable:first-child:before {
       color: #30343D; }
     .breadcrumbs > li:before, .breadcrumbs > li:first-child:before {

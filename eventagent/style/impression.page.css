@@ -299,10 +299,10 @@ code {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-weight: bold;
   color: #bd240d;
-  background-color: #ffd9b3;
+  background-color: #d0ecf5;
   border-width: 1px;
   border-style: solid;
-  border-color: #ffc387;
+  border-color: #acdcec;
   padding: 0.13333rem 0.33333rem 0.06667rem; }
 
 /* Lists */
@@ -2152,7 +2152,7 @@ button, .button {
   button:hover, button:focus, .button:hover, .button:focus {
     color: #333; }
   button.secondary, .button.secondary {
-    background-color: #FF8000;
+    background-color: #64BEDC;
     border-color: white;
     color: #fff; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
@@ -2222,7 +2222,7 @@ button, .button {
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: #30343D; }
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
-      background-color: #FF8000;
+      background-color: #64BEDC;
       border-color: white;
       color: #fff;
       cursor: default;
@@ -2234,7 +2234,7 @@ button, .button {
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         color: #333; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #FF8000; }
+        background-color: #64BEDC; }
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: #43AC6A;
       border-color: white;
@@ -2738,7 +2738,7 @@ meta.foundation-mq-topbar {
         .top-bar-section ul li > a.button:hover, .top-bar-section ul li > a.button:focus {
           color: #333; }
       .top-bar-section ul li > a.button.secondary {
-        background-color: #FF8000;
+        background-color: #64BEDC;
         border-color: white;
         color: #fff; }
         .top-bar-section ul li > a.button.secondary:hover, .top-bar-section ul li > a.button.secondary:focus {
@@ -2773,7 +2773,7 @@ meta.foundation-mq-topbar {
       .top-bar-section ul li > button:hover, .top-bar-section ul li > button:focus {
         color: #333; }
       .top-bar-section ul li > button.secondary {
-        background-color: #FF8000;
+        background-color: #64BEDC;
         border-color: white;
         color: #fff; }
         .top-bar-section ul li > button.secondary:hover, .top-bar-section ul li > button.secondary:focus {
@@ -3843,7 +3843,7 @@ label.error {
           transition: opacity 300ms ease-out;
   background-color: #E8EBEA;
   border-color: #c5cdca;
-  color: #572b00; }
+  color: #144859; }
   .alert-box .close {
     font-size: 1.46667rem;
     padding: 9px 6px 4px;
@@ -3869,8 +3869,8 @@ label.error {
     border-color: #de2b0f;
     color: #fff; }
   .alert-box.secondary {
-    background-color: #FF8000;
-    border-color: #db6e00;
+    background-color: #64BEDC;
+    border-color: #3fafd4;
     color: #fff; }
   .alert-box.warning {
     background-color: #f08a24;
@@ -3879,7 +3879,7 @@ label.error {
   .alert-box.info {
     background-color: #a0d3e8;
     border-color: #74bfdd;
-    color: #572b00; }
+    color: #144859; }
   .alert-box.alert-close {
     opacity: 0; }
 
@@ -4164,8 +4164,8 @@ label.error {
   list-style: none;
   border-style: solid;
   border-width: 1px;
-  background-color: #ffc68c;
-  border-color: #ffaf65;
+  background-color: #b9e2ef;
+  border-color: #97d3e7;
   border-radius: 3px; }
   .breadcrumbs > * {
     margin: 0;
@@ -4819,7 +4819,7 @@ label.error {
     background-color: #43AC6A;
     color: #fff; }
   .label.secondary {
-    background-color: #FF8000;
+    background-color: #64BEDC;
     color: #fff; }
 
 [data-magellan-expedition], [data-magellan-expedition-clone] {
@@ -5162,7 +5162,7 @@ ul.pagination {
     height: 100%;
     display: block; }
   .progress.secondary .meter {
-    background: #FF8000;
+    background: #64BEDC;
     height: 100%;
     display: block; }
   .progress.success .meter {
@@ -5244,7 +5244,7 @@ ul.pagination {
   display: inline-block;
   position: absolute;
   height: 0.93333rem;
-  background: #fc7e00; }
+  background: #61bddb; }
 
 .range-slider-handle {
   display: inline-block;
@@ -6068,7 +6068,7 @@ th.hide-for-touch {
   height: 400px;
   overflow: hidden;
   border: none;
-  background-color: #FF8000;
+  background-color: #64BEDC;
   position: relative; }
   .testemonial .testemonial_title {
     color: white;
