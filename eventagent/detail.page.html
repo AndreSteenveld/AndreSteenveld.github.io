@@ -87,7 +87,7 @@
                 </section>
                 
                 <section class="left tab-bar-section">
-                    <h1 class="title">Eventagent</h1>
+                    <h1 class="title">Event agent</h1>
                 </section>
             
             </nav>
@@ -169,7 +169,7 @@
         <div class="small-12 small-centered columns row">
         
             <div class="small-12 medium-8 columns">
-                <h3 class="detail_subTitle">
+                <h3 class="detail_subTitle show-for-medium-up">
                     <a href="#" class="detail_show_map" data-reveal-id="packages_modal"><img src="./content/ShowOnMap.png" alt="Show on map"/>Show on map</a>
                     &nbsp;
                 </h3>
@@ -177,6 +177,34 @@
                 <h3 class="detail_subTitle">
                     A luxurious hotel near the airport 
                 </h3>
+                
+                <div class="small-12 columns show-for-small-only">
+                    <h2 class="detail_price">&euro;100.00</h2>
+                    
+                    <form 
+                        method="GET"
+                        target="_self"
+                        action="./wizard.01.package.page.html"
+                    >
+                        <input type="hidden" name="package.id" value="1337">
+                        <input type="hidden" name="package.name" value="Hotel Ibis Amsterdam Airport">
+                        <input type="hidden" name="package.price" value="&euro;100.00">
+                        <button type="submit" class="detail_book">Book now</button>
+                    </form>
+                    
+                    <!-- 
+                     | So why are the social media references here? The customer is buying somthing
+                     | and we want to go though the sale process before we ask the user to tell their
+                     | friends about their awesome purchase. -DRE
+                     |-->
+                     
+                    <ul class="detail_social">
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Facebook</a></li>
+                        <li><a href="#">Google+</a></li>
+                    </ul>
+                    
+                </div>
                 
                 <div class="detail_description">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque eleifend mauris sit amet eros cursus, id tristique libero eleifend. Ut finibus, ex sit amet pretium condimentum, odio metus ornare lorem, vitae elementum lectus felis id mi. Pellentesque urna orci, luctus vel elit eu, imperdiet dignissim sem. Mauris maximus vehicula purus in volutpat. Vestibulum in convallis elit, eu lobortis est. Mauris ut euismod risus, vel dapibus purus. Fusce pellentesque eros eget diam auctor egestas. In vitae urna id neque ultricies dignissim ac eget magna.</p>                    
@@ -211,7 +239,7 @@
             
             </div>
             
-            <div class="small-12 medium-4 columns">
+            <div class="medium-4 columns show-for-medium-up">
                 <h2 class="detail_price">&euro;100.00</h2>
                 
                 <form 

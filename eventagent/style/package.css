@@ -1842,6 +1842,20 @@ th.hide-for-touch {
   .column.xxlarge-uncentered.opposite, .columns.xxlarge-uncentered.opposite {
     float: right; } }
 
+@media only screen and (max-width: 40em) {
+  h1 {
+    font-size: 3.33333rem; }
+  h2 {
+    font-size: 1.66667rem; }
+  h3 {
+    font-size: 1rem; }
+  h4 {
+    font-size: 1rem; }
+  h5 {
+    font-size: 1rem; }
+  h6 {
+    font-size: 0.8rem; } }
+
 html, body {
   min-width: 1.33333rem; }
 
@@ -2156,19 +2170,6 @@ button::-moz-focus-inner {
 
 .packages {
   background-color: #E8EBEA; }
-  @media only screen and (max-width: 40em) {
-    .packages .package_info_panel {
-      height: 0;
-      width: 0;
-      padding: 50% 50%;
-      position: absolute;
-      background: rgba(255, 255, 255, 0.8);
-      left: 1rem; } }
-  @media only screen and (max-width: 40em) {
-    .packages .package_info_wrapper {
-      position: absolute;
-      top: 0px;
-      left: 0px; } }
   .packages .package_info_map img {
     margin: -3px 0.5ch 0; }
   .packages .package_cta_button {

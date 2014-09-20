@@ -1843,6 +1843,20 @@ th.hide-for-touch {
   .column.xxlarge-uncentered.opposite, .columns.xxlarge-uncentered.opposite {
     float: right; } }
 
+@media only screen and (max-width: 40em) {
+  h1 {
+    font-size: 3.33333rem; }
+  h2 {
+    font-size: 1.66667rem; }
+  h3 {
+    font-size: 1rem; }
+  h4 {
+    font-size: 1rem; }
+  h5 {
+    font-size: 1rem; }
+  h6 {
+    font-size: 0.8rem; } }
+
 html, body {
   min-width: 1.33333rem; }
 

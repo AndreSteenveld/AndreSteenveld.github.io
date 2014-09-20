@@ -19,7 +19,8 @@ require.config({
         { name: "jquery",           main: "jquery",                  location: "../vendor/jquery/dist/" },
         { name: "jquery.cookie",    main: "jquery.cookie",           location: "../vendor/jquery.cookie/" },        
         { name: "jquery.serialize", main: "jquery.serialize-object", location: "../vendor/jquery-serialize-object/" },
-        { name: "slick",            main: "slick",                   location: "../vendor/slick.js/slick/" }
+        { name: "slick",            main: "slick",                   location: "../vendor/slick.js/slick/" },
+        { name: "skrollr",          main: "skrollr",                 location: "../vendor/skrollr/src/" }
     ],
 
     paths: {

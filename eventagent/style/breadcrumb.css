@@ -97,7 +97,7 @@ select {
 .text-right {
   text-align: right !important; }
 
-.text-center, .breadcrumbs > li {
+.text-center {
   text-align: center !important; }
 
 .text-justify {
@@ -1842,6 +1842,20 @@ th.hide-for-touch {
   .column.xxlarge-uncentered.opposite, .columns.xxlarge-uncentered.opposite {
     float: right; } }
 
+@media only screen and (max-width: 40em) {
+  h1 {
+    font-size: 3.33333rem; }
+  h2 {
+    font-size: 1.66667rem; }
+  h3 {
+    font-size: 1rem; }
+  h4 {
+    font-size: 1rem; }
+  h5 {
+    font-size: 1rem; }
+  h6 {
+    font-size: 0.8rem; } }
+
 html, body {
   min-width: 1.33333rem; }
 
@@ -1966,6 +1980,7 @@ body > section:nth-last-of-type(1) {
   .breadcrumbs li:first-child {
     counter-reset: breadcrumb-counter; }
   .breadcrumbs > li {
+    text-align: center;
     padding: 1.2rem 0;
     width: 20%;
     counter-increment: breadcrumb-counter;
