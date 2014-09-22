@@ -298,10 +298,10 @@ code {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-weight: bold;
   color: #bd240d;
-  background-color: #d0ecf5;
+  background-color: #fee8c8;
   border-width: 1px;
   border-style: solid;
-  border-color: #acdcec;
+  border-color: #fed39b;
   padding: 0.13333rem 0.33333rem 0.06667rem; }
 
 /* Lists */
@@ -2273,7 +2273,7 @@ body > section:nth-last-of-type(1) {
       .grid .grid_panel .grid_panel_link:hover:after {
         display: block; }
       .grid .grid_panel .grid_panel_link:hover {
-        background-color: rgba(100, 190, 220, 0.85); }
+        background-color: rgba(253, 179, 71, 0.85); }
       .grid .grid_panel .grid_panel_link:hover > .grid_panel_description {
         visibility: visible; }
       .grid .grid_panel .grid_panel_link:hover ~ .grid_panel_description {

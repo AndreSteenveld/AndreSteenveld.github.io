@@ -27,7 +27,7 @@
     
     <header 
         id="navigation" 
-        class="row-full contain-to-grid hide-for-small"
+        class="row-full contain-to-grid hide-for-small  exit-off-canvas"
     
         data-start     = " min-height: 100px; height: 10%; max-height: 130px; "
         data-100-start = " min-height: 50px;  height: 5%;  max-height: 65px;  "
@@ -115,8 +115,29 @@
     <div id="top-bar-placeholder" class="hide-for-small"><!-- top bar place holder --></div>
     
     
-    <div class="show-for-small" data-offcanvas></div>
+    <nav data-offcanvas class="show-for-small tab-bar">
+        
+        <div class="left tab-bar-section exit-off-canvas">Event agent</div>
 
+        <div class="right-small">
+            <a href="#idOfRightMenu" role="button" aria-controls="idOfRightMenu" aria-expanded="false" class="right-off-canvas-toggle menu-icon" ><span></span></a>
+        </div>
+    </nav>
+
+    <aside class="off-canvas-wrap right-off-canvas-menu">
+        <ul class="off-canvas-list">
+                        
+            <li><a href="#">Packages</a></li>                        
+            <li><a href="#">Why book?</a></li>
+            <li><a href="#">Tell me more</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">General conditions</a></li>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">Privacy policy</a></li>
+            
+        </ul>
+    </aside>
+    
 
 
     <!-- /foundation.master#header -->
@@ -124,7 +145,7 @@
     <!-- foundation.master#content -->
     
     
-    <footer id="footer" class="footer row-full">
+    <footer id="footer" class="footer row-full  exit-off-canvas">
     
         <div class="small-12 colunms row">
         
@@ -189,7 +210,7 @@
                         
                 
         
-    <footer id="footer" class="footer row-full">
+    <footer id="footer" class="footer row-full  exit-off-canvas">
     
         <div class="small-12 colunms row">
         

@@ -298,10 +298,10 @@ code {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
   font-weight: bold;
   color: #bd240d;
-  background-color: #d0ecf5;
+  background-color: #fee8c8;
   border-width: 1px;
   border-style: solid;
-  border-color: #acdcec;
+  border-color: #fed39b;
   padding: 0.13333rem 0.33333rem 0.06667rem; }
 
 /* Lists */
@@ -2048,11 +2048,11 @@ button, .button {
   button:hover, button:focus, .button:hover, .button:focus {
     color: #333; }
   button.secondary, .button.secondary {
-    background-color: #64BEDC;
-    border-color: white;
+    background-color: #FDB347;
+    border-color: #ffffff;
     color: #fff; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
-      background-color: white; }
+      background-color: #ffffff; }
     button.secondary:hover, button.secondary:focus, .button.secondary:hover, .button.secondary:focus {
       color: #333; }
   button.success, .button.success {
@@ -2118,19 +2118,19 @@ button, .button {
     button.disabled:hover, button.disabled:focus, button[disabled]:hover, button[disabled]:focus, .button.disabled:hover, .button.disabled:focus, .button[disabled]:hover, .button[disabled]:focus {
       background-color: #30343D; }
     button.disabled.secondary, button[disabled].secondary, .button.disabled.secondary, .button[disabled].secondary {
-      background-color: #64BEDC;
-      border-color: white;
+      background-color: #FDB347;
+      border-color: #ffffff;
       color: #fff;
       cursor: default;
       opacity: 0.7;
       -webkit-box-shadow: none;
               box-shadow: none; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: white; }
+        background-color: #ffffff; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
         color: #333; }
       button.disabled.secondary:hover, button.disabled.secondary:focus, button[disabled].secondary:hover, button[disabled].secondary:focus, .button.disabled.secondary:hover, .button.disabled.secondary:focus, .button[disabled].secondary:hover, .button[disabled].secondary:focus {
-        background-color: #64BEDC; }
+        background-color: #FDB347; }
     button.disabled.success, button[disabled].success, .button.disabled.success, .button[disabled].success {
       background-color: #43AC6A;
       border-color: white;
