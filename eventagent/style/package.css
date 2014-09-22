@@ -2169,7 +2169,8 @@ button::-moz-focus-inner {
     display: inline-block; } }
 
 .packages {
-  background-color: #E8EBEA; }
+  background-color: #E8EBEA;
+  position: relative; }
   .packages .package_info_map img {
     margin: -3px 0.5ch 0; }
   .packages .package_cta_button {

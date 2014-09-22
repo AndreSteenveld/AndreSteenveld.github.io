@@ -22,27 +22,54 @@
         <!-- master#body -->
         
     <!-- foundation.master#header -->
-            <header id="navigation" class="row-full">
     
-            <div class="contain-to-grid sticky">
-            
-                
-    <nav class="top-bar navigation hide-for-small" data-topbar role="navigation" data-options="is_hover: false">
-
+    
+    <header 
+        id="navigation" 
+        class="row-full contain-to-grid hide-for-small"
+    
+        data-start     = " min-height: 100px; height: 10%; max-height: 130px; "
+        data-100-start = " min-height: 50px;  height: 5%;  max-height: 65px;  "
+    >
+        
+        
+    <nav 
+        data-top-bar 
+        data-options="is_hover: false"
+        
+        class="top-bar" 
+        role="navigation" 
+        
+        data-anchor-target = "#navigation"
+        data-start         = " line-height: 100px; "
+        data-100-start     = " line-height: 50px;  "
+    >
+        
         <ul class="title-area navigation_title">
             <li class="name">
-                <h1><a href="#">Eventagent</a></h1>
+                <h1>
+                    <a 
+                        href="#"
+                        
+                        data-anchor-target = "#navigation"
+                        data-start         = " font-size: 20px; "
+                        data-100-start     = " font-size: 15px; "
+                    >Eventagent</a>
+                </h1>
             </li>    
             <li class="toggle-topbar menu-icon"><a href="#"><span>&nbsp;</span></a></li>
         </ul>
         
         <section class="top-bar-section">
         
-            <ul class="right">
-                <li>
-                    <a href="#" class="navigation_button" data-dropdown="navigation_packages_dropdown" data-options="is_hover:true">Packages</a>
-                    
-                </li>    
+            <ul 
+                class="right"
+            
+                data-anchor-target = "#navigation"
+                data-start         = " font-size: 20px; "
+                data-100-start     = " font-size: 15px; "    
+            >
+                <li><a href="#" class="navigation_button" data-dropdown="navigation_packages_dropdown" data-options="is_hover:true">Packages</a></li>    
                 <li><a href="#" class="navigation_button">Why book?</a></li>
                 <li><a href="#" class="navigation_button">Tell me more</a></li>                
             </ul>    
@@ -75,58 +102,30 @@
                 <button type="submit" class="small-12 columns button large">Filter</button>
             </form>                        
                                     
-        </div>                    
+        </div>            
         
     </nav>
-        
-    <div class="off-canvas-wrap docs-wrap show-for-small" data-offcanvas>
-        <div class="inner-wrap">
-            <nav class="tab-bar">
-                <section class="right-small">
-                    <a class="right-off-canvas-toggle menu-icon" ><span></span></a>
-                </section>
-                
-                <section class="left tab-bar-section">
-                    <h1 class="title">Event agent</h1>
-                </section>
-            
-            </nav>
-            
-            <aside class="right-off-canvas-menu">
-                <ul class="off-canvas-list">
-                    <li><label>Foundation</label></li>
-                    <li><a href="#">The Psychohistorians</a></li>
-                    <li><a href="#">The Encyclopedists</a></li>
-                    <li><a href="#">The Mayors</a></li>
-                    <li><a href="#">The Traders</a></li>
-                    <li><a href="#">The Merchant Princes</a></li>
-                    <li><label>Foundation and Empire</label></li>
-                    <li><a href="#">The General</a></li>
-                    <li><a href="#">The Mule</a></li>
-                    <li><label>Second Foundation</label></li>
-                    <li><a href="#">Search by the Mule</a></li>
-                    <li><a href="#">Search by the Foundation</a></li>
-                </ul>
-            </aside>
-            
-            <a class="exit-off-canvas"></a>
-        
-        </div>
-    </div>    
 
 
-            
-            </div>
+
         
-        </header>    
-        <!-- /foundation.master#header -->
+    </header>     
+    
+    <div id="top-bar-placeholder" class="hide-for-small"><!-- top bar place holder --></div>
+    
+    
+    <div class="show-for-small" data-offcanvas></div>
+
+
+
+    <!-- /foundation.master#header -->
     
     <!-- foundation.master#content -->
     
     
     
     
-    <section class="impression ">
+    <section class="impression " data-start     = " top: 10%; " data-100-start = " top: 5%;  ">
         
     <a href="javascript:void(0);" class=" impression_button-left "><img src="./content/arrow-left.png" alt="left"></a>
     
@@ -162,6 +161,8 @@
     </section>
 
     
+    
+    <div id="impression_placeholder"><!-- impression placeholder --></div>
     
     
     <section id="detail" class="detail row-full">
@@ -418,29 +419,42 @@
         <!-- /master#body -->
         
         <!-- master#scripts -->
+            <script>
+        var require = {
             
-    <script> 
-        var require = { 
-                callback: function( ){ 
-                    require([ 
-                        "jquery", "scripts/slick", 
+                callback: function( ){
+                
+                                        require(
                         
-                        "foundation/dropdown", 
-                        "foundation/reveal", 
-                        "foundation/topbar", 
-                        "foundation/equalizer",
-                        "foundation/offcanvas"
-                    ], function( $ ){
+                        [ 
+                            "jquery", "skrollr", "foundation", 
+                            
+                            "foundation/dropdown", 
+                            "foundation/topbar", 
+                            "foundation/offcanvas", 
+                            
+                            "domReady!" 
+                        ]
+                            .concat([ "scripts/slick", "foundation/equalizer" ]),
                         
-                        $( document ).foundation( );        
+                                                function( $, skrollr, foundation ){
                         
-                    }); 
-                } 
-            };
+                            $( document ).foundation( );                            
+                            
+                            if( window.matchMedia( foundation.media_queries.medium ).matches )
+                                skrollr.init({ 
+                                    forceHeight: false,
+                                    mobileCheck: function( ){ return false; }
+                                });                                
+                            
+                        }
+                                            );
+                                        
+                }
+            
+            };            
     </script>
-        <script data-main="./lib/config.js" src="./vendor/requirejs/require.js"></script>
-    
-
+    <script data-main="./lib/config.js" src="./vendor/requirejs/require.js"></script>
         <!-- /master#scripts -->
     
     </body>

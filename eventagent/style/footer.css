@@ -2358,7 +2358,8 @@ label.error {
 
 .footer {
   color: #A2AEAA;
-  background-color: #30343D; }
+  background-color: #30343D;
+  position: relative; }
   .footer .footer_item * {
     color: #A2AEAA;
     font-weight: 200; }
