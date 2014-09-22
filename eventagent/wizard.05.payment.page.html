@@ -81,11 +81,11 @@
             <form>
                 <div class="small-6 columns">
                     <h5 class="navigation_packages_dropdown_title">Event</h5>
-                    <label><input name="filter[]" value="" type="checkbox">Indoor dance</label>
-                    <label><input name="filter[]" value="" type="checkbox">Outdoor dance</label>
-                    <label><input name="filter[]" value="" type="checkbox">Concerts</label>
-                    <label><input name="filter[]" value="" type="checkbox">Theater</label>
-                    <label><input name="filter[]" value="" type="checkbox">Sports</label>                        
+                    <label><input name="filter[]" value="true" type="checkbox">Indoor dance</label>
+                    <label><input name="filter[]" value="true" type="checkbox">Outdoor dance</label>
+                    <label><input name="filter[]" value="true" type="checkbox">Concerts</label>
+                    <label><input name="filter[]" value="true" type="checkbox">Theater</label>
+                    <label><input name="filter[]" value="true" type="checkbox">Sports</label>                        
                 
                 </div> 
                 
@@ -144,7 +144,7 @@
     
     <!-- foundation.master#content -->
     
-    <section id="wizard" class="row-full  exit-off-canvas">
+    <section id="wizard" class="row-full">
 
         <div id="breadcrumb" class="row-wide">
             
@@ -216,7 +216,7 @@
                         
                 
         
-    <footer id="footer" class="footer row-full  exit-off-canvas">
+    <footer id="footer" class="footer row-full">
     
         <div class="small-12 colunms row">
         
@@ -307,13 +307,28 @@
                         
                                                 function( $, skrollr, foundation ){
                         
-                            $( document ).foundation( );                            
+                            $( document ).foundation( );     
                             
-                            if( window.matchMedia( foundation.media_queries.medium ).matches )
+                            if( window.matchMedia( foundation.media_queries.medium ).matches ){
+                                
                                 skrollr.init({ 
                                     forceHeight: false,
                                     mobileCheck: function( ){ return false; }
                                 });                                
+                                
+                            } else {
+                                
+                                $( "[data-offcanvas] ~ *:not(.off-canvas-wrap):not(script)" )
+                                    .click( function( ){
+                                        
+                                        foundation.libs.offcanvas.hide(
+                                            "move-left",
+                                            foundation.libs.offcanvas.get_wrapper( ".off-canvas-wrap" )
+                                        );
+                                        
+                                    });    
+                                                        
+                            }
                             
                         }
                                             );
