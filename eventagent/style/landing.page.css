@@ -2379,7 +2379,7 @@ meta.foundation-mq-topbar {
     font-size: 15px; }
     .top-bar .name h1 {
       line-height: 100%;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: normal;
@@ -3049,8 +3049,12 @@ meta.foundation-mq-topbar {
         height: 1rem;
         top: 3px; }
 
+#off-canvas-placeholder {
+  height: 3rem; }
+
 [data-offcanvas] {
   position: fixed;
+  top: 0px;
   width: 100%;
   z-index: 15; }
   [data-offcanvas] + .off-canvas-wrap {
@@ -3759,14 +3763,15 @@ label.error {
         left: 0px; }
         .grid .grid_panel .grid_panel_link > .grid_panel_description * {
           color: white; }
-      .grid .grid_panel .grid_panel_link:hover:after {
-        display: block; }
-      .grid .grid_panel .grid_panel_link:hover {
-        background-color: rgba(253, 179, 71, 0.85); }
-      .grid .grid_panel .grid_panel_link:hover > .grid_panel_description {
-        visibility: visible; }
-      .grid .grid_panel .grid_panel_link:hover ~ .grid_panel_description {
-        visibility: hidden; }
+      @media large-up {
+        .grid .grid_panel .grid_panel_link:hover:after {
+          display: block; }
+        .grid .grid_panel .grid_panel_link:hover {
+          background-color: rgba(253, 179, 71, 0.85); }
+        .grid .grid_panel .grid_panel_link:hover > .grid_panel_description {
+          visibility: visible; }
+        .grid .grid_panel .grid_panel_link:hover ~ .grid_panel_description {
+          visibility: hidden; } }
 
 .landing_title {
   background-color: #A2AEAA;

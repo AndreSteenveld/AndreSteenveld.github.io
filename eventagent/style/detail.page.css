@@ -2551,7 +2551,7 @@ meta.foundation-mq-topbar {
     font-size: 15px; }
     .top-bar .name h1 {
       line-height: 100%;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: normal;
@@ -3221,8 +3221,12 @@ meta.foundation-mq-topbar {
         height: 1rem;
         top: 3px; }
 
+#off-canvas-placeholder {
+  height: 3rem; }
+
 [data-offcanvas] {
   position: fixed;
+  top: 0px;
   width: 100%;
   z-index: 15; }
   [data-offcanvas] + .off-canvas-wrap {
@@ -6277,6 +6281,8 @@ th.hide-for-touch {
       padding-left: 0px;
       padding-right: 0px; } }
   @media only screen and (min-width:40.063em) {
+    .detail .detail_price {
+      margin-top: 2rem; }
     .detail > .row > .columns:first-child {
       border-right: solid 1px #B9C2BF;
       padding-right: 25px; } }

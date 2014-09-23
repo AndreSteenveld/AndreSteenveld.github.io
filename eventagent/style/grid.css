@@ -2270,11 +2270,12 @@ body > section:nth-last-of-type(1) {
         left: 0px; }
         .grid .grid_panel .grid_panel_link > .grid_panel_description * {
           color: white; }
-      .grid .grid_panel .grid_panel_link:hover:after {
-        display: block; }
-      .grid .grid_panel .grid_panel_link:hover {
-        background-color: rgba(253, 179, 71, 0.85); }
-      .grid .grid_panel .grid_panel_link:hover > .grid_panel_description {
-        visibility: visible; }
-      .grid .grid_panel .grid_panel_link:hover ~ .grid_panel_description {
-        visibility: hidden; }
+      @media large-up {
+        .grid .grid_panel .grid_panel_link:hover:after {
+          display: block; }
+        .grid .grid_panel .grid_panel_link:hover {
+          background-color: rgba(253, 179, 71, 0.85); }
+        .grid .grid_panel .grid_panel_link:hover > .grid_panel_description {
+          visibility: visible; }
+        .grid .grid_panel .grid_panel_link:hover ~ .grid_panel_description {
+          visibility: hidden; } }

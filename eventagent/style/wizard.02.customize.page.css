@@ -902,7 +902,7 @@ th.hide-for-touch {
     width: 8.33333%; }
   .small-2 {
     width: 16.66667%; }
-  .small-3 {
+  .small-3, #wizard #breadcrumb .breadcrumbs li {
     width: 25%; }
   .small-4 {
     width: 33.33333%; }
@@ -2379,7 +2379,7 @@ meta.foundation-mq-topbar {
     font-size: 15px; }
     .top-bar .name h1 {
       line-height: 100%;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: normal;
@@ -3049,8 +3049,12 @@ meta.foundation-mq-topbar {
         height: 1rem;
         top: 3px; }
 
+#off-canvas-placeholder {
+  height: 3rem; }
+
 [data-offcanvas] {
   position: fixed;
+  top: 0px;
   width: 100%;
   z-index: 15; }
   [data-offcanvas] + .off-canvas-wrap {
@@ -3134,13 +3138,18 @@ meta.foundation-mq-topbar {
   .breadcrumbs > li {
     text-align: center;
     padding: 1.2rem 0;
-    width: 20%;
     counter-increment: breadcrumb-counter;
     border-left-style: solid;
     border-left-width: 1px;
     border-left-color: #B9C2BF; }
-    .breadcrumbs > li:first-child {
-      border-left: none; }
+    @media only screen and (min-width:64.063em) {
+      .breadcrumbs > li:last-child {
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-right-color: #B9C2BF; } }
+    @media only screen and (max-width: 40em), only screen and (min-width:40.063em) and (max-width:64em) {
+      .breadcrumbs > li:first-child {
+        border-left: none; } }
     .breadcrumbs > li.current:before, .breadcrumbs > li.current:first-child:before {
       color: #FDB347; }
     .breadcrumbs > li.unavailable:before, .breadcrumbs > li.unavailable:first-child:before {
@@ -3556,6 +3565,9 @@ label.error {
     border-color: #B9C2BF; }
   #wizard #breadcrumb .breadcrumbs {
     margin-bottom: 0px; }
+    @media only screen and (min-width:40.063em) {
+      #wizard #breadcrumb .breadcrumbs {
+        text-align: center; } }
     @media only screen and (max-width: 40em) {
       #wizard #breadcrumb .breadcrumbs li {
         width: 100%;
@@ -3589,7 +3601,8 @@ label.error {
       padding-left: 0px;
       padding-right: 0px; }
     #wizard .wizard_cart_total-price {
-      text-align: right; }
+      text-align: right;
+      font-weight: bold; }
     #wizard .wizard_cart_total-title, #wizard .wizard_cart_total-price {
       margin-top: 1rem;
       border-top: solid 2px black;
@@ -3656,6 +3669,8 @@ label.error {
 #wizard .page hr {
   margin-top: 25px;
   margin-bottom: 25px; }
+#wizard .wizard_extra_panel {
+  margin-top: 15px; }
 #wizard .wizard_extra_title {
   font-family: "Raleway", sans-serif;
   font-style: normal;

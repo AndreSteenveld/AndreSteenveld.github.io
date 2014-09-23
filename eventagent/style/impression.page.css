@@ -2657,7 +2657,7 @@ meta.foundation-mq-topbar {
     font-size: 15px; }
     .top-bar .name h1 {
       line-height: 100%;
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 0; }
       .top-bar .name h1 a {
         font-weight: normal;
@@ -3327,8 +3327,12 @@ meta.foundation-mq-topbar {
         height: 1rem;
         top: 3px; }
 
+#off-canvas-placeholder {
+  height: 3rem; }
+
 [data-offcanvas] {
   position: fixed;
+  top: 0px;
   width: 100%;
   z-index: 15; }
   [data-offcanvas] + .off-canvas-wrap {
@@ -6176,11 +6180,6 @@ th.hide-for-touch {
   position: relative; }
   @media only screen and (min-width:64.063em) {
     .reasons > .vertical-center {
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
       width: 100%; } }
   .reasons_button {
     max-width: 275px; }
@@ -6384,13 +6383,16 @@ th.hide-for-touch {
   border-color: #E8EBEA;
   border-style: solid;
   border-width: 25px 0px; }
-  .packages .package:hover {
-    background-color: white;
-    border-color: white; }
+  @media only screen and (min-width:64.063em) {
+    .packages .package:hover {
+      background-color: white;
+      border-color: white; } }
   @media only screen and (max-width: 40em) {
     .packages .package_info {
       padding-left: 0px;
-      padding-right: 0px; } }
+      padding-right: 0px; }
+      .packages .package_info_panel {
+        padding-top: 15px; } }
   @media only screen and (min-width:40.063em) and (max-width:64em) {
     .packages .package_info_image {
       padding-right: 0px; } }

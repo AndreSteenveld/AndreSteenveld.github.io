@@ -1921,11 +1921,6 @@ body > section:nth-last-of-type(1) {
   position: relative; }
   @media only screen and (min-width:64.063em) {
     .reasons > .vertical-center {
-      position: absolute;
-      top: 50%;
-      -webkit-transform: translateY(-50%);
-          -ms-transform: translateY(-50%);
-              transform: translateY(-50%);
       width: 100%; } }
   .reasons_button {
     max-width: 275px; }

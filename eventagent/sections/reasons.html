@@ -27,7 +27,7 @@
     
     <header 
         id="navigation" 
-        class="row-full contain-to-grid hide-for-small  exit-off-canvas"
+        class="row-full contain-to-grid hide-for-small"
     
         data-start     = " min-height: 100px; height: 10%; max-height: 130px; "
         data-100-start = " min-height: 50px;  height: 5%;  max-height: 65px;  "
@@ -49,13 +49,7 @@
         <ul class="title-area navigation_title">
             <li class="name">
                 <h1>
-                    <a 
-                        href="#"
-                        
-                        data-anchor-target = "#navigation"
-                        data-start         = " font-size: 20px; "
-                        data-100-start     = " font-size: 15px; "
-                    >Eventagent</a>
+                    <a href="#">Eventagent</a>
                 </h1>
             </li>    
             <li class="toggle-topbar menu-icon"><a href="#"><span>&nbsp;</span></a></li>
@@ -63,13 +57,7 @@
         
         <section class="top-bar-section">
         
-            <ul 
-                class="right"
-            
-                data-anchor-target = "#navigation"
-                data-start         = " font-size: 20px; "
-                data-100-start     = " font-size: 15px; "    
-            >
+            <ul class="right">
                 <li><a href="#" class="navigation_button" data-dropdown="navigation_packages_dropdown" data-options="is_hover:true">Packages</a></li>    
                 <li><a href="#" class="navigation_button">Why book?</a></li>
                 <li><a href="#" class="navigation_button">Tell me more</a></li>                
@@ -108,13 +96,14 @@
     </nav>
 
 
-
         
     </header>     
     
     <div id="top-bar-placeholder" class="hide-for-small"><!-- top bar place holder --></div>
     
     
+    <div id="off-canvas-placeholder" class="show-for-small"><!-- --></div>
+
     <nav data-offcanvas class="show-for-small tab-bar">
         
         <div class="left tab-bar-section exit-off-canvas">Event agent</div>
@@ -123,7 +112,7 @@
             <a href="#idOfRightMenu" role="button" aria-controls="idOfRightMenu" aria-expanded="false" class="right-off-canvas-toggle menu-icon" ><span></span></a>
         </div>
     </nav>
-
+    
     <aside class="off-canvas-wrap right-off-canvas-menu">
         <ul class="off-canvas-list">
                         
@@ -138,7 +127,11 @@
         </ul>
     </aside>
     
+    
+    
 
+    
+    
 
     <!-- /foundation.master#header -->
     

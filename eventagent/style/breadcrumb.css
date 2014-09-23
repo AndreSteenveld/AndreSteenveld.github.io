@@ -1982,13 +1982,18 @@ body > section:nth-last-of-type(1) {
   .breadcrumbs > li {
     text-align: center;
     padding: 1.2rem 0;
-    width: 20%;
     counter-increment: breadcrumb-counter;
     border-left-style: solid;
     border-left-width: 1px;
     border-left-color: #B9C2BF; }
-    .breadcrumbs > li:first-child {
-      border-left: none; }
+    @media only screen and (min-width:64.063em) {
+      .breadcrumbs > li:last-child {
+        border-right-style: solid;
+        border-right-width: 1px;
+        border-right-color: #B9C2BF; } }
+    @media only screen and (max-width: 40em), only screen and (min-width:40.063em) and (max-width:64em) {
+      .breadcrumbs > li:first-child {
+        border-left: none; } }
     .breadcrumbs > li.current:before, .breadcrumbs > li.current:first-child:before {
       color: #FDB347; }
     .breadcrumbs > li.unavailable:before, .breadcrumbs > li.unavailable:first-child:before {
